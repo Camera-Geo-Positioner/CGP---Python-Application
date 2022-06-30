@@ -1,0 +1,981 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>Main API documentation</title>
+<meta name="description" content="" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;700&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/favicon/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="pdoc-header">
+<nav class="pdoc-nav">
+<ul>
+<li>
+<a href="../index.html" class="menu">Home</a>
+</li>
+<li>
+<a href="../Main.html" class="menu">Main</a>
+</li>
+<li>
+<a href="../API/index.html" class="menu">API</a>
+</li>
+<li>
+<a href="../Calibrator/index.html" class="menu">Calibrator</a>
+</li>
+<li>
+<a href="../CameraReader/index.html" class="menu">Camera Reader</a>
+</li>
+<li>
+<a href="../FrameAnalyzer/index.html" class="menu">Frame Analyzer</a>
+</li>
+<li>
+<a href="../IO/index.html" class="menu">IO</a>
+</li>
+<li>
+<a href="../Positioner/index.html" class="menu">Positioner</a>
+</li>
+<li>
+<a href="../Windowing/index.html" class="menu">Windowing</a>
+</li>
+<li>
+<a href="../ArgsGUI/index.html" class="menu">ArgsGUI</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>Main</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># This program has been developed by students from the bachelor Computer Science at Utrecht University within the
+# Software Project course.
+# © Copyright Utrecht University (Department of Information and Computing Sciences)
+
+# %%
+import argparse
+import asyncio
+import concurrent.futures
+import threading
+import cv2
+
+import aioconsole
+from concurrent.futures import ThreadPoolExecutor
+from typing import Any, Dict
+from datetime import datetime, time
+
+from API.APIController import APIController
+from CameraReader.CameraController import CameraController
+from Positioner.Accuracy.StaticAccuracyDataset import StaticAccuracyDataset
+from Windowing.Sub.CameraSubWindow import CameraSubWindow
+from Windowing.MasterWindow import *
+from FrameAnalyzer.IDetector import IDetector
+from FrameAnalyzer.MainFrameAnalyzer import MainFrameAnalyzer
+from FrameAnalyzer.DetectionFactory import DetectionFactory
+from Positioner.Convertors import Convertors
+from Positioner.DetectedObjectPosition import DetectedObjectPosition
+from Positioner.IConvertor import IConvertor
+from Positioner.MainPositioner import MainPositioner
+from Calibrator.MainCalibrator import MainCalibrator
+from ArgsGUI import UserArgsInput
+
+# events
+calibrationDoneEvent: threading.Event = threading.Event()
+videoAnalyzerCancelEvent: threading.Event = threading.Event()
+
+
+async def CommandInput(api: APIController):
+    &#34;&#34;&#34;
+    Async console input handler. Reads from the console and handles these inputs.
+
+    Parameters
+    ----------
+    api : APIController
+        The api used for sending data, here only used for testing
+    &#34;&#34;&#34;
+
+    try:
+        calibrationDoneEvent.wait()
+
+        while True:
+            command = await aioconsole.ainput()
+            if command == &#34;exit&#34;:
+                break
+            if command == &#34;test&#34;:
+                api.Send([DetectedObjectPosition(2, 3, 6, 1, &#39;human&#39;)], 0, datetime.now())
+    except concurrent.futures.CancelledError:
+        return
+
+
+class Program:
+    # objects
+    api: APIController
+
+    # tasks
+    inputTask: Any
+    apiTask: Any
+    videoAnalyzerTask: Any
+    arguments: Dict[str, Any]
+
+    def __init__(self):
+        self.api = None
+        self.inputTask = None
+        self.apiTask = None
+        self.videoAnalyzerTask = None
+        self.arguments = None
+
+    @staticmethod
+    def ValidateAllArguments(arguments: Dict[str, Any]):
+        &#34;&#34;&#34;
+        Validate all arguments.
+
+        Parameters
+        ----------
+        arguments : Dict[str, Any]
+            The arguments to be validated
+
+        Returns
+        -------
+        bool
+            True if arguments are correct, otherwise false
+        &#34;&#34;&#34;
+        try:
+            APIController.ValidateApiArguments(arguments)
+            CameraController.ValidateReaderArguments(arguments)
+            MainFrameAnalyzer.ValidateFrameAnalyzerArguments(arguments)
+            MainCalibrator.ValidateCalibratorArguments(arguments)
+            StaticAccuracyDataset.ValidateStaticAccuracyDatasetArguments(arguments)
+        except (ValueError, TypeError) as e:
+            print(e)
+            return False
+        return True
+
+    def ParseArguments(self):
+        &#34;&#34;&#34;
+        Parse the arguments
+
+        Returns
+        -------
+        Dict[str, Any]
+            The arguments as a dictionary
+        &#34;&#34;&#34;
+        # Create the argument parser
+        argumentParser = argparse.ArgumentParser()
+
+        # Add arguments
+        APIController.AddApiArguments(argumentParser)
+        CameraController.AddVideoReaderArguments(argumentParser)
+        MainFrameAnalyzer.AddFrameAnalyzerArguments(argumentParser)
+        MainCalibrator.AddCalibratorArguments(argumentParser)
+        StaticAccuracyDataset.AddStaticAccuracyDatasetArguments(argumentParser)
+        UserArgsInput.UserArgsInput().AddArgsGUIArguments(argumentParser)
+
+        # Parse all arguments
+        arguments = vars(argumentParser.parse_args())
+
+        # Validate all arguments
+        if not self.ValidateAllArguments(arguments):
+            return None
+
+        if arguments[&#39;displayArgsGUI&#39;]:
+            arguments = UserArgsInput.UserArgsInput().GetArgsFromUser(arguments)
+
+        self.arguments = arguments
+        return arguments
+
+    async def Main(self):
+        &#34;&#34;&#34;
+        The start of the program.
+        The main async function of the program,
+        starts all other async functions and cancels them when the program exits.
+        Also creates the api used for sending data.
+        &#34;&#34;&#34;
+
+        # Start everything
+        await self._Startup()
+
+        # Wait for video input to stop
+        await asyncio.wait([self.apiTask, self.inputTask, self.videoAnalyzerTask], return_when=asyncio.FIRST_COMPLETED)
+
+        # Clean everything
+        await self._Cleanup()
+
+    async def _Startup(self):
+        &#34;&#34;&#34;Creation of all the tasks for the program.&#34;&#34;&#34;
+
+        loop = asyncio.get_running_loop()
+        executor = ThreadPoolExecutor(1)
+
+        if self.arguments is None:
+            self.ParseArguments()
+
+        # Setup API
+        self.api = APIController(loop, False)
+        self.apiTask = loop.create_task(self.api.Start(self.arguments[&#34;port&#34;]))
+        await self.api.UntilConnected()
+
+        # Setup positioner pipeline
+        pipeline = PositionerPipeline()
+        self.videoAnalyzerTask = loop.run_in_executor(
+            executor, pipeline.RunPipeline, self.api, self.arguments)
+
+        # Setup input loop
+        self.inputTask = loop.create_task(CommandInput(self.api))
+
+    async def _Cleanup(self):
+        &#34;&#34;&#34;Cleaning up all the tasks of the program.&#34;&#34;&#34;
+
+        print(&#34;Stopping...&#34;)
+
+        # Cleanup, stop all other async functions
+        self.inputTask.cancel()
+        self.api.Stop()
+        videoAnalyzerCancelEvent.set()
+
+        # Wait till all other async functions are correctly finished
+        await asyncio.gather(self.apiTask, self.videoAnalyzerTask, self.inputTask)
+
+
+class PositionerPipeline:
+    &#34;&#34;&#34;Separate Positioner Pipeline Object&#34;&#34;&#34;
+
+    cameraController: CameraController = None
+    mainWindow: MasterWindow = None
+    frameAnalyzer: MainFrameAnalyzer = None
+    detector: IDetector
+
+    def __init__(self):
+        self.cameraController = None
+        self.mainWindow = None
+        self.frameAnalyzer = None
+        self.detector = None
+
+    def RunPipeline(self, api: APIController, arguments: Dict[str, Any]):
+        &#34;&#34;&#34;
+        Pipeline that builds all objects needed for the detection, tracking and positioning of object in a frame.
+
+        Parameters
+        ----------
+        api : APIController
+            The API used in the pipeline.
+        arguments : Dict[str, Any]
+            The arguments used to run the pipeline
+        &#34;&#34;&#34;
+
+        # Start positioner pipeline
+        self._Startup(api, arguments)
+
+        # Start FrameAnalyzer and Positioner
+        if not videoAnalyzerCancelEvent.is_set():
+            self.cameraController.StartVideoAnalyzer(self.frameAnalyzer, arguments[&#39;analyzeWidth&#39;],
+                                                     arguments[&#39;analyzeHeight&#39;], videoAnalyzerCancelEvent)
+
+        # stop positioner pipeline
+        self._Cleanup()
+
+    def _Startup(self, api: APIController, arguments: Dict[str, Any]):
+        &#34;&#34;&#34;
+        The startup for the positioner pipeline, builds and connects all pipeline objects.
+
+        Parameters
+        ----------
+        api : APIController
+            The API used in the pipeline.
+        arguments : Dict[str, Any]
+            The arguments used to create the pipeline.
+        &#34;&#34;&#34;
+
+        # Setup master window
+        self.mainWindow = MasterWindow(1080, 640, &#34;CGP - Python Applicatie&#34;)
+        self.mainWindow.Open(True, videoAnalyzerCancelEvent)
+
+        # Setup Camera
+        self.cameraController = CameraController()
+        connected = self.cameraController.StartVideoReader(arguments)
+        if not connected:
+            self._Cleanup()
+            return
+
+        # Grab the last from the camera controller for calibration
+        image = self.cameraController.videoReader.ReadLastFrame()[1]
+        image = cv2.resize(image, (arguments[&#39;analyzeWidth&#39;], arguments[&#39;analyzeHeight&#39;]))
+
+        # Pause the video controller
+        self.cameraController.videoReader.paused = True
+
+        # Calibrate, retrieve the chosen calibration configuration
+        calibrationConfiguration = MainCalibrator.Calibrate(
+            self.cameraController.GetUniqueIdentifier(),
+            image,
+            self.mainWindow,
+            arguments
+        )
+
+        if calibrationConfiguration is None and not MainCalibrator.calibrated:
+            print(&#39;Calibration failed, forcefully exiting...&#39;)
+            self._Cleanup()
+            return
+
+        # Resume the video controller
+        self.cameraController.videoReader.paused = False
+
+        # Setup convertor and positioner
+        if calibrationConfiguration is not None:
+            converterSubWindow = CameraSubWindow()
+            self.mainWindow.rightSubWindow = converterSubWindow
+            convertor = Convertors[type(calibrationConfiguration)](calibrationConfiguration, converterSubWindow)
+        else:
+            convertor = IConvertor(None)
+        calibrationDoneEvent.set()
+
+        # create sub window
+        detectionSubWindow = CameraSubWindow()
+        self.mainWindow.leftSubWindow = detectionSubWindow
+
+        # Setup Pipeline
+        positioner = MainPositioner(convertor, api, True)
+        dataWriteConnection = positioner
+        self.detector = DetectionFactory.CreateDetector(arguments, videoAnalyzerCancelEvent, detectionSubWindow)
+        self.frameAnalyzer = MainFrameAnalyzer(self.detector, dataWriteConnection)
+
+    def _Cleanup(self):
+        &#34;&#34;&#34;Cleans the pipeline when it is closed.&#34;&#34;&#34;
+
+        # set events
+        calibrationDoneEvent.set()
+        videoAnalyzerCancelEvent.set()
+
+        # close camera
+        if self.cameraController.videoReader is not None:
+            self.cameraController.videoReader.paused = False
+
+        if self.mainWindow is not None:
+            self.mainWindow.Close()
+
+        if self.detector is not None:
+            self.detector.Close()
+
+        self.cameraController.StopVideoReader()
+
+
+if __name__ == &#39;__main__&#39;:
+    program = Program()
+    mainArguments = program.ParseArguments()
+
+    if mainArguments is not None:
+        if mainArguments[&#34;calibrateDataSet&#34;] is &#34;&#34;:
+            asyncio.run(program.Main())
+        else:
+            StaticAccuracyDataset.RunStaticAccuracyDataSet(mainArguments)
+        print(&#34;Done&#34;)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="Main.CommandInput"><code class="name flex">
+<span>async def <span class="ident">CommandInput</span></span>(<span>api: <a title="API.APIController.APIController" href="../API/APIController.html#API.APIController.APIController">APIController</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Async console input handler. Reads from the console and handles these inputs.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>api</code></strong> :&ensp;<code>APIController</code></dt>
+<dd>The api used for sending data, here only used for testing</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def CommandInput(api: APIController):
+    &#34;&#34;&#34;
+    Async console input handler. Reads from the console and handles these inputs.
+
+    Parameters
+    ----------
+    api : APIController
+        The api used for sending data, here only used for testing
+    &#34;&#34;&#34;
+
+    try:
+        calibrationDoneEvent.wait()
+
+        while True:
+            command = await aioconsole.ainput()
+            if command == &#34;exit&#34;:
+                break
+            if command == &#34;test&#34;:
+                api.Send([DetectedObjectPosition(2, 3, 6, 1, &#39;human&#39;)], 0, datetime.now())
+    except concurrent.futures.CancelledError:
+        return</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="Main.PositionerPipeline"><code class="flex name class">
+<span>class <span class="ident">PositionerPipeline</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Separate Positioner Pipeline Object</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class PositionerPipeline:
+    &#34;&#34;&#34;Separate Positioner Pipeline Object&#34;&#34;&#34;
+
+    cameraController: CameraController = None
+    mainWindow: MasterWindow = None
+    frameAnalyzer: MainFrameAnalyzer = None
+    detector: IDetector
+
+    def __init__(self):
+        self.cameraController = None
+        self.mainWindow = None
+        self.frameAnalyzer = None
+        self.detector = None
+
+    def RunPipeline(self, api: APIController, arguments: Dict[str, Any]):
+        &#34;&#34;&#34;
+        Pipeline that builds all objects needed for the detection, tracking and positioning of object in a frame.
+
+        Parameters
+        ----------
+        api : APIController
+            The API used in the pipeline.
+        arguments : Dict[str, Any]
+            The arguments used to run the pipeline
+        &#34;&#34;&#34;
+
+        # Start positioner pipeline
+        self._Startup(api, arguments)
+
+        # Start FrameAnalyzer and Positioner
+        if not videoAnalyzerCancelEvent.is_set():
+            self.cameraController.StartVideoAnalyzer(self.frameAnalyzer, arguments[&#39;analyzeWidth&#39;],
+                                                     arguments[&#39;analyzeHeight&#39;], videoAnalyzerCancelEvent)
+
+        # stop positioner pipeline
+        self._Cleanup()
+
+    def _Startup(self, api: APIController, arguments: Dict[str, Any]):
+        &#34;&#34;&#34;
+        The startup for the positioner pipeline, builds and connects all pipeline objects.
+
+        Parameters
+        ----------
+        api : APIController
+            The API used in the pipeline.
+        arguments : Dict[str, Any]
+            The arguments used to create the pipeline.
+        &#34;&#34;&#34;
+
+        # Setup master window
+        self.mainWindow = MasterWindow(1080, 640, &#34;CGP - Python Applicatie&#34;)
+        self.mainWindow.Open(True, videoAnalyzerCancelEvent)
+
+        # Setup Camera
+        self.cameraController = CameraController()
+        connected = self.cameraController.StartVideoReader(arguments)
+        if not connected:
+            self._Cleanup()
+            return
+
+        # Grab the last from the camera controller for calibration
+        image = self.cameraController.videoReader.ReadLastFrame()[1]
+        image = cv2.resize(image, (arguments[&#39;analyzeWidth&#39;], arguments[&#39;analyzeHeight&#39;]))
+
+        # Pause the video controller
+        self.cameraController.videoReader.paused = True
+
+        # Calibrate, retrieve the chosen calibration configuration
+        calibrationConfiguration = MainCalibrator.Calibrate(
+            self.cameraController.GetUniqueIdentifier(),
+            image,
+            self.mainWindow,
+            arguments
+        )
+
+        if calibrationConfiguration is None and not MainCalibrator.calibrated:
+            print(&#39;Calibration failed, forcefully exiting...&#39;)
+            self._Cleanup()
+            return
+
+        # Resume the video controller
+        self.cameraController.videoReader.paused = False
+
+        # Setup convertor and positioner
+        if calibrationConfiguration is not None:
+            converterSubWindow = CameraSubWindow()
+            self.mainWindow.rightSubWindow = converterSubWindow
+            convertor = Convertors[type(calibrationConfiguration)](calibrationConfiguration, converterSubWindow)
+        else:
+            convertor = IConvertor(None)
+        calibrationDoneEvent.set()
+
+        # create sub window
+        detectionSubWindow = CameraSubWindow()
+        self.mainWindow.leftSubWindow = detectionSubWindow
+
+        # Setup Pipeline
+        positioner = MainPositioner(convertor, api, True)
+        dataWriteConnection = positioner
+        self.detector = DetectionFactory.CreateDetector(arguments, videoAnalyzerCancelEvent, detectionSubWindow)
+        self.frameAnalyzer = MainFrameAnalyzer(self.detector, dataWriteConnection)
+
+    def _Cleanup(self):
+        &#34;&#34;&#34;Cleans the pipeline when it is closed.&#34;&#34;&#34;
+
+        # set events
+        calibrationDoneEvent.set()
+        videoAnalyzerCancelEvent.set()
+
+        # close camera
+        if self.cameraController.videoReader is not None:
+            self.cameraController.videoReader.paused = False
+
+        if self.mainWindow is not None:
+            self.mainWindow.Close()
+
+        if self.detector is not None:
+            self.detector.Close()
+
+        self.cameraController.StopVideoReader()</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="Main.PositionerPipeline.cameraController"><code class="name">var <span class="ident">cameraController</span> : <a title="CameraReader.CameraController.CameraController" href="../CameraReader/CameraController.html#CameraReader.CameraController.CameraController">CameraController</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="Main.PositionerPipeline.detector"><code class="name">var <span class="ident">detector</span> : <a title="FrameAnalyzer.IDetector.IDetector" href="../FrameAnalyzer/IDetector.html#FrameAnalyzer.IDetector.IDetector">IDetector</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="Main.PositionerPipeline.frameAnalyzer"><code class="name">var <span class="ident">frameAnalyzer</span> : <a title="FrameAnalyzer.MainFrameAnalyzer.MainFrameAnalyzer" href="../FrameAnalyzer/MainFrameAnalyzer.html#FrameAnalyzer.MainFrameAnalyzer.MainFrameAnalyzer">MainFrameAnalyzer</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="Main.PositionerPipeline.mainWindow"><code class="name">var <span class="ident">mainWindow</span> : <a title="Windowing.MasterWindow.MasterWindow" href="../Windowing/MasterWindow.html#Windowing.MasterWindow.MasterWindow">MasterWindow</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="Main.PositionerPipeline.RunPipeline"><code class="name flex">
+<span>def <span class="ident">RunPipeline</span></span>(<span>self, api: <a title="API.APIController.APIController" href="../API/APIController.html#API.APIController.APIController">APIController</a>, arguments: Dict[str, Any])</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Pipeline that builds all objects needed for the detection, tracking and positioning of object in a frame.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>api</code></strong> :&ensp;<code>APIController</code></dt>
+<dd>The API used in the pipeline.</dd>
+<dt><strong><code>arguments</code></strong> :&ensp;<code>Dict[str, Any]</code></dt>
+<dd>The arguments used to run the pipeline</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def RunPipeline(self, api: APIController, arguments: Dict[str, Any]):
+    &#34;&#34;&#34;
+    Pipeline that builds all objects needed for the detection, tracking and positioning of object in a frame.
+
+    Parameters
+    ----------
+    api : APIController
+        The API used in the pipeline.
+    arguments : Dict[str, Any]
+        The arguments used to run the pipeline
+    &#34;&#34;&#34;
+
+    # Start positioner pipeline
+    self._Startup(api, arguments)
+
+    # Start FrameAnalyzer and Positioner
+    if not videoAnalyzerCancelEvent.is_set():
+        self.cameraController.StartVideoAnalyzer(self.frameAnalyzer, arguments[&#39;analyzeWidth&#39;],
+                                                 arguments[&#39;analyzeHeight&#39;], videoAnalyzerCancelEvent)
+
+    # stop positioner pipeline
+    self._Cleanup()</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="Main.Program"><code class="flex name class">
+<span>class <span class="ident">Program</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Program:
+    # objects
+    api: APIController
+
+    # tasks
+    inputTask: Any
+    apiTask: Any
+    videoAnalyzerTask: Any
+    arguments: Dict[str, Any]
+
+    def __init__(self):
+        self.api = None
+        self.inputTask = None
+        self.apiTask = None
+        self.videoAnalyzerTask = None
+        self.arguments = None
+
+    @staticmethod
+    def ValidateAllArguments(arguments: Dict[str, Any]):
+        &#34;&#34;&#34;
+        Validate all arguments.
+
+        Parameters
+        ----------
+        arguments : Dict[str, Any]
+            The arguments to be validated
+
+        Returns
+        -------
+        bool
+            True if arguments are correct, otherwise false
+        &#34;&#34;&#34;
+        try:
+            APIController.ValidateApiArguments(arguments)
+            CameraController.ValidateReaderArguments(arguments)
+            MainFrameAnalyzer.ValidateFrameAnalyzerArguments(arguments)
+            MainCalibrator.ValidateCalibratorArguments(arguments)
+            StaticAccuracyDataset.ValidateStaticAccuracyDatasetArguments(arguments)
+        except (ValueError, TypeError) as e:
+            print(e)
+            return False
+        return True
+
+    def ParseArguments(self):
+        &#34;&#34;&#34;
+        Parse the arguments
+
+        Returns
+        -------
+        Dict[str, Any]
+            The arguments as a dictionary
+        &#34;&#34;&#34;
+        # Create the argument parser
+        argumentParser = argparse.ArgumentParser()
+
+        # Add arguments
+        APIController.AddApiArguments(argumentParser)
+        CameraController.AddVideoReaderArguments(argumentParser)
+        MainFrameAnalyzer.AddFrameAnalyzerArguments(argumentParser)
+        MainCalibrator.AddCalibratorArguments(argumentParser)
+        StaticAccuracyDataset.AddStaticAccuracyDatasetArguments(argumentParser)
+        UserArgsInput.UserArgsInput().AddArgsGUIArguments(argumentParser)
+
+        # Parse all arguments
+        arguments = vars(argumentParser.parse_args())
+
+        # Validate all arguments
+        if not self.ValidateAllArguments(arguments):
+            return None
+
+        if arguments[&#39;displayArgsGUI&#39;]:
+            arguments = UserArgsInput.UserArgsInput().GetArgsFromUser(arguments)
+
+        self.arguments = arguments
+        return arguments
+
+    async def Main(self):
+        &#34;&#34;&#34;
+        The start of the program.
+        The main async function of the program,
+        starts all other async functions and cancels them when the program exits.
+        Also creates the api used for sending data.
+        &#34;&#34;&#34;
+
+        # Start everything
+        await self._Startup()
+
+        # Wait for video input to stop
+        await asyncio.wait([self.apiTask, self.inputTask, self.videoAnalyzerTask], return_when=asyncio.FIRST_COMPLETED)
+
+        # Clean everything
+        await self._Cleanup()
+
+    async def _Startup(self):
+        &#34;&#34;&#34;Creation of all the tasks for the program.&#34;&#34;&#34;
+
+        loop = asyncio.get_running_loop()
+        executor = ThreadPoolExecutor(1)
+
+        if self.arguments is None:
+            self.ParseArguments()
+
+        # Setup API
+        self.api = APIController(loop, False)
+        self.apiTask = loop.create_task(self.api.Start(self.arguments[&#34;port&#34;]))
+        await self.api.UntilConnected()
+
+        # Setup positioner pipeline
+        pipeline = PositionerPipeline()
+        self.videoAnalyzerTask = loop.run_in_executor(
+            executor, pipeline.RunPipeline, self.api, self.arguments)
+
+        # Setup input loop
+        self.inputTask = loop.create_task(CommandInput(self.api))
+
+    async def _Cleanup(self):
+        &#34;&#34;&#34;Cleaning up all the tasks of the program.&#34;&#34;&#34;
+
+        print(&#34;Stopping...&#34;)
+
+        # Cleanup, stop all other async functions
+        self.inputTask.cancel()
+        self.api.Stop()
+        videoAnalyzerCancelEvent.set()
+
+        # Wait till all other async functions are correctly finished
+        await asyncio.gather(self.apiTask, self.videoAnalyzerTask, self.inputTask)</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="Main.Program.api"><code class="name">var <span class="ident">api</span> : <a title="API.APIController.APIController" href="../API/APIController.html#API.APIController.APIController">APIController</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="Main.Program.apiTask"><code class="name">var <span class="ident">apiTask</span> : Any</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="Main.Program.arguments"><code class="name">var <span class="ident">arguments</span> : Dict[str, Any]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="Main.Program.inputTask"><code class="name">var <span class="ident">inputTask</span> : Any</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="Main.Program.videoAnalyzerTask"><code class="name">var <span class="ident">videoAnalyzerTask</span> : Any</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Static methods</h3>
+<dl>
+<dt id="Main.Program.ValidateAllArguments"><code class="name flex">
+<span>def <span class="ident">ValidateAllArguments</span></span>(<span>arguments: Dict[str, Any])</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Validate all arguments.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>arguments</code></strong> :&ensp;<code>Dict[str, Any]</code></dt>
+<dd>The arguments to be validated</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>bool</code></dt>
+<dd>True if arguments are correct, otherwise false</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def ValidateAllArguments(arguments: Dict[str, Any]):
+    &#34;&#34;&#34;
+    Validate all arguments.
+
+    Parameters
+    ----------
+    arguments : Dict[str, Any]
+        The arguments to be validated
+
+    Returns
+    -------
+    bool
+        True if arguments are correct, otherwise false
+    &#34;&#34;&#34;
+    try:
+        APIController.ValidateApiArguments(arguments)
+        CameraController.ValidateReaderArguments(arguments)
+        MainFrameAnalyzer.ValidateFrameAnalyzerArguments(arguments)
+        MainCalibrator.ValidateCalibratorArguments(arguments)
+        StaticAccuracyDataset.ValidateStaticAccuracyDatasetArguments(arguments)
+    except (ValueError, TypeError) as e:
+        print(e)
+        return False
+    return True</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="Main.Program.Main"><code class="name flex">
+<span>async def <span class="ident">Main</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>The start of the program.
+The main async function of the program,
+starts all other async functions and cancels them when the program exits.
+Also creates the api used for sending data.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def Main(self):
+    &#34;&#34;&#34;
+    The start of the program.
+    The main async function of the program,
+    starts all other async functions and cancels them when the program exits.
+    Also creates the api used for sending data.
+    &#34;&#34;&#34;
+
+    # Start everything
+    await self._Startup()
+
+    # Wait for video input to stop
+    await asyncio.wait([self.apiTask, self.inputTask, self.videoAnalyzerTask], return_when=asyncio.FIRST_COMPLETED)
+
+    # Clean everything
+    await self._Cleanup()</code></pre>
+</details>
+</dd>
+<dt id="Main.Program.ParseArguments"><code class="name flex">
+<span>def <span class="ident">ParseArguments</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parse the arguments</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Dict[str, Any]</code></dt>
+<dd>The arguments as a dictionary</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ParseArguments(self):
+    &#34;&#34;&#34;
+    Parse the arguments
+
+    Returns
+    -------
+    Dict[str, Any]
+        The arguments as a dictionary
+    &#34;&#34;&#34;
+    # Create the argument parser
+    argumentParser = argparse.ArgumentParser()
+
+    # Add arguments
+    APIController.AddApiArguments(argumentParser)
+    CameraController.AddVideoReaderArguments(argumentParser)
+    MainFrameAnalyzer.AddFrameAnalyzerArguments(argumentParser)
+    MainCalibrator.AddCalibratorArguments(argumentParser)
+    StaticAccuracyDataset.AddStaticAccuracyDatasetArguments(argumentParser)
+    UserArgsInput.UserArgsInput().AddArgsGUIArguments(argumentParser)
+
+    # Parse all arguments
+    arguments = vars(argumentParser.parse_args())
+
+    # Validate all arguments
+    if not self.ValidateAllArguments(arguments):
+        return None
+
+    if arguments[&#39;displayArgsGUI&#39;]:
+        arguments = UserArgsInput.UserArgsInput().GetArgsFromUser(arguments)
+
+    self.arguments = arguments
+    return arguments</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<img src="/images/logo_full.png" alt="">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="Main.CommandInput" href="#Main.CommandInput">CommandInput</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="Main.PositionerPipeline" href="#Main.PositionerPipeline">PositionerPipeline</a></code></h4>
+<ul class="">
+<li><code><a title="Main.PositionerPipeline.RunPipeline" href="#Main.PositionerPipeline.RunPipeline">RunPipeline</a></code></li>
+<li><code><a title="Main.PositionerPipeline.cameraController" href="#Main.PositionerPipeline.cameraController">cameraController</a></code></li>
+<li><code><a title="Main.PositionerPipeline.detector" href="#Main.PositionerPipeline.detector">detector</a></code></li>
+<li><code><a title="Main.PositionerPipeline.frameAnalyzer" href="#Main.PositionerPipeline.frameAnalyzer">frameAnalyzer</a></code></li>
+<li><code><a title="Main.PositionerPipeline.mainWindow" href="#Main.PositionerPipeline.mainWindow">mainWindow</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="Main.Program" href="#Main.Program">Program</a></code></h4>
+<ul class="">
+<li><code><a title="Main.Program.Main" href="#Main.Program.Main">Main</a></code></li>
+<li><code><a title="Main.Program.ParseArguments" href="#Main.Program.ParseArguments">ParseArguments</a></code></li>
+<li><code><a title="Main.Program.ValidateAllArguments" href="#Main.Program.ValidateAllArguments">ValidateAllArguments</a></code></li>
+<li><code><a title="Main.Program.api" href="#Main.Program.api">api</a></code></li>
+<li><code><a title="Main.Program.apiTask" href="#Main.Program.apiTask">apiTask</a></code></li>
+<li><code><a title="Main.Program.arguments" href="#Main.Program.arguments">arguments</a></code></li>
+<li><code><a title="Main.Program.inputTask" href="#Main.Program.inputTask">inputTask</a></code></li>
+<li><code><a title="Main.Program.videoAnalyzerTask" href="#Main.Program.videoAnalyzerTask">videoAnalyzerTask</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p><center>
+This program has been developed by students from the bachelor Computer Science at Utrecht University within the Software Project course.
+&#169 Copyright Utrecht University (Department of Information and Computing Sciences)
+</center></p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>Calibrator.Input.Primitives.PlanePrimitive API documentation</title>
+<meta name="description" content="Implementation of the IPrimitive.
+Create a plane on screen for calibration." />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;700&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/favicon/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="pdoc-header">
+<nav class="pdoc-nav">
+<ul>
+<li>
+<a href="../index.html" class="menu">Home</a>
+</li>
+<li>
+<a href="../Main.html" class="menu">Main</a>
+</li>
+<li>
+<a href="../API/index.html" class="menu">API</a>
+</li>
+<li>
+<a href="../Calibrator/index.html" class="menu">Calibrator</a>
+</li>
+<li>
+<a href="../CameraReader/index.html" class="menu">Camera Reader</a>
+</li>
+<li>
+<a href="../FrameAnalyzer/index.html" class="menu">Frame Analyzer</a>
+</li>
+<li>
+<a href="../IO/index.html" class="menu">IO</a>
+</li>
+<li>
+<a href="../Positioner/index.html" class="menu">Positioner</a>
+</li>
+<li>
+<a href="../Windowing/index.html" class="menu">Windowing</a>
+</li>
+<li>
+<a href="../ArgsGUI/index.html" class="menu">ArgsGUI</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>Calibrator.Input.Primitives.PlanePrimitive</code></h1>
+</header>
+<section id="section-intro">
+<p>Implementation of the IPrimitive.
+Create a plane on screen for calibration.</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># This program has been developed by students from the bachelor Computer Science at Utrecht University within the
+# Software Project course.
+# © Copyright Utrecht University (Department of Information and Computing Sciences)
+
+&#34;&#34;&#34;
+Implementation of the IPrimitive.
+Create a plane on screen for calibration.
+&#34;&#34;&#34;
+
+import cv2
+import numpy as np
+from Calibrator.Input.Primitives.IPrimitive import IPrimitive, IPrimitivePoint
+from Windowing.Rendering import Rendering
+
+
+class PlanePrimitive(IPrimitive):
+    def __init__(self, relativeX=0.5, relativeY=0.5, relativeWidth=0.5, relativeHeight=0.5):
+        &#34;&#34;&#34; Initialize a new plane primitive.
+
+        Parameters
+        ----------
+        relativeX : float
+            The relative center x position of the plane.
+        relativeY : float
+            The relative center y position of the plane.
+        relativeWidth : float
+            The relative width of the plane.
+        relativeHeight : float
+            The relative height of the plane.
+        &#34;&#34;&#34;
+
+        # Create points
+        points = [
+            IPrimitivePoint(-relativeWidth / 2, -relativeHeight / 2),
+            IPrimitivePoint(relativeWidth / 2, -relativeHeight / 2),
+            IPrimitivePoint(relativeWidth / 2, relativeHeight / 2),
+            IPrimitivePoint(-relativeWidth / 2, relativeHeight / 2)
+        ]
+
+        # Call super constructor
+        super(PlanePrimitive, self).__init__(relativeX, relativeY, points)
+
+    def IsMouseOver(self, relativeMouseX, relativeMouseY) -&gt; bool:
+        &#34;&#34;&#34; Check if the mouse is over the primitive.
+
+        Parameters
+        ----------
+        relativeMouseX : float
+            The relative x screen position of the mouse.
+        relativeMouseY : float
+            The relative y screen position of the mouse.
+
+        Returns
+        -------
+        bool
+            True if the mouse is over the primitive, false otherwise.
+        &#34;&#34;&#34;
+
+        # Check if mouse is over the quadrilateral plane - we require
+        # an arbitrary scale to go from float space to int space
+        arbitraryScale = 100
+
+        points = self.GetRelativePoints()
+        for i in range(len(points)):
+            points[i] = (int(points[i][0] * arbitraryScale), int(points[i][1] * arbitraryScale))
+
+        mouseX = int(relativeMouseX * arbitraryScale)
+        mouseY = int(relativeMouseY * arbitraryScale)
+
+        return cv2.pointPolygonTest(np.array(points), (mouseX, mouseY), False) &gt;= 0
+
+    def Render(self, surface, xOffset, yOffset, absoluteWidth, absoluteHeight, scaled=False):  # pragma: no cover
+        &#34;&#34;&#34; Render the primitive.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to render on.
+        xOffset : int
+            The x offset of the primitive.
+        yOffset : int
+            The y offset of the primitive.
+        absoluteWidth : int
+            The absolute width of the respective image.
+        absoluteHeight : int
+            The absolute height of the respective image.
+        scaled : bool
+            Determines if the points should be shown scaled. Default is False.
+        &#34;&#34;&#34;
+
+        # Get the absolute points, with the offset applied
+        points = self.GetAbsolutePoints(absoluteWidth, absoluteHeight)
+        for i in range(len(points)):
+            points[i] = (int(points[i][0]) + xOffset, int(points[i][1]) + yOffset)
+
+        # Setup alpha and colors for the lines between points
+        alpha = 255
+        colors = [
+            (255, 0, 0, alpha),  # Red
+            (0, 0, 255, alpha),  # Blue
+            (255, 0, 0, alpha),  # Red
+            (0, 0, 255, alpha)   # Blue
+        ]
+
+        # Draw a perspective grid on the plane between the four points,
+        # we do this by setting up a number of points on the lines between
+        # the points, and then drawing a line between each of these points
+
+        # Get the lines between the points
+        subPoints = 7
+        lines = []
+        for i in range(len(points)):
+            lines.append(np.linspace(points[i][0], points[(i + 1) % len(points)][0], subPoints))
+            lines.append(np.linspace(points[i][1], points[(i + 1) % len(points)][1], subPoints))
+
+        # Draw the lines from one line to it&#39;s opposite line to create a grid
+        for i in range(subPoints):
+            # Skip the first and last point
+            if i == 0 or i == subPoints - 1:
+                continue
+
+            # Render the lines
+            Rendering.RenderLine(
+                surface,
+                int(lines[0][i]), int(lines[1][i]),
+                int(lines[4][(subPoints - 1) - i]), int(lines[5][(subPoints - 1) - i]),
+                (255, 255, 255, alpha)
+            )
+            Rendering.RenderLine(
+                surface,
+                int(lines[2][i]), int(lines[3][i]),
+                int(lines[6][(subPoints - 1) - i]), int(lines[7][(subPoints - 1) - i]),
+                (255, 255, 255, alpha)
+            )
+
+        # Draw the lines and direction texts between the points
+        direction = [&#34;Verweg&#34;, &#34;Rechts&#34;, &#34;Dichtbij&#34;, &#34;Links&#34;]
+        # Magic numbers to get the boxes and text to fit and be centered
+        directionOffset = [(-10, -12), (10, 0), (-12, 14), (-40, 0)]
+        boxOffset = (-4, -8)
+        boxesSizes = [(53, 16), (50, 16), (55, 16), (40, 16)]
+        for i in range(len(points)):
+            x1, y1 = points[i]
+            x2, y2 = points[(i + 1) % len(points)]
+
+            # Render line
+            Rendering.RenderLine(surface, x1, y1, x2, y2, colors[i], 2)
+
+            # Render box with text
+            Rendering.RenderBox(
+                surface,
+                (x1 + x2) / 2 + directionOffset[i][0] + boxOffset[0],
+                (y1 + y2) / 2 + directionOffset[i][1] + boxOffset[1],
+                boxesSizes[i][0],
+                boxesSizes[i][1],
+                (25, 25, 25, 125)
+            )
+            Rendering.RenderText(
+                surface,
+                direction[i],
+                (x1 + x2) / 2 + directionOffset[i][0],
+                (y1 + y2) / 2 + directionOffset[i][1],
+                Rendering.FontSize.Small,
+                Rendering.TextAlignment.MiddleLeft,
+                (255, 255, 255, alpha),
+                1
+            )
+
+        super(PlanePrimitive, self).Render(surface, xOffset, yOffset, absoluteWidth, absoluteHeight, scaled)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive"><code class="flex name class">
+<span>class <span class="ident">PlanePrimitive</span></span>
+<span>(</span><span>relativeX=0.5, relativeY=0.5, relativeWidth=0.5, relativeHeight=0.5)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Helper class that provides a standard way to create an ABC using
+inheritance.</p>
+<p>Initialize a new plane primitive.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>relativeX</code></strong> :&ensp;<code>float</code></dt>
+<dd>The relative center x position of the plane.</dd>
+<dt><strong><code>relativeY</code></strong> :&ensp;<code>float</code></dt>
+<dd>The relative center y position of the plane.</dd>
+<dt><strong><code>relativeWidth</code></strong> :&ensp;<code>float</code></dt>
+<dd>The relative width of the plane.</dd>
+<dt><strong><code>relativeHeight</code></strong> :&ensp;<code>float</code></dt>
+<dd>The relative height of the plane.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class PlanePrimitive(IPrimitive):
+    def __init__(self, relativeX=0.5, relativeY=0.5, relativeWidth=0.5, relativeHeight=0.5):
+        &#34;&#34;&#34; Initialize a new plane primitive.
+
+        Parameters
+        ----------
+        relativeX : float
+            The relative center x position of the plane.
+        relativeY : float
+            The relative center y position of the plane.
+        relativeWidth : float
+            The relative width of the plane.
+        relativeHeight : float
+            The relative height of the plane.
+        &#34;&#34;&#34;
+
+        # Create points
+        points = [
+            IPrimitivePoint(-relativeWidth / 2, -relativeHeight / 2),
+            IPrimitivePoint(relativeWidth / 2, -relativeHeight / 2),
+            IPrimitivePoint(relativeWidth / 2, relativeHeight / 2),
+            IPrimitivePoint(-relativeWidth / 2, relativeHeight / 2)
+        ]
+
+        # Call super constructor
+        super(PlanePrimitive, self).__init__(relativeX, relativeY, points)
+
+    def IsMouseOver(self, relativeMouseX, relativeMouseY) -&gt; bool:
+        &#34;&#34;&#34; Check if the mouse is over the primitive.
+
+        Parameters
+        ----------
+        relativeMouseX : float
+            The relative x screen position of the mouse.
+        relativeMouseY : float
+            The relative y screen position of the mouse.
+
+        Returns
+        -------
+        bool
+            True if the mouse is over the primitive, false otherwise.
+        &#34;&#34;&#34;
+
+        # Check if mouse is over the quadrilateral plane - we require
+        # an arbitrary scale to go from float space to int space
+        arbitraryScale = 100
+
+        points = self.GetRelativePoints()
+        for i in range(len(points)):
+            points[i] = (int(points[i][0] * arbitraryScale), int(points[i][1] * arbitraryScale))
+
+        mouseX = int(relativeMouseX * arbitraryScale)
+        mouseY = int(relativeMouseY * arbitraryScale)
+
+        return cv2.pointPolygonTest(np.array(points), (mouseX, mouseY), False) &gt;= 0
+
+    def Render(self, surface, xOffset, yOffset, absoluteWidth, absoluteHeight, scaled=False):  # pragma: no cover
+        &#34;&#34;&#34; Render the primitive.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to render on.
+        xOffset : int
+            The x offset of the primitive.
+        yOffset : int
+            The y offset of the primitive.
+        absoluteWidth : int
+            The absolute width of the respective image.
+        absoluteHeight : int
+            The absolute height of the respective image.
+        scaled : bool
+            Determines if the points should be shown scaled. Default is False.
+        &#34;&#34;&#34;
+
+        # Get the absolute points, with the offset applied
+        points = self.GetAbsolutePoints(absoluteWidth, absoluteHeight)
+        for i in range(len(points)):
+            points[i] = (int(points[i][0]) + xOffset, int(points[i][1]) + yOffset)
+
+        # Setup alpha and colors for the lines between points
+        alpha = 255
+        colors = [
+            (255, 0, 0, alpha),  # Red
+            (0, 0, 255, alpha),  # Blue
+            (255, 0, 0, alpha),  # Red
+            (0, 0, 255, alpha)   # Blue
+        ]
+
+        # Draw a perspective grid on the plane between the four points,
+        # we do this by setting up a number of points on the lines between
+        # the points, and then drawing a line between each of these points
+
+        # Get the lines between the points
+        subPoints = 7
+        lines = []
+        for i in range(len(points)):
+            lines.append(np.linspace(points[i][0], points[(i + 1) % len(points)][0], subPoints))
+            lines.append(np.linspace(points[i][1], points[(i + 1) % len(points)][1], subPoints))
+
+        # Draw the lines from one line to it&#39;s opposite line to create a grid
+        for i in range(subPoints):
+            # Skip the first and last point
+            if i == 0 or i == subPoints - 1:
+                continue
+
+            # Render the lines
+            Rendering.RenderLine(
+                surface,
+                int(lines[0][i]), int(lines[1][i]),
+                int(lines[4][(subPoints - 1) - i]), int(lines[5][(subPoints - 1) - i]),
+                (255, 255, 255, alpha)
+            )
+            Rendering.RenderLine(
+                surface,
+                int(lines[2][i]), int(lines[3][i]),
+                int(lines[6][(subPoints - 1) - i]), int(lines[7][(subPoints - 1) - i]),
+                (255, 255, 255, alpha)
+            )
+
+        # Draw the lines and direction texts between the points
+        direction = [&#34;Verweg&#34;, &#34;Rechts&#34;, &#34;Dichtbij&#34;, &#34;Links&#34;]
+        # Magic numbers to get the boxes and text to fit and be centered
+        directionOffset = [(-10, -12), (10, 0), (-12, 14), (-40, 0)]
+        boxOffset = (-4, -8)
+        boxesSizes = [(53, 16), (50, 16), (55, 16), (40, 16)]
+        for i in range(len(points)):
+            x1, y1 = points[i]
+            x2, y2 = points[(i + 1) % len(points)]
+
+            # Render line
+            Rendering.RenderLine(surface, x1, y1, x2, y2, colors[i], 2)
+
+            # Render box with text
+            Rendering.RenderBox(
+                surface,
+                (x1 + x2) / 2 + directionOffset[i][0] + boxOffset[0],
+                (y1 + y2) / 2 + directionOffset[i][1] + boxOffset[1],
+                boxesSizes[i][0],
+                boxesSizes[i][1],
+                (25, 25, 25, 125)
+            )
+            Rendering.RenderText(
+                surface,
+                direction[i],
+                (x1 + x2) / 2 + directionOffset[i][0],
+                (y1 + y2) / 2 + directionOffset[i][1],
+                Rendering.FontSize.Small,
+                Rendering.TextAlignment.MiddleLeft,
+                (255, 255, 255, alpha),
+                1
+            )
+
+        super(PlanePrimitive, self).Render(surface, xOffset, yOffset, absoluteWidth, absoluteHeight, scaled)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive" href="IPrimitive.html#Calibrator.Input.Primitives.IPrimitive.IPrimitive">IPrimitive</a></li>
+<li>abc.ABC</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.GetAbsolutePoint"><code class="name flex">
+<span>def <span class="ident">GetAbsolutePoint</span></span>(<span>self, index, absoluteWidth, absoluteHeight) -> (<class 'int'>, <class 'int'>)</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive" href="IPrimitive.html#Calibrator.Input.Primitives.IPrimitive.IPrimitive">IPrimitive</a></code>.<code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.GetAbsolutePoint" href="IPrimitive.html#Calibrator.Input.Primitives.IPrimitive.IPrimitive.GetAbsolutePoint">GetAbsolutePoint</a></code>
+</p>
+<div class="desc inherited"><p>Converts specific relative primitive point with index to absolute screen point …</p></div>
+</dd>
+<dt id="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.GetAbsolutePoints"><code class="name flex">
+<span>def <span class="ident">GetAbsolutePoints</span></span>(<span>self, absoluteWidth, absoluteHeight) -> [(<class 'int'>, <class 'int'>)]</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive" href="IPrimitive.html#Calibrator.Input.Primitives.IPrimitive.IPrimitive">IPrimitive</a></code>.<code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.GetAbsolutePoints" href="IPrimitive.html#Calibrator.Input.Primitives.IPrimitive.IPrimitive.GetAbsolutePoints">GetAbsolutePoints</a></code>
+</p>
+<div class="desc inherited"><p>Converts relative primitive points to absolute screen points …</p></div>
+</dd>
+<dt id="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.GetRelativePoint"><code class="name flex">
+<span>def <span class="ident">GetRelativePoint</span></span>(<span>self, index) -> (<class 'float'>, <class 'float'>)</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive" href="IPrimitive.html#Calibrator.Input.Primitives.IPrimitive.IPrimitive">IPrimitive</a></code>.<code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.GetRelativePoint" href="IPrimitive.html#Calibrator.Input.Primitives.IPrimitive.IPrimitive.GetRelativePoint">GetRelativePoint</a></code>
+</p>
+<div class="desc inherited"><p>Get a specific relative primitive point …</p></div>
+</dd>
+<dt id="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.GetRelativePoints"><code class="name flex">
+<span>def <span class="ident">GetRelativePoints</span></span>(<span>self) -> [(<class 'float'>, <class 'float'>)]</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive" href="IPrimitive.html#Calibrator.Input.Primitives.IPrimitive.IPrimitive">IPrimitive</a></code>.<code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.GetRelativePoints" href="IPrimitive.html#Calibrator.Input.Primitives.IPrimitive.IPrimitive.GetRelativePoints">GetRelativePoints</a></code>
+</p>
+<div class="desc inherited"><p>Lists relative primitive points …</p></div>
+</dd>
+<dt id="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.HandleMouseMovement"><code class="name flex">
+<span>def <span class="ident">HandleMouseMovement</span></span>(<span>self, relativeMouseX, relativeMouseY) -> bool</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive" href="IPrimitive.html#Calibrator.Input.Primitives.IPrimitive.IPrimitive">IPrimitive</a></code>.<code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.HandleMouseMovement" href="IPrimitive.html#Calibrator.Input.Primitives.IPrimitive.IPrimitive.HandleMouseMovement">HandleMouseMovement</a></code>
+</p>
+<div class="desc inherited"><p>Handles mouse movement …</p></div>
+</dd>
+<dt id="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.IsMouseOver"><code class="name flex">
+<span>def <span class="ident">IsMouseOver</span></span>(<span>self, relativeMouseX, relativeMouseY) -> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Check if the mouse is over the primitive.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>relativeMouseX</code></strong> :&ensp;<code>float</code></dt>
+<dd>The relative x screen position of the mouse.</dd>
+<dt><strong><code>relativeMouseY</code></strong> :&ensp;<code>float</code></dt>
+<dd>The relative y screen position of the mouse.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>bool</code></dt>
+<dd>True if the mouse is over the primitive, false otherwise.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def IsMouseOver(self, relativeMouseX, relativeMouseY) -&gt; bool:
+    &#34;&#34;&#34; Check if the mouse is over the primitive.
+
+    Parameters
+    ----------
+    relativeMouseX : float
+        The relative x screen position of the mouse.
+    relativeMouseY : float
+        The relative y screen position of the mouse.
+
+    Returns
+    -------
+    bool
+        True if the mouse is over the primitive, false otherwise.
+    &#34;&#34;&#34;
+
+    # Check if mouse is over the quadrilateral plane - we require
+    # an arbitrary scale to go from float space to int space
+    arbitraryScale = 100
+
+    points = self.GetRelativePoints()
+    for i in range(len(points)):
+        points[i] = (int(points[i][0] * arbitraryScale), int(points[i][1] * arbitraryScale))
+
+    mouseX = int(relativeMouseX * arbitraryScale)
+    mouseY = int(relativeMouseY * arbitraryScale)
+
+    return cv2.pointPolygonTest(np.array(points), (mouseX, mouseY), False) &gt;= 0</code></pre>
+</details>
+</dd>
+<dt id="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.IsMouseOverPoint"><code class="name flex">
+<span>def <span class="ident">IsMouseOverPoint</span></span>(<span>self, relativeMouseX, relativeMouseY) -> (<class 'bool'>, <class 'int'>)</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive" href="IPrimitive.html#Calibrator.Input.Primitives.IPrimitive.IPrimitive">IPrimitive</a></code>.<code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.IsMouseOverPoint" href="IPrimitive.html#Calibrator.Input.Primitives.IPrimitive.IPrimitive.IsMouseOverPoint">IsMouseOverPoint</a></code>
+</p>
+<div class="desc inherited"><p>Checks if the relative mouse position is over any primitive point …</p></div>
+</dd>
+<dt id="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.MoveTo"><code class="name flex">
+<span>def <span class="ident">MoveTo</span></span>(<span>self, relativeX, relativeY)</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive" href="IPrimitive.html#Calibrator.Input.Primitives.IPrimitive.IPrimitive">IPrimitive</a></code>.<code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.MoveTo" href="IPrimitive.html#Calibrator.Input.Primitives.IPrimitive.IPrimitive.MoveTo">MoveTo</a></code>
+</p>
+<div class="desc inherited"><p>Moves the shape as a whole …</p></div>
+</dd>
+<dt id="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.Render"><code class="name flex">
+<span>def <span class="ident">Render</span></span>(<span>self, surface, xOffset, yOffset, absoluteWidth, absoluteHeight, scaled=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Render the primitive.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>surface</code></strong> :&ensp;<code>pygame.Surface</code></dt>
+<dd>The surface to render on.</dd>
+<dt><strong><code>xOffset</code></strong> :&ensp;<code>int</code></dt>
+<dd>The x offset of the primitive.</dd>
+<dt><strong><code>yOffset</code></strong> :&ensp;<code>int</code></dt>
+<dd>The y offset of the primitive.</dd>
+<dt><strong><code>absoluteWidth</code></strong> :&ensp;<code>int</code></dt>
+<dd>The absolute width of the respective image.</dd>
+<dt><strong><code>absoluteHeight</code></strong> :&ensp;<code>int</code></dt>
+<dd>The absolute height of the respective image.</dd>
+<dt><strong><code>scaled</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Determines if the points should be shown scaled. Default is False.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def Render(self, surface, xOffset, yOffset, absoluteWidth, absoluteHeight, scaled=False):  # pragma: no cover
+    &#34;&#34;&#34; Render the primitive.
+
+    Parameters
+    ----------
+    surface : pygame.Surface
+        The surface to render on.
+    xOffset : int
+        The x offset of the primitive.
+    yOffset : int
+        The y offset of the primitive.
+    absoluteWidth : int
+        The absolute width of the respective image.
+    absoluteHeight : int
+        The absolute height of the respective image.
+    scaled : bool
+        Determines if the points should be shown scaled. Default is False.
+    &#34;&#34;&#34;
+
+    # Get the absolute points, with the offset applied
+    points = self.GetAbsolutePoints(absoluteWidth, absoluteHeight)
+    for i in range(len(points)):
+        points[i] = (int(points[i][0]) + xOffset, int(points[i][1]) + yOffset)
+
+    # Setup alpha and colors for the lines between points
+    alpha = 255
+    colors = [
+        (255, 0, 0, alpha),  # Red
+        (0, 0, 255, alpha),  # Blue
+        (255, 0, 0, alpha),  # Red
+        (0, 0, 255, alpha)   # Blue
+    ]
+
+    # Draw a perspective grid on the plane between the four points,
+    # we do this by setting up a number of points on the lines between
+    # the points, and then drawing a line between each of these points
+
+    # Get the lines between the points
+    subPoints = 7
+    lines = []
+    for i in range(len(points)):
+        lines.append(np.linspace(points[i][0], points[(i + 1) % len(points)][0], subPoints))
+        lines.append(np.linspace(points[i][1], points[(i + 1) % len(points)][1], subPoints))
+
+    # Draw the lines from one line to it&#39;s opposite line to create a grid
+    for i in range(subPoints):
+        # Skip the first and last point
+        if i == 0 or i == subPoints - 1:
+            continue
+
+        # Render the lines
+        Rendering.RenderLine(
+            surface,
+            int(lines[0][i]), int(lines[1][i]),
+            int(lines[4][(subPoints - 1) - i]), int(lines[5][(subPoints - 1) - i]),
+            (255, 255, 255, alpha)
+        )
+        Rendering.RenderLine(
+            surface,
+            int(lines[2][i]), int(lines[3][i]),
+            int(lines[6][(subPoints - 1) - i]), int(lines[7][(subPoints - 1) - i]),
+            (255, 255, 255, alpha)
+        )
+
+    # Draw the lines and direction texts between the points
+    direction = [&#34;Verweg&#34;, &#34;Rechts&#34;, &#34;Dichtbij&#34;, &#34;Links&#34;]
+    # Magic numbers to get the boxes and text to fit and be centered
+    directionOffset = [(-10, -12), (10, 0), (-12, 14), (-40, 0)]
+    boxOffset = (-4, -8)
+    boxesSizes = [(53, 16), (50, 16), (55, 16), (40, 16)]
+    for i in range(len(points)):
+        x1, y1 = points[i]
+        x2, y2 = points[(i + 1) % len(points)]
+
+        # Render line
+        Rendering.RenderLine(surface, x1, y1, x2, y2, colors[i], 2)
+
+        # Render box with text
+        Rendering.RenderBox(
+            surface,
+            (x1 + x2) / 2 + directionOffset[i][0] + boxOffset[0],
+            (y1 + y2) / 2 + directionOffset[i][1] + boxOffset[1],
+            boxesSizes[i][0],
+            boxesSizes[i][1],
+            (25, 25, 25, 125)
+        )
+        Rendering.RenderText(
+            surface,
+            direction[i],
+            (x1 + x2) / 2 + directionOffset[i][0],
+            (y1 + y2) / 2 + directionOffset[i][1],
+            Rendering.FontSize.Small,
+            Rendering.TextAlignment.MiddleLeft,
+            (255, 255, 255, alpha),
+            1
+        )
+
+    super(PlanePrimitive, self).Render(surface, xOffset, yOffset, absoluteWidth, absoluteHeight, scaled)</code></pre>
+</details>
+</dd>
+<dt id="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.ResetMouseMovement"><code class="name flex">
+<span>def <span class="ident">ResetMouseMovement</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive" href="IPrimitive.html#Calibrator.Input.Primitives.IPrimitive.IPrimitive">IPrimitive</a></code>.<code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.ResetMouseMovement" href="IPrimitive.html#Calibrator.Input.Primitives.IPrimitive.IPrimitive.ResetMouseMovement">ResetMouseMovement</a></code>
+</p>
+<div class="desc inherited"><p>Resets mouse movement.</p></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<img src="/images/logo_full.png" alt="">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="Calibrator.Input.Primitives" href="index.html">Calibrator.Input.Primitives</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive" href="#Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive">PlanePrimitive</a></code></h4>
+<ul class="two-column">
+<li><code><a title="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.GetAbsolutePoint" href="IPrimitive.html#Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.GetAbsolutePoint">GetAbsolutePoint</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.GetAbsolutePoints" href="IPrimitive.html#Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.GetAbsolutePoints">GetAbsolutePoints</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.GetRelativePoint" href="IPrimitive.html#Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.GetRelativePoint">GetRelativePoint</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.GetRelativePoints" href="IPrimitive.html#Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.GetRelativePoints">GetRelativePoints</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.HandleMouseMovement" href="IPrimitive.html#Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.HandleMouseMovement">HandleMouseMovement</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.IsMouseOver" href="#Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.IsMouseOver">IsMouseOver</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.IsMouseOverPoint" href="IPrimitive.html#Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.IsMouseOverPoint">IsMouseOverPoint</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.MoveTo" href="IPrimitive.html#Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.MoveTo">MoveTo</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.Render" href="#Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.Render">Render</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.ResetMouseMovement" href="IPrimitive.html#Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive.ResetMouseMovement">ResetMouseMovement</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p><center>
+This program has been developed by students from the bachelor Computer Science at Utrecht University within the Software Project course.
+&#169 Copyright Utrecht University (Department of Information and Computing Sciences)
+</center></p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

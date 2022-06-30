@@ -1,0 +1,1490 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>Windowing.Rendering API documentation</title>
+<meta name="description" content="" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;700&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/favicon/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="pdoc-header">
+<nav class="pdoc-nav">
+<ul>
+<li>
+<a href="../index.html" class="menu">Home</a>
+</li>
+<li>
+<a href="../Main/Main.html" class="menu">Main</a>
+</li>
+<li>
+<a href="../API/index.html" class="menu">API</a>
+</li>
+<li>
+<a href="../Calibrator/index.html" class="menu">Calibrator</a>
+</li>
+<li>
+<a href="../CameraReader/index.html" class="menu">Camera Reader</a>
+</li>
+<li>
+<a href="../FrameAnalyzer/index.html" class="menu">Frame Analyzer</a>
+</li>
+<li>
+<a href="../IO/index.html" class="menu">IO</a>
+</li>
+<li>
+<a href="../Positioner/index.html" class="menu">Positioner</a>
+</li>
+<li>
+<a href="../Windowing/index.html" class="menu">Windowing</a>
+</li>
+<li>
+<a href="../ArgsGUI/index.html" class="menu">ArgsGUI</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>Windowing.Rendering</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># This program has been developed by students from the bachelor Computer Science at Utrecht University within the
+# Software Project course.
+# © Copyright Utrecht University (Department of Information and Computing Sciences)
+import math
+from enum import Enum
+
+import cv2
+import numpy as np
+import pygame
+
+
+class Rendering:    # pragma: no cover
+    class FontSize(Enum):
+        &#34;&#34;&#34; Enum for the different font sizes. &#34;&#34;&#34;
+        Mini = 12
+        Small = 14
+        Medium = 20
+        Large = 24
+
+    class TextAlignment(Enum):
+        &#34;&#34;&#34;Enum for the different text alignments. &#34;&#34;&#34;
+        TopLeft = 0
+        TopCenter = 1
+        TopRight = 2
+        MiddleLeft = 3
+        MiddleCenter = 4
+        MiddleRight = 5
+
+    @staticmethod
+    def RenderText(
+            surface,
+            text,
+            x, y,
+            fontSize=FontSize.Medium,
+            textAlignment=TextAlignment.TopLeft,
+            color=(255, 255, 255, 255),
+            shadowOffset=2
+    ):  # pragma: no cover
+        &#34;&#34;&#34; Renders a text on a given surface.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to render the text on.
+        text : str
+            The text to render.
+        x : int
+            The x coordinate of the text.
+        y : int
+            The y coordinate of the text.
+        fontSize : FontSize
+            The font size of the text, default is FontSize.Medium.
+        textAlignment : TextAlignment
+            The text alignment of the text, default is TextAlignment.TopLeft.
+        color : tuple
+            The color of the text, default is (255, 255, 255, 255).
+        shadowOffset : int
+            The offset of the shadow, default is 2.
+        &#34;&#34;&#34;
+
+        # Render shadow, if necessary
+        if shadowOffset &gt; 0:
+            Rendering._RenderLabel(surface, text, x, y + shadowOffset, fontSize, textAlignment, (0, 0, 0))
+
+        # Render text
+        Rendering._RenderLabel(surface, text, x, y, fontSize, textAlignment, color)
+
+    @staticmethod
+    def RenderLine(surface, x1, y1, x2, y2, color=(255, 255, 255, 255), width=1):  # pragma: no cover
+        &#34;&#34;&#34; Renders a line on a given surface.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to render the line on.
+        x1 : int
+            The x coordinate of the first point.
+        y1 : int
+            The y coordinate of the first point.
+        x2 : int
+            The x coordinate of the second point.
+        y2 : int
+            The y coordinate of the second point.
+        color : tuple
+            The color of the line, default is (255, 255, 255, 255).
+        width : int
+            The width of the line, default is 1.
+        &#34;&#34;&#34;
+
+        # Create a new surface
+        lineSurface = Rendering._CopyEmptySurface(surface)
+
+        # Parse the color and alpha value
+        color, alpha = Rendering._ParseColorAndAlpha(color)
+
+        # Draw the line
+        pygame.draw.line(lineSurface, color, (x1, y1), (x2, y2), width)
+
+        # Apply the alpha value
+        lineSurface.set_alpha(alpha)
+
+        # Blit the line to the surface
+        surface.blit(lineSurface, (0, 0))
+
+    @staticmethod
+    def RenderPolygon(surface, points, color=(255, 255, 255, 255), width=1):  # pragma: no cover
+        &#34;&#34;&#34; Renders a polygon of points on a given surface.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to render the line on.
+        points: [(int, int)]
+            The list of points to render lines between.
+        color : tuple
+            The color of the line, default is (255, 255, 255, 255).
+        width : int
+            The width of the line, default is 1.
+        &#34;&#34;&#34;
+
+        # Create a new surface
+        polygonSurface = Rendering._CopyEmptySurface(surface)
+
+        # Parse the color and alpha value
+        color, alpha = Rendering._ParseColorAndAlpha(color)
+
+        # Draw the lines, between the points
+        for i in range(len(points)):
+            pygame.draw.line(polygonSurface, color, points[i], points[(i + 1) % len(points)], width)
+
+        # Apply the alpha value
+        polygonSurface.set_alpha(alpha)
+
+        # Blit the line to the surface
+        surface.blit(polygonSurface, (0, 0))
+
+    @staticmethod
+    def RenderPoint(surface, x, y, color=(255, 255, 255, 255), radius=3):  # pragma: no cover
+        &#34;&#34;&#34; Renders a point on a given surface.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to render the point on.
+        x : int
+            The x coordinate of the point.
+        y : int
+            The y coordinate of the point.
+        color : tuple
+            The color of the point, default is (255, 255, 255, 255).
+        radius : int
+            The radius of the point, default is 3.
+        &#34;&#34;&#34;
+
+        # Create a new surface
+        pointSurface = Rendering._CopyEmptySurface(surface)
+
+        # Parse the color and alpha value
+        color, alpha = Rendering._ParseColorAndAlpha(color)
+
+        # Draw the point
+        pygame.draw.circle(pointSurface, color, (x, y), radius)
+
+        # Apply the alpha value
+        pointSurface.set_alpha(alpha)
+
+        # Blit the point to the surface
+        surface.blit(pointSurface, (0, 0))
+
+    @staticmethod
+    def RenderBox(surface, x, y, width, height, color=(25, 25, 25, 125), cornerRadius=4):  # pragma: no cover
+        &#34;&#34;&#34; Renders a box on a given surface.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to render the box on.
+        x : int
+            The x coordinate of the box.
+        y : int
+            The y coordinate of the box.
+        width : int
+            The width of the box.
+        height : int
+            The height of the box.
+        color : tuple
+            The color of the box, default is (25, 25, 25, 125).
+        cornerRadius : int
+            The radius of the corners, default is 4.
+        &#34;&#34;&#34;
+
+        # Create a new surface
+        boxSurface = Rendering._CopyEmptySurface(surface)
+
+        # Parse the color and alpha value
+        color, alpha = Rendering._ParseColorAndAlpha(color)
+
+        # Draw the box
+        pygame.draw.rect(boxSurface, color, (x, y, width, height), 0, cornerRadius)
+
+        # Apply the alpha value
+        boxSurface.set_alpha(alpha)
+
+        # Blit the box to the surface
+        surface.blit(boxSurface, (0, 0))
+
+    @staticmethod
+    def RenderCrosshair(surface, x, y, color=(255, 0, 0, 180), spacing=4, lengths=12, width=4,
+                        centerOutline=True):  # pragma: no cover
+        &#34;&#34;&#34;
+        Renders a crosshair on the given surface the surface to render the crosshair on
+
+        Parameters
+        ---------
+        surface : pygame.Surface
+            The surface to render the crosshair onto.
+        x : int
+            The x coordinate of the position of the CENTER of the crosshair.
+        y : int
+            The y coordinate of the position of the CENTER of the crosshair.
+        color : tuple
+            The color of the crosshair in (r, g, b, alpha), default is (255, 0, 0, 180).
+        spacing : int
+            The distance from center to where crosshair lines start, default is 4.
+        lengths : int
+            The length of the crosshair lines, default is 12.
+        width : int
+            The width of the crosshair lines, default is 4.
+        centerOutline : bool
+            Defines if an outline box should be drawn around the center, default is True.
+        &#34;&#34;&#34;
+
+        # create temporary surface
+        crosshairSurface = Rendering._CopyEmptySurface(surface)
+
+        # Parse the color and alpha value
+        color, alpha = Rendering._ParseColorAndAlpha(color)
+
+        # draw the four sides of the crosshair:
+        # top:
+        pygame.draw.rect(crosshairSurface, color, (x - math.ceil(width / 2), y - spacing - lengths, width, lengths))
+        # bottom:
+        pygame.draw.rect(crosshairSurface, color, (x - math.ceil(width / 2), y + spacing, width, lengths))
+        # left:
+        pygame.draw.rect(crosshairSurface, color, (x - spacing - lengths, y - math.ceil(width / 2), lengths, width))
+        # right:
+        pygame.draw.rect(crosshairSurface, color, (x + spacing, y - math.ceil(width / 2), lengths, width))
+
+        # if enabled, also draw center outline
+        if centerOutline:
+            rectangle = (x - spacing, y - spacing, spacing * 2, spacing * 2)
+            pygame.draw.rect(crosshairSurface, color, rectangle, 1)
+
+        # set alpha
+        crosshairSurface.set_alpha(alpha)
+
+        # Blit the crosshair to the surface
+        surface.blit(crosshairSurface, (0, 0))
+
+    @staticmethod
+    def ConvertOpenCVImageToPyGameImage(image: np.ndarray) -&gt; pygame.Surface:
+        &#34;&#34;&#34; Convert OpenCV images for Pygame.
+
+        Parameters
+        ----------
+        image : numpy.ndarray
+            The OpenCV image.
+
+        Returns
+        -------
+        pygame.Surface
+            The Pygame image.
+        &#34;&#34;&#34;
+
+        # Prevent unnecessary conversion
+        if isinstance(image, pygame.Surface):
+            return image
+
+        # Convert to pygame image
+        imageFormat = &#39;RGB&#39;
+        if image.dtype.name == &#39;uint16&#39;:
+            image = (image / 256).astype(&#39;uint8&#39;)
+        size = image.shape[1::-1]
+        if len(image.shape) == 2:
+            image = np.repeat(image.reshape(size[1], size[0], 1), 3, axis=2)
+            imageFormat = &#39;RGB&#39;
+        else:
+            imageFormat = &#39;RGBA&#39; if image.shape[2] == 4 else &#39;RGB&#39;
+            image[:, :, [0, 2]] = image[:, :, [2, 0]]
+
+        # Create surface and internally convert based on image format
+        surface = pygame.image.frombuffer(image.flatten(), size, imageFormat)
+        if pygame.get_init() and pygame.display.get_init():
+            return surface.convert_alpha() if imageFormat == &#39;RGBA&#39; else surface.convert()
+        else:
+            return surface
+
+    @staticmethod
+    def ConvertSurfaceToOpenCV(surface) -&gt; np.ndarray:
+        &#34;&#34;&#34;
+        Convert a Pygame surface to OpenCV.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to convert.
+
+        Returns
+        -------
+        numpy.ndarray
+            The OpenCV image.
+        &#34;&#34;&#34;
+        image = pygame.surfarray.array3d(surface)
+        image = np.swapaxes(image, 0, 1)
+        image = image[:, :, ::-1]
+        return image
+
+    @staticmethod
+    def _GetFont(fontSize) -&gt; pygame.font.Font:  # pragma: no cover
+        &#34;&#34;&#34; Returns the font used for rendering.
+
+        Parameters
+        ----------
+        fontSize : int
+            The size of the font.
+
+        Returns
+        -------
+        pygame.font.Font
+            The font used for rendering.
+        &#34;&#34;&#34;
+
+        return pygame.font.SysFont(&#39;Arial&#39;, fontSize.value)
+
+    @staticmethod
+    def _CopyEmptySurface(surface) -&gt; pygame.Surface:  # pragma: no cover
+        &#34;&#34;&#34; Creates an empty surface from a given surface.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to create the empty surface from.
+
+        Returns
+        -------
+        pygame.Surface
+            The empty surface.
+        &#34;&#34;&#34;
+
+        width, height = surface.get_size()
+        return pygame.Surface((width, height), pygame.SRCALPHA, 32)
+
+    @staticmethod
+    def _ParseColorAndAlpha(color) -&gt; ((int, int, int), int):  # pragma: no cover
+        &#34;&#34;&#34; Parses a color and alpha value from a given color.
+
+        Parameters
+        ----------
+        color : tuple
+            The color to parse.
+
+        Returns
+        -------
+        ((int, int, int), int)
+            The parsed color and alpha value.
+        &#34;&#34;&#34;
+
+        if len(color) == 3:
+            return color, 255
+        elif len(color) == 4:
+            return (color[0], color[1], color[2]), color[3]
+
+    @staticmethod
+    def _RenderLabel(
+            surface,
+            text,
+            x, y,
+            fontSize=FontSize.Medium,
+            textAlignment=TextAlignment.TopLeft,
+            color=(255, 255, 255, 255)
+    ):  # pragma: no cover
+        &#34;&#34;&#34; Renders a label of text on a given surface.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to render the label on.
+        text : str
+            The text to render.
+        x : int
+            The x coordinate of the label.
+        y : int
+            The y coordinate of the label.
+        fontSize : FontSize
+            The font size of the text, default is FontSize.Medium.
+        textAlignment : TextAlignment
+            The text alignment of the text, default is TextAlignment.TopLeft.
+        color : tuple
+            The color of the label, default is (255, 255, 255, 255).
+        &#34;&#34;&#34;
+
+        # Get the font
+        font = Rendering._GetFont(fontSize)
+
+        # Parse the color and alpha value
+        color, alpha = Rendering._ParseColorAndAlpha(color)
+
+        # Render the text surface
+        textSurface = font.render(text, True, color)
+
+        # Apply the alpha value
+        textSurface.set_alpha(alpha)
+
+        # Blit the text surface on the given surface,
+        # aligned as specified
+
+        textRect = textSurface.get_rect()
+        switcher = {
+            0: (x, y),  # top-left
+            1: (x - textRect.width / 2, y),  # top-center
+            2: (x - textRect.width, y),  # top-right
+
+            3: (x, y - textRect.height / 2),  # middle-left
+            4: (x - textRect.width / 2, y - textRect.height / 2),  # middle-center
+            5: (x - textRect.width, y - textRect.height / 2),  # middle-right
+        }
+        (ax, ay) = switcher.get(textAlignment.value)
+
+        textRect.left = ax
+        textRect.top = ay
+        surface.blit(textSurface, textRect)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="Windowing.Rendering.Rendering"><code class="flex name class">
+<span>class <span class="ident">Rendering</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Rendering:    # pragma: no cover
+    class FontSize(Enum):
+        &#34;&#34;&#34; Enum for the different font sizes. &#34;&#34;&#34;
+        Mini = 12
+        Small = 14
+        Medium = 20
+        Large = 24
+
+    class TextAlignment(Enum):
+        &#34;&#34;&#34;Enum for the different text alignments. &#34;&#34;&#34;
+        TopLeft = 0
+        TopCenter = 1
+        TopRight = 2
+        MiddleLeft = 3
+        MiddleCenter = 4
+        MiddleRight = 5
+
+    @staticmethod
+    def RenderText(
+            surface,
+            text,
+            x, y,
+            fontSize=FontSize.Medium,
+            textAlignment=TextAlignment.TopLeft,
+            color=(255, 255, 255, 255),
+            shadowOffset=2
+    ):  # pragma: no cover
+        &#34;&#34;&#34; Renders a text on a given surface.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to render the text on.
+        text : str
+            The text to render.
+        x : int
+            The x coordinate of the text.
+        y : int
+            The y coordinate of the text.
+        fontSize : FontSize
+            The font size of the text, default is FontSize.Medium.
+        textAlignment : TextAlignment
+            The text alignment of the text, default is TextAlignment.TopLeft.
+        color : tuple
+            The color of the text, default is (255, 255, 255, 255).
+        shadowOffset : int
+            The offset of the shadow, default is 2.
+        &#34;&#34;&#34;
+
+        # Render shadow, if necessary
+        if shadowOffset &gt; 0:
+            Rendering._RenderLabel(surface, text, x, y + shadowOffset, fontSize, textAlignment, (0, 0, 0))
+
+        # Render text
+        Rendering._RenderLabel(surface, text, x, y, fontSize, textAlignment, color)
+
+    @staticmethod
+    def RenderLine(surface, x1, y1, x2, y2, color=(255, 255, 255, 255), width=1):  # pragma: no cover
+        &#34;&#34;&#34; Renders a line on a given surface.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to render the line on.
+        x1 : int
+            The x coordinate of the first point.
+        y1 : int
+            The y coordinate of the first point.
+        x2 : int
+            The x coordinate of the second point.
+        y2 : int
+            The y coordinate of the second point.
+        color : tuple
+            The color of the line, default is (255, 255, 255, 255).
+        width : int
+            The width of the line, default is 1.
+        &#34;&#34;&#34;
+
+        # Create a new surface
+        lineSurface = Rendering._CopyEmptySurface(surface)
+
+        # Parse the color and alpha value
+        color, alpha = Rendering._ParseColorAndAlpha(color)
+
+        # Draw the line
+        pygame.draw.line(lineSurface, color, (x1, y1), (x2, y2), width)
+
+        # Apply the alpha value
+        lineSurface.set_alpha(alpha)
+
+        # Blit the line to the surface
+        surface.blit(lineSurface, (0, 0))
+
+    @staticmethod
+    def RenderPolygon(surface, points, color=(255, 255, 255, 255), width=1):  # pragma: no cover
+        &#34;&#34;&#34; Renders a polygon of points on a given surface.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to render the line on.
+        points: [(int, int)]
+            The list of points to render lines between.
+        color : tuple
+            The color of the line, default is (255, 255, 255, 255).
+        width : int
+            The width of the line, default is 1.
+        &#34;&#34;&#34;
+
+        # Create a new surface
+        polygonSurface = Rendering._CopyEmptySurface(surface)
+
+        # Parse the color and alpha value
+        color, alpha = Rendering._ParseColorAndAlpha(color)
+
+        # Draw the lines, between the points
+        for i in range(len(points)):
+            pygame.draw.line(polygonSurface, color, points[i], points[(i + 1) % len(points)], width)
+
+        # Apply the alpha value
+        polygonSurface.set_alpha(alpha)
+
+        # Blit the line to the surface
+        surface.blit(polygonSurface, (0, 0))
+
+    @staticmethod
+    def RenderPoint(surface, x, y, color=(255, 255, 255, 255), radius=3):  # pragma: no cover
+        &#34;&#34;&#34; Renders a point on a given surface.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to render the point on.
+        x : int
+            The x coordinate of the point.
+        y : int
+            The y coordinate of the point.
+        color : tuple
+            The color of the point, default is (255, 255, 255, 255).
+        radius : int
+            The radius of the point, default is 3.
+        &#34;&#34;&#34;
+
+        # Create a new surface
+        pointSurface = Rendering._CopyEmptySurface(surface)
+
+        # Parse the color and alpha value
+        color, alpha = Rendering._ParseColorAndAlpha(color)
+
+        # Draw the point
+        pygame.draw.circle(pointSurface, color, (x, y), radius)
+
+        # Apply the alpha value
+        pointSurface.set_alpha(alpha)
+
+        # Blit the point to the surface
+        surface.blit(pointSurface, (0, 0))
+
+    @staticmethod
+    def RenderBox(surface, x, y, width, height, color=(25, 25, 25, 125), cornerRadius=4):  # pragma: no cover
+        &#34;&#34;&#34; Renders a box on a given surface.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to render the box on.
+        x : int
+            The x coordinate of the box.
+        y : int
+            The y coordinate of the box.
+        width : int
+            The width of the box.
+        height : int
+            The height of the box.
+        color : tuple
+            The color of the box, default is (25, 25, 25, 125).
+        cornerRadius : int
+            The radius of the corners, default is 4.
+        &#34;&#34;&#34;
+
+        # Create a new surface
+        boxSurface = Rendering._CopyEmptySurface(surface)
+
+        # Parse the color and alpha value
+        color, alpha = Rendering._ParseColorAndAlpha(color)
+
+        # Draw the box
+        pygame.draw.rect(boxSurface, color, (x, y, width, height), 0, cornerRadius)
+
+        # Apply the alpha value
+        boxSurface.set_alpha(alpha)
+
+        # Blit the box to the surface
+        surface.blit(boxSurface, (0, 0))
+
+    @staticmethod
+    def RenderCrosshair(surface, x, y, color=(255, 0, 0, 180), spacing=4, lengths=12, width=4,
+                        centerOutline=True):  # pragma: no cover
+        &#34;&#34;&#34;
+        Renders a crosshair on the given surface the surface to render the crosshair on
+
+        Parameters
+        ---------
+        surface : pygame.Surface
+            The surface to render the crosshair onto.
+        x : int
+            The x coordinate of the position of the CENTER of the crosshair.
+        y : int
+            The y coordinate of the position of the CENTER of the crosshair.
+        color : tuple
+            The color of the crosshair in (r, g, b, alpha), default is (255, 0, 0, 180).
+        spacing : int
+            The distance from center to where crosshair lines start, default is 4.
+        lengths : int
+            The length of the crosshair lines, default is 12.
+        width : int
+            The width of the crosshair lines, default is 4.
+        centerOutline : bool
+            Defines if an outline box should be drawn around the center, default is True.
+        &#34;&#34;&#34;
+
+        # create temporary surface
+        crosshairSurface = Rendering._CopyEmptySurface(surface)
+
+        # Parse the color and alpha value
+        color, alpha = Rendering._ParseColorAndAlpha(color)
+
+        # draw the four sides of the crosshair:
+        # top:
+        pygame.draw.rect(crosshairSurface, color, (x - math.ceil(width / 2), y - spacing - lengths, width, lengths))
+        # bottom:
+        pygame.draw.rect(crosshairSurface, color, (x - math.ceil(width / 2), y + spacing, width, lengths))
+        # left:
+        pygame.draw.rect(crosshairSurface, color, (x - spacing - lengths, y - math.ceil(width / 2), lengths, width))
+        # right:
+        pygame.draw.rect(crosshairSurface, color, (x + spacing, y - math.ceil(width / 2), lengths, width))
+
+        # if enabled, also draw center outline
+        if centerOutline:
+            rectangle = (x - spacing, y - spacing, spacing * 2, spacing * 2)
+            pygame.draw.rect(crosshairSurface, color, rectangle, 1)
+
+        # set alpha
+        crosshairSurface.set_alpha(alpha)
+
+        # Blit the crosshair to the surface
+        surface.blit(crosshairSurface, (0, 0))
+
+    @staticmethod
+    def ConvertOpenCVImageToPyGameImage(image: np.ndarray) -&gt; pygame.Surface:
+        &#34;&#34;&#34; Convert OpenCV images for Pygame.
+
+        Parameters
+        ----------
+        image : numpy.ndarray
+            The OpenCV image.
+
+        Returns
+        -------
+        pygame.Surface
+            The Pygame image.
+        &#34;&#34;&#34;
+
+        # Prevent unnecessary conversion
+        if isinstance(image, pygame.Surface):
+            return image
+
+        # Convert to pygame image
+        imageFormat = &#39;RGB&#39;
+        if image.dtype.name == &#39;uint16&#39;:
+            image = (image / 256).astype(&#39;uint8&#39;)
+        size = image.shape[1::-1]
+        if len(image.shape) == 2:
+            image = np.repeat(image.reshape(size[1], size[0], 1), 3, axis=2)
+            imageFormat = &#39;RGB&#39;
+        else:
+            imageFormat = &#39;RGBA&#39; if image.shape[2] == 4 else &#39;RGB&#39;
+            image[:, :, [0, 2]] = image[:, :, [2, 0]]
+
+        # Create surface and internally convert based on image format
+        surface = pygame.image.frombuffer(image.flatten(), size, imageFormat)
+        if pygame.get_init() and pygame.display.get_init():
+            return surface.convert_alpha() if imageFormat == &#39;RGBA&#39; else surface.convert()
+        else:
+            return surface
+
+    @staticmethod
+    def ConvertSurfaceToOpenCV(surface) -&gt; np.ndarray:
+        &#34;&#34;&#34;
+        Convert a Pygame surface to OpenCV.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to convert.
+
+        Returns
+        -------
+        numpy.ndarray
+            The OpenCV image.
+        &#34;&#34;&#34;
+        image = pygame.surfarray.array3d(surface)
+        image = np.swapaxes(image, 0, 1)
+        image = image[:, :, ::-1]
+        return image
+
+    @staticmethod
+    def _GetFont(fontSize) -&gt; pygame.font.Font:  # pragma: no cover
+        &#34;&#34;&#34; Returns the font used for rendering.
+
+        Parameters
+        ----------
+        fontSize : int
+            The size of the font.
+
+        Returns
+        -------
+        pygame.font.Font
+            The font used for rendering.
+        &#34;&#34;&#34;
+
+        return pygame.font.SysFont(&#39;Arial&#39;, fontSize.value)
+
+    @staticmethod
+    def _CopyEmptySurface(surface) -&gt; pygame.Surface:  # pragma: no cover
+        &#34;&#34;&#34; Creates an empty surface from a given surface.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to create the empty surface from.
+
+        Returns
+        -------
+        pygame.Surface
+            The empty surface.
+        &#34;&#34;&#34;
+
+        width, height = surface.get_size()
+        return pygame.Surface((width, height), pygame.SRCALPHA, 32)
+
+    @staticmethod
+    def _ParseColorAndAlpha(color) -&gt; ((int, int, int), int):  # pragma: no cover
+        &#34;&#34;&#34; Parses a color and alpha value from a given color.
+
+        Parameters
+        ----------
+        color : tuple
+            The color to parse.
+
+        Returns
+        -------
+        ((int, int, int), int)
+            The parsed color and alpha value.
+        &#34;&#34;&#34;
+
+        if len(color) == 3:
+            return color, 255
+        elif len(color) == 4:
+            return (color[0], color[1], color[2]), color[3]
+
+    @staticmethod
+    def _RenderLabel(
+            surface,
+            text,
+            x, y,
+            fontSize=FontSize.Medium,
+            textAlignment=TextAlignment.TopLeft,
+            color=(255, 255, 255, 255)
+    ):  # pragma: no cover
+        &#34;&#34;&#34; Renders a label of text on a given surface.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to render the label on.
+        text : str
+            The text to render.
+        x : int
+            The x coordinate of the label.
+        y : int
+            The y coordinate of the label.
+        fontSize : FontSize
+            The font size of the text, default is FontSize.Medium.
+        textAlignment : TextAlignment
+            The text alignment of the text, default is TextAlignment.TopLeft.
+        color : tuple
+            The color of the label, default is (255, 255, 255, 255).
+        &#34;&#34;&#34;
+
+        # Get the font
+        font = Rendering._GetFont(fontSize)
+
+        # Parse the color and alpha value
+        color, alpha = Rendering._ParseColorAndAlpha(color)
+
+        # Render the text surface
+        textSurface = font.render(text, True, color)
+
+        # Apply the alpha value
+        textSurface.set_alpha(alpha)
+
+        # Blit the text surface on the given surface,
+        # aligned as specified
+
+        textRect = textSurface.get_rect()
+        switcher = {
+            0: (x, y),  # top-left
+            1: (x - textRect.width / 2, y),  # top-center
+            2: (x - textRect.width, y),  # top-right
+
+            3: (x, y - textRect.height / 2),  # middle-left
+            4: (x - textRect.width / 2, y - textRect.height / 2),  # middle-center
+            5: (x - textRect.width, y - textRect.height / 2),  # middle-right
+        }
+        (ax, ay) = switcher.get(textAlignment.value)
+
+        textRect.left = ax
+        textRect.top = ay
+        surface.blit(textSurface, textRect)</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="Windowing.Rendering.Rendering.FontSize"><code class="name">var <span class="ident">FontSize</span></code></dt>
+<dd>
+<div class="desc"><p>Enum for the different font sizes.</p></div>
+</dd>
+<dt id="Windowing.Rendering.Rendering.TextAlignment"><code class="name">var <span class="ident">TextAlignment</span></code></dt>
+<dd>
+<div class="desc"><p>Enum for the different text alignments.</p></div>
+</dd>
+</dl>
+<h3>Static methods</h3>
+<dl>
+<dt id="Windowing.Rendering.Rendering.ConvertOpenCVImageToPyGameImage"><code class="name flex">
+<span>def <span class="ident">ConvertOpenCVImageToPyGameImage</span></span>(<span>image: numpy.ndarray) -> pygame.Surface</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Convert OpenCV images for Pygame.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>image</code></strong> :&ensp;<code>numpy.ndarray</code></dt>
+<dd>The OpenCV image.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>pygame.Surface</code></dt>
+<dd>The Pygame image.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def ConvertOpenCVImageToPyGameImage(image: np.ndarray) -&gt; pygame.Surface:
+    &#34;&#34;&#34; Convert OpenCV images for Pygame.
+
+    Parameters
+    ----------
+    image : numpy.ndarray
+        The OpenCV image.
+
+    Returns
+    -------
+    pygame.Surface
+        The Pygame image.
+    &#34;&#34;&#34;
+
+    # Prevent unnecessary conversion
+    if isinstance(image, pygame.Surface):
+        return image
+
+    # Convert to pygame image
+    imageFormat = &#39;RGB&#39;
+    if image.dtype.name == &#39;uint16&#39;:
+        image = (image / 256).astype(&#39;uint8&#39;)
+    size = image.shape[1::-1]
+    if len(image.shape) == 2:
+        image = np.repeat(image.reshape(size[1], size[0], 1), 3, axis=2)
+        imageFormat = &#39;RGB&#39;
+    else:
+        imageFormat = &#39;RGBA&#39; if image.shape[2] == 4 else &#39;RGB&#39;
+        image[:, :, [0, 2]] = image[:, :, [2, 0]]
+
+    # Create surface and internally convert based on image format
+    surface = pygame.image.frombuffer(image.flatten(), size, imageFormat)
+    if pygame.get_init() and pygame.display.get_init():
+        return surface.convert_alpha() if imageFormat == &#39;RGBA&#39; else surface.convert()
+    else:
+        return surface</code></pre>
+</details>
+</dd>
+<dt id="Windowing.Rendering.Rendering.ConvertSurfaceToOpenCV"><code class="name flex">
+<span>def <span class="ident">ConvertSurfaceToOpenCV</span></span>(<span>surface) -> numpy.ndarray</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Convert a Pygame surface to OpenCV.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>surface</code></strong> :&ensp;<code>pygame.Surface</code></dt>
+<dd>The surface to convert.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>numpy.ndarray</code></dt>
+<dd>The OpenCV image.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def ConvertSurfaceToOpenCV(surface) -&gt; np.ndarray:
+    &#34;&#34;&#34;
+    Convert a Pygame surface to OpenCV.
+
+    Parameters
+    ----------
+    surface : pygame.Surface
+        The surface to convert.
+
+    Returns
+    -------
+    numpy.ndarray
+        The OpenCV image.
+    &#34;&#34;&#34;
+    image = pygame.surfarray.array3d(surface)
+    image = np.swapaxes(image, 0, 1)
+    image = image[:, :, ::-1]
+    return image</code></pre>
+</details>
+</dd>
+<dt id="Windowing.Rendering.Rendering.RenderBox"><code class="name flex">
+<span>def <span class="ident">RenderBox</span></span>(<span>surface, x, y, width, height, color=(25, 25, 25, 125), cornerRadius=4)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Renders a box on a given surface.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>surface</code></strong> :&ensp;<code>pygame.Surface</code></dt>
+<dd>The surface to render the box on.</dd>
+<dt><strong><code>x</code></strong> :&ensp;<code>int</code></dt>
+<dd>The x coordinate of the box.</dd>
+<dt><strong><code>y</code></strong> :&ensp;<code>int</code></dt>
+<dd>The y coordinate of the box.</dd>
+<dt><strong><code>width</code></strong> :&ensp;<code>int</code></dt>
+<dd>The width of the box.</dd>
+<dt><strong><code>height</code></strong> :&ensp;<code>int</code></dt>
+<dd>The height of the box.</dd>
+<dt><strong><code>color</code></strong> :&ensp;<code>tuple</code></dt>
+<dd>The color of the box, default is (25, 25, 25, 125).</dd>
+<dt><strong><code>cornerRadius</code></strong> :&ensp;<code>int</code></dt>
+<dd>The radius of the corners, default is 4.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def RenderBox(surface, x, y, width, height, color=(25, 25, 25, 125), cornerRadius=4):  # pragma: no cover
+    &#34;&#34;&#34; Renders a box on a given surface.
+
+    Parameters
+    ----------
+    surface : pygame.Surface
+        The surface to render the box on.
+    x : int
+        The x coordinate of the box.
+    y : int
+        The y coordinate of the box.
+    width : int
+        The width of the box.
+    height : int
+        The height of the box.
+    color : tuple
+        The color of the box, default is (25, 25, 25, 125).
+    cornerRadius : int
+        The radius of the corners, default is 4.
+    &#34;&#34;&#34;
+
+    # Create a new surface
+    boxSurface = Rendering._CopyEmptySurface(surface)
+
+    # Parse the color and alpha value
+    color, alpha = Rendering._ParseColorAndAlpha(color)
+
+    # Draw the box
+    pygame.draw.rect(boxSurface, color, (x, y, width, height), 0, cornerRadius)
+
+    # Apply the alpha value
+    boxSurface.set_alpha(alpha)
+
+    # Blit the box to the surface
+    surface.blit(boxSurface, (0, 0))</code></pre>
+</details>
+</dd>
+<dt id="Windowing.Rendering.Rendering.RenderCrosshair"><code class="name flex">
+<span>def <span class="ident">RenderCrosshair</span></span>(<span>surface, x, y, color=(255, 0, 0, 180), spacing=4, lengths=12, width=4, centerOutline=True)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Renders a crosshair on the given surface the surface to render the crosshair on</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>surface</code></strong> :&ensp;<code>pygame.Surface</code></dt>
+<dd>The surface to render the crosshair onto.</dd>
+<dt><strong><code>x</code></strong> :&ensp;<code>int</code></dt>
+<dd>The x coordinate of the position of the CENTER of the crosshair.</dd>
+<dt><strong><code>y</code></strong> :&ensp;<code>int</code></dt>
+<dd>The y coordinate of the position of the CENTER of the crosshair.</dd>
+<dt><strong><code>color</code></strong> :&ensp;<code>tuple</code></dt>
+<dd>The color of the crosshair in (r, g, b, alpha), default is (255, 0, 0, 180).</dd>
+<dt><strong><code>spacing</code></strong> :&ensp;<code>int</code></dt>
+<dd>The distance from center to where crosshair lines start, default is 4.</dd>
+<dt><strong><code>lengths</code></strong> :&ensp;<code>int</code></dt>
+<dd>The length of the crosshair lines, default is 12.</dd>
+<dt><strong><code>width</code></strong> :&ensp;<code>int</code></dt>
+<dd>The width of the crosshair lines, default is 4.</dd>
+<dt><strong><code>centerOutline</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Defines if an outline box should be drawn around the center, default is True.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def RenderCrosshair(surface, x, y, color=(255, 0, 0, 180), spacing=4, lengths=12, width=4,
+                    centerOutline=True):  # pragma: no cover
+    &#34;&#34;&#34;
+    Renders a crosshair on the given surface the surface to render the crosshair on
+
+    Parameters
+    ---------
+    surface : pygame.Surface
+        The surface to render the crosshair onto.
+    x : int
+        The x coordinate of the position of the CENTER of the crosshair.
+    y : int
+        The y coordinate of the position of the CENTER of the crosshair.
+    color : tuple
+        The color of the crosshair in (r, g, b, alpha), default is (255, 0, 0, 180).
+    spacing : int
+        The distance from center to where crosshair lines start, default is 4.
+    lengths : int
+        The length of the crosshair lines, default is 12.
+    width : int
+        The width of the crosshair lines, default is 4.
+    centerOutline : bool
+        Defines if an outline box should be drawn around the center, default is True.
+    &#34;&#34;&#34;
+
+    # create temporary surface
+    crosshairSurface = Rendering._CopyEmptySurface(surface)
+
+    # Parse the color and alpha value
+    color, alpha = Rendering._ParseColorAndAlpha(color)
+
+    # draw the four sides of the crosshair:
+    # top:
+    pygame.draw.rect(crosshairSurface, color, (x - math.ceil(width / 2), y - spacing - lengths, width, lengths))
+    # bottom:
+    pygame.draw.rect(crosshairSurface, color, (x - math.ceil(width / 2), y + spacing, width, lengths))
+    # left:
+    pygame.draw.rect(crosshairSurface, color, (x - spacing - lengths, y - math.ceil(width / 2), lengths, width))
+    # right:
+    pygame.draw.rect(crosshairSurface, color, (x + spacing, y - math.ceil(width / 2), lengths, width))
+
+    # if enabled, also draw center outline
+    if centerOutline:
+        rectangle = (x - spacing, y - spacing, spacing * 2, spacing * 2)
+        pygame.draw.rect(crosshairSurface, color, rectangle, 1)
+
+    # set alpha
+    crosshairSurface.set_alpha(alpha)
+
+    # Blit the crosshair to the surface
+    surface.blit(crosshairSurface, (0, 0))</code></pre>
+</details>
+</dd>
+<dt id="Windowing.Rendering.Rendering.RenderLine"><code class="name flex">
+<span>def <span class="ident">RenderLine</span></span>(<span>surface, x1, y1, x2, y2, color=(255, 255, 255, 255), width=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Renders a line on a given surface.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>surface</code></strong> :&ensp;<code>pygame.Surface</code></dt>
+<dd>The surface to render the line on.</dd>
+<dt><strong><code>x1</code></strong> :&ensp;<code>int</code></dt>
+<dd>The x coordinate of the first point.</dd>
+<dt><strong><code>y1</code></strong> :&ensp;<code>int</code></dt>
+<dd>The y coordinate of the first point.</dd>
+<dt><strong><code>x2</code></strong> :&ensp;<code>int</code></dt>
+<dd>The x coordinate of the second point.</dd>
+<dt><strong><code>y2</code></strong> :&ensp;<code>int</code></dt>
+<dd>The y coordinate of the second point.</dd>
+<dt><strong><code>color</code></strong> :&ensp;<code>tuple</code></dt>
+<dd>The color of the line, default is (255, 255, 255, 255).</dd>
+<dt><strong><code>width</code></strong> :&ensp;<code>int</code></dt>
+<dd>The width of the line, default is 1.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def RenderLine(surface, x1, y1, x2, y2, color=(255, 255, 255, 255), width=1):  # pragma: no cover
+    &#34;&#34;&#34; Renders a line on a given surface.
+
+    Parameters
+    ----------
+    surface : pygame.Surface
+        The surface to render the line on.
+    x1 : int
+        The x coordinate of the first point.
+    y1 : int
+        The y coordinate of the first point.
+    x2 : int
+        The x coordinate of the second point.
+    y2 : int
+        The y coordinate of the second point.
+    color : tuple
+        The color of the line, default is (255, 255, 255, 255).
+    width : int
+        The width of the line, default is 1.
+    &#34;&#34;&#34;
+
+    # Create a new surface
+    lineSurface = Rendering._CopyEmptySurface(surface)
+
+    # Parse the color and alpha value
+    color, alpha = Rendering._ParseColorAndAlpha(color)
+
+    # Draw the line
+    pygame.draw.line(lineSurface, color, (x1, y1), (x2, y2), width)
+
+    # Apply the alpha value
+    lineSurface.set_alpha(alpha)
+
+    # Blit the line to the surface
+    surface.blit(lineSurface, (0, 0))</code></pre>
+</details>
+</dd>
+<dt id="Windowing.Rendering.Rendering.RenderPoint"><code class="name flex">
+<span>def <span class="ident">RenderPoint</span></span>(<span>surface, x, y, color=(255, 255, 255, 255), radius=3)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Renders a point on a given surface.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>surface</code></strong> :&ensp;<code>pygame.Surface</code></dt>
+<dd>The surface to render the point on.</dd>
+<dt><strong><code>x</code></strong> :&ensp;<code>int</code></dt>
+<dd>The x coordinate of the point.</dd>
+<dt><strong><code>y</code></strong> :&ensp;<code>int</code></dt>
+<dd>The y coordinate of the point.</dd>
+<dt><strong><code>color</code></strong> :&ensp;<code>tuple</code></dt>
+<dd>The color of the point, default is (255, 255, 255, 255).</dd>
+<dt><strong><code>radius</code></strong> :&ensp;<code>int</code></dt>
+<dd>The radius of the point, default is 3.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def RenderPoint(surface, x, y, color=(255, 255, 255, 255), radius=3):  # pragma: no cover
+    &#34;&#34;&#34; Renders a point on a given surface.
+
+    Parameters
+    ----------
+    surface : pygame.Surface
+        The surface to render the point on.
+    x : int
+        The x coordinate of the point.
+    y : int
+        The y coordinate of the point.
+    color : tuple
+        The color of the point, default is (255, 255, 255, 255).
+    radius : int
+        The radius of the point, default is 3.
+    &#34;&#34;&#34;
+
+    # Create a new surface
+    pointSurface = Rendering._CopyEmptySurface(surface)
+
+    # Parse the color and alpha value
+    color, alpha = Rendering._ParseColorAndAlpha(color)
+
+    # Draw the point
+    pygame.draw.circle(pointSurface, color, (x, y), radius)
+
+    # Apply the alpha value
+    pointSurface.set_alpha(alpha)
+
+    # Blit the point to the surface
+    surface.blit(pointSurface, (0, 0))</code></pre>
+</details>
+</dd>
+<dt id="Windowing.Rendering.Rendering.RenderPolygon"><code class="name flex">
+<span>def <span class="ident">RenderPolygon</span></span>(<span>surface, points, color=(255, 255, 255, 255), width=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Renders a polygon of points on a given surface.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>surface</code></strong> :&ensp;<code>pygame.Surface</code></dt>
+<dd>The surface to render the line on.</dd>
+<dt><strong><code>points</code></strong> :&ensp;<code>[(int, int)]</code></dt>
+<dd>The list of points to render lines between.</dd>
+<dt><strong><code>color</code></strong> :&ensp;<code>tuple</code></dt>
+<dd>The color of the line, default is (255, 255, 255, 255).</dd>
+<dt><strong><code>width</code></strong> :&ensp;<code>int</code></dt>
+<dd>The width of the line, default is 1.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def RenderPolygon(surface, points, color=(255, 255, 255, 255), width=1):  # pragma: no cover
+    &#34;&#34;&#34; Renders a polygon of points on a given surface.
+
+    Parameters
+    ----------
+    surface : pygame.Surface
+        The surface to render the line on.
+    points: [(int, int)]
+        The list of points to render lines between.
+    color : tuple
+        The color of the line, default is (255, 255, 255, 255).
+    width : int
+        The width of the line, default is 1.
+    &#34;&#34;&#34;
+
+    # Create a new surface
+    polygonSurface = Rendering._CopyEmptySurface(surface)
+
+    # Parse the color and alpha value
+    color, alpha = Rendering._ParseColorAndAlpha(color)
+
+    # Draw the lines, between the points
+    for i in range(len(points)):
+        pygame.draw.line(polygonSurface, color, points[i], points[(i + 1) % len(points)], width)
+
+    # Apply the alpha value
+    polygonSurface.set_alpha(alpha)
+
+    # Blit the line to the surface
+    surface.blit(polygonSurface, (0, 0))</code></pre>
+</details>
+</dd>
+<dt id="Windowing.Rendering.Rendering.RenderText"><code class="name flex">
+<span>def <span class="ident">RenderText</span></span>(<span>surface, text, x, y, fontSize=FontSize.Medium, textAlignment=TextAlignment.TopLeft, color=(255, 255, 255, 255), shadowOffset=2)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Renders a text on a given surface.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>surface</code></strong> :&ensp;<code>pygame.Surface</code></dt>
+<dd>The surface to render the text on.</dd>
+<dt><strong><code>text</code></strong> :&ensp;<code>str</code></dt>
+<dd>The text to render.</dd>
+<dt><strong><code>x</code></strong> :&ensp;<code>int</code></dt>
+<dd>The x coordinate of the text.</dd>
+<dt><strong><code>y</code></strong> :&ensp;<code>int</code></dt>
+<dd>The y coordinate of the text.</dd>
+<dt><strong><code>fontSize</code></strong> :&ensp;<code>FontSize</code></dt>
+<dd>The font size of the text, default is FontSize.Medium.</dd>
+<dt><strong><code>textAlignment</code></strong> :&ensp;<code>TextAlignment</code></dt>
+<dd>The text alignment of the text, default is TextAlignment.TopLeft.</dd>
+<dt><strong><code>color</code></strong> :&ensp;<code>tuple</code></dt>
+<dd>The color of the text, default is (255, 255, 255, 255).</dd>
+<dt><strong><code>shadowOffset</code></strong> :&ensp;<code>int</code></dt>
+<dd>The offset of the shadow, default is 2.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def RenderText(
+        surface,
+        text,
+        x, y,
+        fontSize=FontSize.Medium,
+        textAlignment=TextAlignment.TopLeft,
+        color=(255, 255, 255, 255),
+        shadowOffset=2
+):  # pragma: no cover
+    &#34;&#34;&#34; Renders a text on a given surface.
+
+    Parameters
+    ----------
+    surface : pygame.Surface
+        The surface to render the text on.
+    text : str
+        The text to render.
+    x : int
+        The x coordinate of the text.
+    y : int
+        The y coordinate of the text.
+    fontSize : FontSize
+        The font size of the text, default is FontSize.Medium.
+    textAlignment : TextAlignment
+        The text alignment of the text, default is TextAlignment.TopLeft.
+    color : tuple
+        The color of the text, default is (255, 255, 255, 255).
+    shadowOffset : int
+        The offset of the shadow, default is 2.
+    &#34;&#34;&#34;
+
+    # Render shadow, if necessary
+    if shadowOffset &gt; 0:
+        Rendering._RenderLabel(surface, text, x, y + shadowOffset, fontSize, textAlignment, (0, 0, 0))
+
+    # Render text
+    Rendering._RenderLabel(surface, text, x, y, fontSize, textAlignment, color)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<img src="/images/logo_full.png" alt="">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="Windowing" href="index.html">Windowing</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="Windowing.Rendering.Rendering" href="#Windowing.Rendering.Rendering">Rendering</a></code></h4>
+<ul class="">
+<li><code><a title="Windowing.Rendering.Rendering.ConvertOpenCVImageToPyGameImage" href="#Windowing.Rendering.Rendering.ConvertOpenCVImageToPyGameImage">ConvertOpenCVImageToPyGameImage</a></code></li>
+<li><code><a title="Windowing.Rendering.Rendering.ConvertSurfaceToOpenCV" href="#Windowing.Rendering.Rendering.ConvertSurfaceToOpenCV">ConvertSurfaceToOpenCV</a></code></li>
+<li><code><a title="Windowing.Rendering.Rendering.FontSize" href="#Windowing.Rendering.Rendering.FontSize">FontSize</a></code></li>
+<li><code><a title="Windowing.Rendering.Rendering.RenderBox" href="#Windowing.Rendering.Rendering.RenderBox">RenderBox</a></code></li>
+<li><code><a title="Windowing.Rendering.Rendering.RenderCrosshair" href="#Windowing.Rendering.Rendering.RenderCrosshair">RenderCrosshair</a></code></li>
+<li><code><a title="Windowing.Rendering.Rendering.RenderLine" href="#Windowing.Rendering.Rendering.RenderLine">RenderLine</a></code></li>
+<li><code><a title="Windowing.Rendering.Rendering.RenderPoint" href="#Windowing.Rendering.Rendering.RenderPoint">RenderPoint</a></code></li>
+<li><code><a title="Windowing.Rendering.Rendering.RenderPolygon" href="#Windowing.Rendering.Rendering.RenderPolygon">RenderPolygon</a></code></li>
+<li><code><a title="Windowing.Rendering.Rendering.RenderText" href="#Windowing.Rendering.Rendering.RenderText">RenderText</a></code></li>
+<li><code><a title="Windowing.Rendering.Rendering.TextAlignment" href="#Windowing.Rendering.Rendering.TextAlignment">TextAlignment</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p><center>
+This program has been developed by students from the bachelor Computer Science at Utrecht University within the Software Project course.
+&#169 Copyright Utrecht University (Department of Information and Computing Sciences)
+</center></p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

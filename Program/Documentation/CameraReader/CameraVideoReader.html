@@ -1,0 +1,900 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>CameraReader.CameraVideoReader API documentation</title>
+<meta name="description" content="The Camera Video Reader is a buffer-less VideoCapture object. It constantly reads video and returns the latest frame." />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;700&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/favicon/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="pdoc-header">
+<nav class="pdoc-nav">
+<ul>
+<li>
+<a href="../index.html" class="menu">Home</a>
+</li>
+<li>
+<a href="../Main/Main.html" class="menu">Main</a>
+</li>
+<li>
+<a href="../API/index.html" class="menu">API</a>
+</li>
+<li>
+<a href="../Calibrator/index.html" class="menu">Calibrator</a>
+</li>
+<li>
+<a href="../CameraReader/index.html" class="menu">Camera Reader</a>
+</li>
+<li>
+<a href="../FrameAnalyzer/index.html" class="menu">Frame Analyzer</a>
+</li>
+<li>
+<a href="../IO/index.html" class="menu">IO</a>
+</li>
+<li>
+<a href="../Positioner/index.html" class="menu">Positioner</a>
+</li>
+<li>
+<a href="../Windowing/index.html" class="menu">Windowing</a>
+</li>
+<li>
+<a href="../ArgsGUI/index.html" class="menu">ArgsGUI</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>CameraReader.CameraVideoReader</code></h1>
+</header>
+<section id="section-intro">
+<p>The Camera Video Reader is a buffer-less VideoCapture object. It constantly reads video and returns the latest frame.</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># This program has been developed by students from the bachelor Computer Science at Utrecht University within the
+# Software Project course.
+# © Copyright Utrecht University (Department of Information and Computing Sciences)
+
+&#34;&#34;&#34;
+The Camera Video Reader is a buffer-less VideoCapture object. It constantly reads video and returns the latest frame.
+&#34;&#34;&#34;
+import threading
+import time
+import cv2
+from datetime import datetime
+
+
+class VideoCapture:
+    &#34;&#34;&#34;A buffer-less VideoCapture object&#34;&#34;&#34;
+    # videoCapture object variables
+    captureObject: cv2.VideoCapture = None
+    width: int = 0
+    height: int = 0
+    captureObjectFPS: float = 0
+    fileOrStreamLocation: str = None
+
+    # stream reading variables
+    readingThread: threading.Thread = None
+    status: bool = True
+    isStream: bool = False
+    readingStream: bool = False
+    paused: bool = False
+
+    # frame variables
+    hasFrame: threading.Condition = None
+    lastFrame = None
+    frameIndex: int = 0
+    frameReadDatetime: datetime = 0
+    currentFrameTime: float = 0
+    previousFrameTime: float = 0
+
+    def __init__(self):
+        # videoCapture object variables
+        self.captureObject = None
+        self.width = 0
+        self.height = 0
+        self.captureObjectFPS = 0
+        self.fileOrStreamLocation = None
+
+        # stream reading variables
+        self.readingThread = None
+        self.status = True
+        self.isStream = False
+        self.readingStream = False
+        self.paused = False
+
+        # frame variables
+        self.hasFrame = threading.Condition()
+        self.lastFrame = None
+        self.frameIndex = 0
+        self.previousFrameTime = 0
+        self.currentFrameTime = 0
+
+    def ConnectCaptureObject(self, fileOrStreamLocation: str, isStream: bool):
+        &#34;&#34;&#34;
+        Connect to a camera object or video file and start reading a stream from it.
+
+        Parameters
+        ----------
+        fileOrStreamLocation : str
+            The location of the camera or video file
+        isStream : bool
+            Checks if the data is a stream or not
+        &#34;&#34;&#34;
+        self.fileOrStreamLocation = fileOrStreamLocation
+        self.isStream = isStream
+
+        # open the capture object
+        self.captureObject = cv2.VideoCapture(fileOrStreamLocation)
+        if not self.captureObject.isOpened():
+            print(&#34;Could not open CaptureObject&#34;)
+            return
+        self.width = self.captureObject.get(3)
+        self.height = self.captureObject.get(4)
+        self.captureObjectFPS = self.captureObject.get(cv2.CAP_PROP_FPS)
+
+        # check if the capture object is a real-time video stream
+        if str.startswith(fileOrStreamLocation, &#34;rtsp://&#34;) or\
+           str.startswith(fileOrStreamLocation, &#34;http://&#34;) or\
+           str.startswith(fileOrStreamLocation, &#34;https://&#34;):
+            isStream = True
+
+        # Frame times
+        self.currentFrameTime = time.time()
+        self.previousFrameTime = self.currentFrameTime
+        self.readingStream = True
+
+        # Start reading thread
+        if isStream:
+            self.readingThread = threading.Thread(target=self._ReadStream)
+            self.readingThread.daemon = True
+            self.readingThread.start()
+        else:
+            self.readingThread = threading.Thread(target=self._ReadVideo)
+            self.readingThread.daemon = True
+            self.readingThread.start()
+
+    def ReleaseCaptureObject(self):
+        &#34;&#34;&#34;
+        Release the capture object and stop reading the stream.
+
+        Returns
+        -------
+        bool
+            Returns True if the release was successful
+        &#34;&#34;&#34;
+        if self.captureObject is None:
+            return False
+
+        # Stop reading thread
+        self.readingStream = False
+        if self.readingThread is not None:
+            self.readingThread.join()
+        self.readingThread = None
+
+        # Stop capture object
+        status = self.captureObject.release()
+        self.captureObject = None
+        print(&#39;Capture Object disconnected&#39;)
+
+        return status
+
+    def _ReadStream(self):
+        &#34;&#34;&#34;Thread to read frames from a stream.&#34;&#34;&#34;
+        while self.readingStream:
+            self.previousFrameTime = self.currentFrameTime
+            self._SingleRead()
+            self.frameIndex += 1
+            time.sleep(0.003)
+
+    def _SingleRead(self):
+        &#34;&#34;&#34;Read a single frame from the captureObject.&#34;&#34;&#34;
+        (status, lastFrame) = self.captureObject.read()
+        with self.hasFrame:
+            self.status = status
+            self.lastFrame = lastFrame
+            self.frameReadDatetime = datetime.now()
+            self.hasFrame.notify()
+
+    def _ReadVideo(self):
+        &#34;&#34;&#34;Thread to continuously read frames from a video.&#34;&#34;&#34;
+        self._SingleRead()
+
+        timeForFrame = 1 / self.captureObjectFPS
+        while self.readingStream:
+            # Check if paused
+            if self.paused:
+                time.sleep(0.01)
+                continue
+
+            self.previousFrameTime = self.currentFrameTime
+            if time.time() - self.currentFrameTime &gt; timeForFrame:
+                self.frameIndex += 1
+                self._SingleRead()
+                self.currentFrameTime = time.time()
+            time.sleep(0.003)
+
+    def ReadLastFrame(self):
+        &#34;&#34;&#34;
+        Return the last frame read from the camera or video.
+
+        Returns
+        -------
+        bool, Frame, int
+            The status of the Frame,
+            the Frame itself,
+            the Frame index
+        &#34;&#34;&#34;
+        with self.hasFrame:
+            self.hasFrame.wait()
+            return self.status, self.lastFrame, self.frameIndex, self.frameReadDatetime
+
+    def GetWidth(self):
+        &#34;&#34;&#34;
+        Get the width of the camera object
+
+        Returns
+        -------
+        int
+        &#34;&#34;&#34;
+        return self.width
+
+    def GetHeight(self):
+        &#34;&#34;&#34;
+        Get the height of the camera object
+
+        Returns
+        -------
+        int
+        &#34;&#34;&#34;
+        return self.height
+
+    def IsOpened(self):
+        &#34;&#34;&#34;
+        Check if the captureObject is opened
+
+        Returns
+        -------
+        bool
+        &#34;&#34;&#34;
+        if self.captureObject is None:
+            return False
+        return self.captureObject.isOpened()
+
+    def GetFPS(self):
+        &#34;&#34;&#34;
+        Get the current reading fps and the fps of the captureObject
+
+        Returns
+        -------
+        int, int
+            The build in fps,
+            the current fps
+        &#34;&#34;&#34;
+        fps = 0
+        if self.currentFrameTime is not self.previousFrameTime:
+            fps = 1.0 / (self.currentFrameTime - self.previousFrameTime)
+        return fps, self.captureObjectFPS</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="CameraReader.CameraVideoReader.VideoCapture"><code class="flex name class">
+<span>class <span class="ident">VideoCapture</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>A buffer-less VideoCapture object</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class VideoCapture:
+    &#34;&#34;&#34;A buffer-less VideoCapture object&#34;&#34;&#34;
+    # videoCapture object variables
+    captureObject: cv2.VideoCapture = None
+    width: int = 0
+    height: int = 0
+    captureObjectFPS: float = 0
+    fileOrStreamLocation: str = None
+
+    # stream reading variables
+    readingThread: threading.Thread = None
+    status: bool = True
+    isStream: bool = False
+    readingStream: bool = False
+    paused: bool = False
+
+    # frame variables
+    hasFrame: threading.Condition = None
+    lastFrame = None
+    frameIndex: int = 0
+    frameReadDatetime: datetime = 0
+    currentFrameTime: float = 0
+    previousFrameTime: float = 0
+
+    def __init__(self):
+        # videoCapture object variables
+        self.captureObject = None
+        self.width = 0
+        self.height = 0
+        self.captureObjectFPS = 0
+        self.fileOrStreamLocation = None
+
+        # stream reading variables
+        self.readingThread = None
+        self.status = True
+        self.isStream = False
+        self.readingStream = False
+        self.paused = False
+
+        # frame variables
+        self.hasFrame = threading.Condition()
+        self.lastFrame = None
+        self.frameIndex = 0
+        self.previousFrameTime = 0
+        self.currentFrameTime = 0
+
+    def ConnectCaptureObject(self, fileOrStreamLocation: str, isStream: bool):
+        &#34;&#34;&#34;
+        Connect to a camera object or video file and start reading a stream from it.
+
+        Parameters
+        ----------
+        fileOrStreamLocation : str
+            The location of the camera or video file
+        isStream : bool
+            Checks if the data is a stream or not
+        &#34;&#34;&#34;
+        self.fileOrStreamLocation = fileOrStreamLocation
+        self.isStream = isStream
+
+        # open the capture object
+        self.captureObject = cv2.VideoCapture(fileOrStreamLocation)
+        if not self.captureObject.isOpened():
+            print(&#34;Could not open CaptureObject&#34;)
+            return
+        self.width = self.captureObject.get(3)
+        self.height = self.captureObject.get(4)
+        self.captureObjectFPS = self.captureObject.get(cv2.CAP_PROP_FPS)
+
+        # check if the capture object is a real-time video stream
+        if str.startswith(fileOrStreamLocation, &#34;rtsp://&#34;) or\
+           str.startswith(fileOrStreamLocation, &#34;http://&#34;) or\
+           str.startswith(fileOrStreamLocation, &#34;https://&#34;):
+            isStream = True
+
+        # Frame times
+        self.currentFrameTime = time.time()
+        self.previousFrameTime = self.currentFrameTime
+        self.readingStream = True
+
+        # Start reading thread
+        if isStream:
+            self.readingThread = threading.Thread(target=self._ReadStream)
+            self.readingThread.daemon = True
+            self.readingThread.start()
+        else:
+            self.readingThread = threading.Thread(target=self._ReadVideo)
+            self.readingThread.daemon = True
+            self.readingThread.start()
+
+    def ReleaseCaptureObject(self):
+        &#34;&#34;&#34;
+        Release the capture object and stop reading the stream.
+
+        Returns
+        -------
+        bool
+            Returns True if the release was successful
+        &#34;&#34;&#34;
+        if self.captureObject is None:
+            return False
+
+        # Stop reading thread
+        self.readingStream = False
+        if self.readingThread is not None:
+            self.readingThread.join()
+        self.readingThread = None
+
+        # Stop capture object
+        status = self.captureObject.release()
+        self.captureObject = None
+        print(&#39;Capture Object disconnected&#39;)
+
+        return status
+
+    def _ReadStream(self):
+        &#34;&#34;&#34;Thread to read frames from a stream.&#34;&#34;&#34;
+        while self.readingStream:
+            self.previousFrameTime = self.currentFrameTime
+            self._SingleRead()
+            self.frameIndex += 1
+            time.sleep(0.003)
+
+    def _SingleRead(self):
+        &#34;&#34;&#34;Read a single frame from the captureObject.&#34;&#34;&#34;
+        (status, lastFrame) = self.captureObject.read()
+        with self.hasFrame:
+            self.status = status
+            self.lastFrame = lastFrame
+            self.frameReadDatetime = datetime.now()
+            self.hasFrame.notify()
+
+    def _ReadVideo(self):
+        &#34;&#34;&#34;Thread to continuously read frames from a video.&#34;&#34;&#34;
+        self._SingleRead()
+
+        timeForFrame = 1 / self.captureObjectFPS
+        while self.readingStream:
+            # Check if paused
+            if self.paused:
+                time.sleep(0.01)
+                continue
+
+            self.previousFrameTime = self.currentFrameTime
+            if time.time() - self.currentFrameTime &gt; timeForFrame:
+                self.frameIndex += 1
+                self._SingleRead()
+                self.currentFrameTime = time.time()
+            time.sleep(0.003)
+
+    def ReadLastFrame(self):
+        &#34;&#34;&#34;
+        Return the last frame read from the camera or video.
+
+        Returns
+        -------
+        bool, Frame, int
+            The status of the Frame,
+            the Frame itself,
+            the Frame index
+        &#34;&#34;&#34;
+        with self.hasFrame:
+            self.hasFrame.wait()
+            return self.status, self.lastFrame, self.frameIndex, self.frameReadDatetime
+
+    def GetWidth(self):
+        &#34;&#34;&#34;
+        Get the width of the camera object
+
+        Returns
+        -------
+        int
+        &#34;&#34;&#34;
+        return self.width
+
+    def GetHeight(self):
+        &#34;&#34;&#34;
+        Get the height of the camera object
+
+        Returns
+        -------
+        int
+        &#34;&#34;&#34;
+        return self.height
+
+    def IsOpened(self):
+        &#34;&#34;&#34;
+        Check if the captureObject is opened
+
+        Returns
+        -------
+        bool
+        &#34;&#34;&#34;
+        if self.captureObject is None:
+            return False
+        return self.captureObject.isOpened()
+
+    def GetFPS(self):
+        &#34;&#34;&#34;
+        Get the current reading fps and the fps of the captureObject
+
+        Returns
+        -------
+        int, int
+            The build in fps,
+            the current fps
+        &#34;&#34;&#34;
+        fps = 0
+        if self.currentFrameTime is not self.previousFrameTime:
+            fps = 1.0 / (self.currentFrameTime - self.previousFrameTime)
+        return fps, self.captureObjectFPS</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.captureObject"><code class="name">var <span class="ident">captureObject</span> : cv2.VideoCapture</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.captureObjectFPS"><code class="name">var <span class="ident">captureObjectFPS</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.currentFrameTime"><code class="name">var <span class="ident">currentFrameTime</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.fileOrStreamLocation"><code class="name">var <span class="ident">fileOrStreamLocation</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.frameIndex"><code class="name">var <span class="ident">frameIndex</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.frameReadDatetime"><code class="name">var <span class="ident">frameReadDatetime</span> : datetime.datetime</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.hasFrame"><code class="name">var <span class="ident">hasFrame</span> : threading.Condition</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.height"><code class="name">var <span class="ident">height</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.isStream"><code class="name">var <span class="ident">isStream</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.lastFrame"><code class="name">var <span class="ident">lastFrame</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.paused"><code class="name">var <span class="ident">paused</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.previousFrameTime"><code class="name">var <span class="ident">previousFrameTime</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.readingStream"><code class="name">var <span class="ident">readingStream</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.readingThread"><code class="name">var <span class="ident">readingThread</span> : threading.Thread</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.status"><code class="name">var <span class="ident">status</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.width"><code class="name">var <span class="ident">width</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.ConnectCaptureObject"><code class="name flex">
+<span>def <span class="ident">ConnectCaptureObject</span></span>(<span>self, fileOrStreamLocation: str, isStream: bool)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Connect to a camera object or video file and start reading a stream from it.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>fileOrStreamLocation</code></strong> :&ensp;<code>str</code></dt>
+<dd>The location of the camera or video file</dd>
+<dt><strong><code>isStream</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Checks if the data is a stream or not</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ConnectCaptureObject(self, fileOrStreamLocation: str, isStream: bool):
+    &#34;&#34;&#34;
+    Connect to a camera object or video file and start reading a stream from it.
+
+    Parameters
+    ----------
+    fileOrStreamLocation : str
+        The location of the camera or video file
+    isStream : bool
+        Checks if the data is a stream or not
+    &#34;&#34;&#34;
+    self.fileOrStreamLocation = fileOrStreamLocation
+    self.isStream = isStream
+
+    # open the capture object
+    self.captureObject = cv2.VideoCapture(fileOrStreamLocation)
+    if not self.captureObject.isOpened():
+        print(&#34;Could not open CaptureObject&#34;)
+        return
+    self.width = self.captureObject.get(3)
+    self.height = self.captureObject.get(4)
+    self.captureObjectFPS = self.captureObject.get(cv2.CAP_PROP_FPS)
+
+    # check if the capture object is a real-time video stream
+    if str.startswith(fileOrStreamLocation, &#34;rtsp://&#34;) or\
+       str.startswith(fileOrStreamLocation, &#34;http://&#34;) or\
+       str.startswith(fileOrStreamLocation, &#34;https://&#34;):
+        isStream = True
+
+    # Frame times
+    self.currentFrameTime = time.time()
+    self.previousFrameTime = self.currentFrameTime
+    self.readingStream = True
+
+    # Start reading thread
+    if isStream:
+        self.readingThread = threading.Thread(target=self._ReadStream)
+        self.readingThread.daemon = True
+        self.readingThread.start()
+    else:
+        self.readingThread = threading.Thread(target=self._ReadVideo)
+        self.readingThread.daemon = True
+        self.readingThread.start()</code></pre>
+</details>
+</dd>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.GetFPS"><code class="name flex">
+<span>def <span class="ident">GetFPS</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the current reading fps and the fps of the captureObject</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int, int</code></dt>
+<dd>The build in fps,
+the current fps</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def GetFPS(self):
+    &#34;&#34;&#34;
+    Get the current reading fps and the fps of the captureObject
+
+    Returns
+    -------
+    int, int
+        The build in fps,
+        the current fps
+    &#34;&#34;&#34;
+    fps = 0
+    if self.currentFrameTime is not self.previousFrameTime:
+        fps = 1.0 / (self.currentFrameTime - self.previousFrameTime)
+    return fps, self.captureObjectFPS</code></pre>
+</details>
+</dd>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.GetHeight"><code class="name flex">
+<span>def <span class="ident">GetHeight</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the height of the camera object</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def GetHeight(self):
+    &#34;&#34;&#34;
+    Get the height of the camera object
+
+    Returns
+    -------
+    int
+    &#34;&#34;&#34;
+    return self.height</code></pre>
+</details>
+</dd>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.GetWidth"><code class="name flex">
+<span>def <span class="ident">GetWidth</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the width of the camera object</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def GetWidth(self):
+    &#34;&#34;&#34;
+    Get the width of the camera object
+
+    Returns
+    -------
+    int
+    &#34;&#34;&#34;
+    return self.width</code></pre>
+</details>
+</dd>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.IsOpened"><code class="name flex">
+<span>def <span class="ident">IsOpened</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Check if the captureObject is opened</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>bool</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def IsOpened(self):
+    &#34;&#34;&#34;
+    Check if the captureObject is opened
+
+    Returns
+    -------
+    bool
+    &#34;&#34;&#34;
+    if self.captureObject is None:
+        return False
+    return self.captureObject.isOpened()</code></pre>
+</details>
+</dd>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.ReadLastFrame"><code class="name flex">
+<span>def <span class="ident">ReadLastFrame</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Return the last frame read from the camera or video.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>bool, Frame, int</code></dt>
+<dd>The status of the Frame,
+the Frame itself,
+the Frame index</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ReadLastFrame(self):
+    &#34;&#34;&#34;
+    Return the last frame read from the camera or video.
+
+    Returns
+    -------
+    bool, Frame, int
+        The status of the Frame,
+        the Frame itself,
+        the Frame index
+    &#34;&#34;&#34;
+    with self.hasFrame:
+        self.hasFrame.wait()
+        return self.status, self.lastFrame, self.frameIndex, self.frameReadDatetime</code></pre>
+</details>
+</dd>
+<dt id="CameraReader.CameraVideoReader.VideoCapture.ReleaseCaptureObject"><code class="name flex">
+<span>def <span class="ident">ReleaseCaptureObject</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Release the capture object and stop reading the stream.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>bool</code></dt>
+<dd>Returns True if the release was successful</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ReleaseCaptureObject(self):
+    &#34;&#34;&#34;
+    Release the capture object and stop reading the stream.
+
+    Returns
+    -------
+    bool
+        Returns True if the release was successful
+    &#34;&#34;&#34;
+    if self.captureObject is None:
+        return False
+
+    # Stop reading thread
+    self.readingStream = False
+    if self.readingThread is not None:
+        self.readingThread.join()
+    self.readingThread = None
+
+    # Stop capture object
+    status = self.captureObject.release()
+    self.captureObject = None
+    print(&#39;Capture Object disconnected&#39;)
+
+    return status</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<img src="/images/logo_full.png" alt="">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="CameraReader" href="index.html">CameraReader</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="CameraReader.CameraVideoReader.VideoCapture" href="#CameraReader.CameraVideoReader.VideoCapture">VideoCapture</a></code></h4>
+<ul class="">
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.ConnectCaptureObject" href="#CameraReader.CameraVideoReader.VideoCapture.ConnectCaptureObject">ConnectCaptureObject</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.GetFPS" href="#CameraReader.CameraVideoReader.VideoCapture.GetFPS">GetFPS</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.GetHeight" href="#CameraReader.CameraVideoReader.VideoCapture.GetHeight">GetHeight</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.GetWidth" href="#CameraReader.CameraVideoReader.VideoCapture.GetWidth">GetWidth</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.IsOpened" href="#CameraReader.CameraVideoReader.VideoCapture.IsOpened">IsOpened</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.ReadLastFrame" href="#CameraReader.CameraVideoReader.VideoCapture.ReadLastFrame">ReadLastFrame</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.ReleaseCaptureObject" href="#CameraReader.CameraVideoReader.VideoCapture.ReleaseCaptureObject">ReleaseCaptureObject</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.captureObject" href="#CameraReader.CameraVideoReader.VideoCapture.captureObject">captureObject</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.captureObjectFPS" href="#CameraReader.CameraVideoReader.VideoCapture.captureObjectFPS">captureObjectFPS</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.currentFrameTime" href="#CameraReader.CameraVideoReader.VideoCapture.currentFrameTime">currentFrameTime</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.fileOrStreamLocation" href="#CameraReader.CameraVideoReader.VideoCapture.fileOrStreamLocation">fileOrStreamLocation</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.frameIndex" href="#CameraReader.CameraVideoReader.VideoCapture.frameIndex">frameIndex</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.frameReadDatetime" href="#CameraReader.CameraVideoReader.VideoCapture.frameReadDatetime">frameReadDatetime</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.hasFrame" href="#CameraReader.CameraVideoReader.VideoCapture.hasFrame">hasFrame</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.height" href="#CameraReader.CameraVideoReader.VideoCapture.height">height</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.isStream" href="#CameraReader.CameraVideoReader.VideoCapture.isStream">isStream</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.lastFrame" href="#CameraReader.CameraVideoReader.VideoCapture.lastFrame">lastFrame</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.paused" href="#CameraReader.CameraVideoReader.VideoCapture.paused">paused</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.previousFrameTime" href="#CameraReader.CameraVideoReader.VideoCapture.previousFrameTime">previousFrameTime</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.readingStream" href="#CameraReader.CameraVideoReader.VideoCapture.readingStream">readingStream</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.readingThread" href="#CameraReader.CameraVideoReader.VideoCapture.readingThread">readingThread</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.status" href="#CameraReader.CameraVideoReader.VideoCapture.status">status</a></code></li>
+<li><code><a title="CameraReader.CameraVideoReader.VideoCapture.width" href="#CameraReader.CameraVideoReader.VideoCapture.width">width</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p><center>
+This program has been developed by students from the bachelor Computer Science at Utrecht University within the Software Project course.
+&#169 Copyright Utrecht University (Department of Information and Computing Sciences)
+</center></p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

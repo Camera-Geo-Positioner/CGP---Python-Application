@@ -1,0 +1,1156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>Positioner.IConvertor API documentation</title>
+<meta name="description" content="Interface for the different conversion methods." />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;700&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/favicon/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="pdoc-header">
+<nav class="pdoc-nav">
+<ul>
+<li>
+<a href="../index.html" class="menu">Home</a>
+</li>
+<li>
+<a href="../Main/Main.html" class="menu">Main</a>
+</li>
+<li>
+<a href="../API/index.html" class="menu">API</a>
+</li>
+<li>
+<a href="../Calibrator/index.html" class="menu">Calibrator</a>
+</li>
+<li>
+<a href="../CameraReader/index.html" class="menu">Camera Reader</a>
+</li>
+<li>
+<a href="../FrameAnalyzer/index.html" class="menu">Frame Analyzer</a>
+</li>
+<li>
+<a href="../IO/index.html" class="menu">IO</a>
+</li>
+<li>
+<a href="../Positioner/index.html" class="menu">Positioner</a>
+</li>
+<li>
+<a href="../Windowing/index.html" class="menu">Windowing</a>
+</li>
+<li>
+<a href="../ArgsGUI/index.html" class="menu">ArgsGUI</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>Positioner.IConvertor</code></h1>
+</header>
+<section id="section-intro">
+<p>Interface for the different conversion methods.</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># This program has been developed by students from the bachelor Computer Science at Utrecht University within the
+# Software Project course.
+# © Copyright Utrecht University (Department of Information and Computing Sciences)
+
+&#34;&#34;&#34;
+Interface for the different conversion methods.
+&#34;&#34;&#34;
+
+import os
+import geopy.distance
+import math
+import numpy as np
+
+from Calibrator.Configurations.ICalibrationConfiguration import ICalibrationConfiguration
+from FrameAnalyzer.IDetector import DetectedObject
+from IO import Pathing
+from Positioner.Accuracy.StaticAccuracyDataset import StaticAccuracyDataset, StaticAccuracyError
+from Positioner.DetectedObjectPosition import DetectedObjectPosition
+
+
+class IConvertor:
+    &#34;&#34;&#34;
+    Interface for the different conversion methods used in the MainPositioner.
+    &#34;&#34;&#34;
+    configuration: ICalibrationConfiguration = None
+    staticError: StaticAccuracyError = None
+
+    def __init__(self, configuration: ICalibrationConfiguration):
+        &#34;&#34;&#34;
+        Constructor of the IConvertor, takes a worldRepresentation to convert data.
+
+        Parameters
+        ----------
+        configuration : ICalibrationConfiguration|None
+            The configuration used for conversion.
+        &#34;&#34;&#34;
+
+        # Set the configuration
+        self.configuration = configuration
+
+        # Call calculate static error by default
+        if self.configuration is not None and isinstance(self.configuration, ICalibrationConfiguration):
+            self._CalculateStaticError()
+
+    def Convert2DTo3D(self, detectedObjects: [DetectedObject], frameIndex: int, showConversions=False):
+        &#34;&#34;&#34;
+        This function converts a screenspace (2D) position to a worldspace (3D) position.
+        It uses the worldRepresentation to convert the given DetectedObject[] data to detectedObjectPosition[] data.
+        This function is meant to be abstract and to recieve specific implementation depending on the conversion method
+
+
+        Parameters
+        ----------
+        detectedObjects : [DetectedObject]
+            The DetectedObject[] data to be converted.
+        frameIndex : int
+            The index belonging to the DetectedObject[] data.
+        showConversions : bool
+            Whether conversions are shown on the map
+
+        Returns
+        -------
+        DetectedObjectPosition[]
+            An array of named tuples containing X, Y and Z coordinates, ID
+            and the type of detected and to 3D converted objects.
+        &#34;&#34;&#34;
+        detectedObjectPositions = []
+
+        for detectedObject in detectedObjects:
+            x = (detectedObject.x - 540) / 40
+            y = (250 - detectedObject.y) / 30
+            objectID = detectedObject.id
+            objectType = detectedObject.type
+            detectedObjectPositions.append(DetectedObjectPosition(y, x, 0, objectID, objectType))
+
+        return detectedObjectPositions
+
+    def _CalculateStaticError(self):  # pragma: no cover
+        &#34;&#34;&#34;
+        Calculates the static error for the given configuration based
+        on all available static error datasets.
+        &#34;&#34;&#34;
+
+        # Read all static error datasets
+        folder = Pathing.AssureAbsolutePath(&#34;Testing/Assets/Datasets&#34;)
+        staticErrorDatasets = []
+        for file in os.listdir(folder):
+            if file.endswith(&#34;.json&#34;):
+                staticErrorDatasets.append(StaticAccuracyDataset.Load(folder / file))
+
+        # Save configuration for now
+        savedConfiguration = self.configuration
+
+        # Calculate the static error for all datasets
+        for staticErrorDataset in staticErrorDatasets:
+            # Get the configuration for the dataset, and
+            # use it temporarily
+            self.configuration = staticErrorDataset.GetCalibrationConfiguration(
+                savedConfiguration.__class__.__name__
+            )
+
+            # Calculate the static error for the dataset
+            for e in range(len(staticErrorDataset.entries)):
+                entry = staticErrorDataset.entries[e]
+                validationWorldPosition = self.Convert2DTo3D(
+                    [DetectedObject(
+                        float(entry[&#39;screenPosition&#39;][0]),
+                        float(entry[&#39;screenPosition&#39;][1]),
+                        -1, None
+                    )],
+                    -1
+                )[0]
+                validationLongitude = validationWorldPosition.longitude
+                validationLatitude = validationWorldPosition.latitude
+
+                # Calculate the error
+                if self.staticError is None:
+                    self.staticError = StaticAccuracyError()
+
+                actualPos = IConvertor._WorldPosToGeoPos(entry[&#39;worldPosition&#39;])
+                validationPos = (validationLatitude, validationLongitude)
+                newError = IConvertor.MetersBetweenGeoPositions(actualPos, validationPos)
+                self.staticError.AddError(newError)
+
+        self.staticError.AverageErrors()
+
+        # Print the static error
+        print(&#34;Method static max error:&#34;, self.staticError.GetMaxError())
+        print(&#34;Method static average error:&#34;, self.staticError.averageError)
+
+        # Restore the configuration
+        self.configuration = savedConfiguration
+
+    @staticmethod
+    def _WorldPosToGeoPos(worldPos):  # pragma: no cover
+        &#34;&#34;&#34;
+
+        Parameters
+        ----------
+        worldPos: [float]
+            list in form [x, y, z] in meters
+
+        Returns
+        -------
+        geoPos in form [float, float]
+        &#34;&#34;&#34;
+        [x, y, z] = worldPos
+        angle = IConvertor.GetAngleToNorthFromVector(x, z)
+        meters = math.sqrt(x * x + z * z)
+        [lat, lon] = IConvertor.MoveGeoByBearing(0, 0, np.rad2deg(angle), meters)
+        return lat, lon
+
+    def ConversionSinglePixelError(self, detectedObjects: [DetectedObject], frameIndex: int):
+        &#34;&#34;&#34;
+        This function does the same as Convert2DTo3D but also checks how much the position would change for each point,
+        if it was shifted by a single pixel
+        (it picks the largest error per point of all four cardinal directions and passes that)
+
+        Parameters
+        ----------
+        detectedObjects : [DetectedObject]
+                A list items, each holding the information of a single point to be transformed from 2D to 3D
+
+        frameIndex : int
+                the index of the frame in the video on which this list of objects, and these positions, were detected
+
+        Returns
+        -------
+        [DetectedObjectPosition]
+                A list containing for each entry the result of that entry in Convert2DTo3D and its metadata (e.g. error)
+        &#34;&#34;&#34;
+        detectedObjectPositionsWithError = []
+
+        if detectedObjects == []:
+            return []
+
+        mainResults = self.Convert2DTo3D(detectedObjects, frameIndex, True)
+
+        for i in range(len(mainResults)):
+            mainResult = mainResults[i]
+            mainPosition = (mainResult.latitude, mainResult.longitude)
+            shiftedObjects = self.PrepareShiftedPositionList(detectedObjects[i])
+            shiftedObjectResults = self.Convert2DTo3D(shiftedObjects, frameIndex)
+            errorDistance = []
+            for obj in shiftedObjectResults:
+                errorDistance.append(self.MetersBetweenGeoPositions((obj.latitude, obj.longitude), mainPosition))
+
+            objectLat = mainResult.latitude
+            objectLon = mainResult.longitude
+            objectAlt = mainResult.altitude
+            objectID = mainResult.id
+            objectType = mainResult.type
+            objectEr = 0
+            if self.staticError is not None:
+                objectEr = max(errorDistance) + self.staticError.GetMaxError()
+            objectRdX = mainResult.rijksdriehoekX
+            objectRdY = mainResult.rijksdriehoekY
+            final = DetectedObjectPosition(objectLat, objectLon, objectAlt, objectID,
+                                           objectType, objectEr, objectRdX, objectRdY)
+            detectedObjectPositionsWithError.append(final)
+
+        return detectedObjectPositionsWithError
+
+    @staticmethod
+    def PrepareShiftedPositionList(object: DetectedObject):
+        &#34;&#34;&#34;
+        Given a single DetectedObject it returns the list of all single pixel shifted (in cardinal directions) positions
+        In other words, it takes the position of the detected object, and makes a list of x+1, X-1 etc. versions of that
+        object and converts them using the 2DTo3D function. It discards the original point in this process,
+        it is a helper function for ConversionSinglePixelError
+
+        Parameters
+        ----------
+        object : DetectedObject
+                The single detected object which is to be duplicated and shifted
+
+        Returns
+        -------
+        [DetectedObject]
+                Four copies of the input, each shifted one pixel in a different direction.
+        &#34;&#34;&#34;
+        singlePixelShiftList = []
+        objectID = object.id
+        objectType = object.type
+        objectXPosition = object.x
+        objectYPosition = object.y
+        singlePixelShiftList.append(DetectedObject(objectXPosition + 5, objectYPosition, objectID, objectType))
+        singlePixelShiftList.append(DetectedObject(objectXPosition - 5, objectYPosition, objectID, objectType))
+        singlePixelShiftList.append(DetectedObject(objectXPosition, objectYPosition + 5, objectID, objectType))
+        singlePixelShiftList.append(DetectedObject(objectXPosition, objectYPosition - 5, objectID, objectType))
+        return singlePixelShiftList
+
+    @staticmethod
+    def MetersBetweenGeoPositions(position1: (float, float), position2: (float, float)):
+        &#34;&#34;&#34;&#34;
+        This is a very simple function that returns the distance between to coordinates in meters
+
+        Parameters
+        ----------
+        position1: (float, float)
+                The position of the first point in (latitude, longitude) format
+
+        position2: (float, float)
+                The second position, to wich the distance is calulated from the first point
+
+        Returns
+        -------
+        distance: float
+                The distance between the points in meters
+        &#34;&#34;&#34;
+        if len(position1) != len(position2):
+            raise RuntimeError(&#34;Points don&#39;t have the same amount of dimensions&#34;)
+        elif len(position1) != 2:
+            raise RuntimeError(&#34;Coordinates do not contain the expected two dimensions, it has &#34; + str(len(position1)))
+        elif (position1[0] &lt; -90) or (position1[0] &gt; 90) or (position2[0] &lt; -90) or (position2[0] &gt; 90):
+            lat1 = str(position1[0])
+            lat2 = str(position2[0])
+            raise RuntimeError(&#34;latitude must be in [-90, 90] range, instead they are 1: &#34; + lat1 + &#34; and 2: &#34; + lat2)
+        return geopy.distance.distance(position1, position2).meters
+
+    @staticmethod
+    def MoveGeoByBearing(startLatDegrees, startLonDegrees, angleToNorth, metersToMove, earthRadius=6378.1):
+        &#34;&#34;&#34;
+        This function lets you calculate the new position given how many meters you move from a certain position.
+
+        Parameters
+        ----------
+        startLatDegrees : double
+            a known latitude
+        startLonDegrees : double
+            a known longitude
+        angleToNorth : double
+            angle to go in (since pixels either 0 or 90 degrees)
+        metersToMove : double
+            use the scale to get convert the scale to degrees per pixel
+        earthRadius : double
+            the radius of the earth
+
+        Returns
+        -------
+        the new gps position, given the input
+
+        &#34;&#34;&#34;
+        startLat = math.radians(startLatDegrees)
+        startLon = math.radians(startLonDegrees)
+        distance = metersToMove / 1000
+        bearing = math.radians(angleToNorth)
+        lengthRatio = distance / earthRadius
+        newLat = math.asin(
+            math.sin(startLat) * math.cos(lengthRatio) + math.cos(startLat) * math.sin(lengthRatio) * math.cos(bearing))
+        newLon = startLon + math.atan2(math.sin(bearing) * math.sin(lengthRatio) * math.cos(startLat),
+                                       math.cos(lengthRatio) - math.sin(startLat) * math.sin(newLat))
+        return [math.degrees(newLat), math.degrees(newLon)]
+
+    @staticmethod
+    def GetAngleToNorthFromVector(deltaLon, deltaLat):
+        &#34;&#34;&#34;
+        This function converts a vector to an angle compared to north in radians
+
+        Parameters
+        ----------
+        deltaLon: int
+            difference in longitude
+        deltaLat: int
+            difference in latitude
+
+        Returns
+        -------
+        Angle to north in radians
+        &#34;&#34;&#34;
+
+        if deltaLon == 0 and deltaLat == 0:
+            return 0
+
+        # Calculate vector from anchorPixelPos to new pixelPos
+        vector = np.array([deltaLon, deltaLat])
+        # Divide by length to get unit vector (vector of length 1)
+        unitVector = vector / np.linalg.norm(vector)
+        north = np.array([0, 1])
+        # cos(theta) = vector1 * vector2. where theta is the angle between vectors
+        dotProduct = np.dot(unitVector, north)
+        # calculate angle to north
+        angle = np.arccos(dotProduct)
+
+        if deltaLon &lt; 0:
+            angle = 2 * math.pi - angle
+
+        return angle</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="Positioner.IConvertor.IConvertor"><code class="flex name class">
+<span>class <span class="ident">IConvertor</span></span>
+<span>(</span><span>configuration: <a title="Calibrator.Configurations.ICalibrationConfiguration.ICalibrationConfiguration" href="../Calibrator/Configurations/ICalibrationConfiguration.html#Calibrator.Configurations.ICalibrationConfiguration.ICalibrationConfiguration">ICalibrationConfiguration</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Interface for the different conversion methods used in the MainPositioner.</p>
+<p>Constructor of the IConvertor, takes a worldRepresentation to convert data.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>configuration</code></strong> :&ensp;<code>ICalibrationConfiguration|None</code></dt>
+<dd>The configuration used for conversion.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class IConvertor:
+    &#34;&#34;&#34;
+    Interface for the different conversion methods used in the MainPositioner.
+    &#34;&#34;&#34;
+    configuration: ICalibrationConfiguration = None
+    staticError: StaticAccuracyError = None
+
+    def __init__(self, configuration: ICalibrationConfiguration):
+        &#34;&#34;&#34;
+        Constructor of the IConvertor, takes a worldRepresentation to convert data.
+
+        Parameters
+        ----------
+        configuration : ICalibrationConfiguration|None
+            The configuration used for conversion.
+        &#34;&#34;&#34;
+
+        # Set the configuration
+        self.configuration = configuration
+
+        # Call calculate static error by default
+        if self.configuration is not None and isinstance(self.configuration, ICalibrationConfiguration):
+            self._CalculateStaticError()
+
+    def Convert2DTo3D(self, detectedObjects: [DetectedObject], frameIndex: int, showConversions=False):
+        &#34;&#34;&#34;
+        This function converts a screenspace (2D) position to a worldspace (3D) position.
+        It uses the worldRepresentation to convert the given DetectedObject[] data to detectedObjectPosition[] data.
+        This function is meant to be abstract and to recieve specific implementation depending on the conversion method
+
+
+        Parameters
+        ----------
+        detectedObjects : [DetectedObject]
+            The DetectedObject[] data to be converted.
+        frameIndex : int
+            The index belonging to the DetectedObject[] data.
+        showConversions : bool
+            Whether conversions are shown on the map
+
+        Returns
+        -------
+        DetectedObjectPosition[]
+            An array of named tuples containing X, Y and Z coordinates, ID
+            and the type of detected and to 3D converted objects.
+        &#34;&#34;&#34;
+        detectedObjectPositions = []
+
+        for detectedObject in detectedObjects:
+            x = (detectedObject.x - 540) / 40
+            y = (250 - detectedObject.y) / 30
+            objectID = detectedObject.id
+            objectType = detectedObject.type
+            detectedObjectPositions.append(DetectedObjectPosition(y, x, 0, objectID, objectType))
+
+        return detectedObjectPositions
+
+    def _CalculateStaticError(self):  # pragma: no cover
+        &#34;&#34;&#34;
+        Calculates the static error for the given configuration based
+        on all available static error datasets.
+        &#34;&#34;&#34;
+
+        # Read all static error datasets
+        folder = Pathing.AssureAbsolutePath(&#34;Testing/Assets/Datasets&#34;)
+        staticErrorDatasets = []
+        for file in os.listdir(folder):
+            if file.endswith(&#34;.json&#34;):
+                staticErrorDatasets.append(StaticAccuracyDataset.Load(folder / file))
+
+        # Save configuration for now
+        savedConfiguration = self.configuration
+
+        # Calculate the static error for all datasets
+        for staticErrorDataset in staticErrorDatasets:
+            # Get the configuration for the dataset, and
+            # use it temporarily
+            self.configuration = staticErrorDataset.GetCalibrationConfiguration(
+                savedConfiguration.__class__.__name__
+            )
+
+            # Calculate the static error for the dataset
+            for e in range(len(staticErrorDataset.entries)):
+                entry = staticErrorDataset.entries[e]
+                validationWorldPosition = self.Convert2DTo3D(
+                    [DetectedObject(
+                        float(entry[&#39;screenPosition&#39;][0]),
+                        float(entry[&#39;screenPosition&#39;][1]),
+                        -1, None
+                    )],
+                    -1
+                )[0]
+                validationLongitude = validationWorldPosition.longitude
+                validationLatitude = validationWorldPosition.latitude
+
+                # Calculate the error
+                if self.staticError is None:
+                    self.staticError = StaticAccuracyError()
+
+                actualPos = IConvertor._WorldPosToGeoPos(entry[&#39;worldPosition&#39;])
+                validationPos = (validationLatitude, validationLongitude)
+                newError = IConvertor.MetersBetweenGeoPositions(actualPos, validationPos)
+                self.staticError.AddError(newError)
+
+        self.staticError.AverageErrors()
+
+        # Print the static error
+        print(&#34;Method static max error:&#34;, self.staticError.GetMaxError())
+        print(&#34;Method static average error:&#34;, self.staticError.averageError)
+
+        # Restore the configuration
+        self.configuration = savedConfiguration
+
+    @staticmethod
+    def _WorldPosToGeoPos(worldPos):  # pragma: no cover
+        &#34;&#34;&#34;
+
+        Parameters
+        ----------
+        worldPos: [float]
+            list in form [x, y, z] in meters
+
+        Returns
+        -------
+        geoPos in form [float, float]
+        &#34;&#34;&#34;
+        [x, y, z] = worldPos
+        angle = IConvertor.GetAngleToNorthFromVector(x, z)
+        meters = math.sqrt(x * x + z * z)
+        [lat, lon] = IConvertor.MoveGeoByBearing(0, 0, np.rad2deg(angle), meters)
+        return lat, lon
+
+    def ConversionSinglePixelError(self, detectedObjects: [DetectedObject], frameIndex: int):
+        &#34;&#34;&#34;
+        This function does the same as Convert2DTo3D but also checks how much the position would change for each point,
+        if it was shifted by a single pixel
+        (it picks the largest error per point of all four cardinal directions and passes that)
+
+        Parameters
+        ----------
+        detectedObjects : [DetectedObject]
+                A list items, each holding the information of a single point to be transformed from 2D to 3D
+
+        frameIndex : int
+                the index of the frame in the video on which this list of objects, and these positions, were detected
+
+        Returns
+        -------
+        [DetectedObjectPosition]
+                A list containing for each entry the result of that entry in Convert2DTo3D and its metadata (e.g. error)
+        &#34;&#34;&#34;
+        detectedObjectPositionsWithError = []
+
+        if detectedObjects == []:
+            return []
+
+        mainResults = self.Convert2DTo3D(detectedObjects, frameIndex, True)
+
+        for i in range(len(mainResults)):
+            mainResult = mainResults[i]
+            mainPosition = (mainResult.latitude, mainResult.longitude)
+            shiftedObjects = self.PrepareShiftedPositionList(detectedObjects[i])
+            shiftedObjectResults = self.Convert2DTo3D(shiftedObjects, frameIndex)
+            errorDistance = []
+            for obj in shiftedObjectResults:
+                errorDistance.append(self.MetersBetweenGeoPositions((obj.latitude, obj.longitude), mainPosition))
+
+            objectLat = mainResult.latitude
+            objectLon = mainResult.longitude
+            objectAlt = mainResult.altitude
+            objectID = mainResult.id
+            objectType = mainResult.type
+            objectEr = 0
+            if self.staticError is not None:
+                objectEr = max(errorDistance) + self.staticError.GetMaxError()
+            objectRdX = mainResult.rijksdriehoekX
+            objectRdY = mainResult.rijksdriehoekY
+            final = DetectedObjectPosition(objectLat, objectLon, objectAlt, objectID,
+                                           objectType, objectEr, objectRdX, objectRdY)
+            detectedObjectPositionsWithError.append(final)
+
+        return detectedObjectPositionsWithError
+
+    @staticmethod
+    def PrepareShiftedPositionList(object: DetectedObject):
+        &#34;&#34;&#34;
+        Given a single DetectedObject it returns the list of all single pixel shifted (in cardinal directions) positions
+        In other words, it takes the position of the detected object, and makes a list of x+1, X-1 etc. versions of that
+        object and converts them using the 2DTo3D function. It discards the original point in this process,
+        it is a helper function for ConversionSinglePixelError
+
+        Parameters
+        ----------
+        object : DetectedObject
+                The single detected object which is to be duplicated and shifted
+
+        Returns
+        -------
+        [DetectedObject]
+                Four copies of the input, each shifted one pixel in a different direction.
+        &#34;&#34;&#34;
+        singlePixelShiftList = []
+        objectID = object.id
+        objectType = object.type
+        objectXPosition = object.x
+        objectYPosition = object.y
+        singlePixelShiftList.append(DetectedObject(objectXPosition + 5, objectYPosition, objectID, objectType))
+        singlePixelShiftList.append(DetectedObject(objectXPosition - 5, objectYPosition, objectID, objectType))
+        singlePixelShiftList.append(DetectedObject(objectXPosition, objectYPosition + 5, objectID, objectType))
+        singlePixelShiftList.append(DetectedObject(objectXPosition, objectYPosition - 5, objectID, objectType))
+        return singlePixelShiftList
+
+    @staticmethod
+    def MetersBetweenGeoPositions(position1: (float, float), position2: (float, float)):
+        &#34;&#34;&#34;&#34;
+        This is a very simple function that returns the distance between to coordinates in meters
+
+        Parameters
+        ----------
+        position1: (float, float)
+                The position of the first point in (latitude, longitude) format
+
+        position2: (float, float)
+                The second position, to wich the distance is calulated from the first point
+
+        Returns
+        -------
+        distance: float
+                The distance between the points in meters
+        &#34;&#34;&#34;
+        if len(position1) != len(position2):
+            raise RuntimeError(&#34;Points don&#39;t have the same amount of dimensions&#34;)
+        elif len(position1) != 2:
+            raise RuntimeError(&#34;Coordinates do not contain the expected two dimensions, it has &#34; + str(len(position1)))
+        elif (position1[0] &lt; -90) or (position1[0] &gt; 90) or (position2[0] &lt; -90) or (position2[0] &gt; 90):
+            lat1 = str(position1[0])
+            lat2 = str(position2[0])
+            raise RuntimeError(&#34;latitude must be in [-90, 90] range, instead they are 1: &#34; + lat1 + &#34; and 2: &#34; + lat2)
+        return geopy.distance.distance(position1, position2).meters
+
+    @staticmethod
+    def MoveGeoByBearing(startLatDegrees, startLonDegrees, angleToNorth, metersToMove, earthRadius=6378.1):
+        &#34;&#34;&#34;
+        This function lets you calculate the new position given how many meters you move from a certain position.
+
+        Parameters
+        ----------
+        startLatDegrees : double
+            a known latitude
+        startLonDegrees : double
+            a known longitude
+        angleToNorth : double
+            angle to go in (since pixels either 0 or 90 degrees)
+        metersToMove : double
+            use the scale to get convert the scale to degrees per pixel
+        earthRadius : double
+            the radius of the earth
+
+        Returns
+        -------
+        the new gps position, given the input
+
+        &#34;&#34;&#34;
+        startLat = math.radians(startLatDegrees)
+        startLon = math.radians(startLonDegrees)
+        distance = metersToMove / 1000
+        bearing = math.radians(angleToNorth)
+        lengthRatio = distance / earthRadius
+        newLat = math.asin(
+            math.sin(startLat) * math.cos(lengthRatio) + math.cos(startLat) * math.sin(lengthRatio) * math.cos(bearing))
+        newLon = startLon + math.atan2(math.sin(bearing) * math.sin(lengthRatio) * math.cos(startLat),
+                                       math.cos(lengthRatio) - math.sin(startLat) * math.sin(newLat))
+        return [math.degrees(newLat), math.degrees(newLon)]
+
+    @staticmethod
+    def GetAngleToNorthFromVector(deltaLon, deltaLat):
+        &#34;&#34;&#34;
+        This function converts a vector to an angle compared to north in radians
+
+        Parameters
+        ----------
+        deltaLon: int
+            difference in longitude
+        deltaLat: int
+            difference in latitude
+
+        Returns
+        -------
+        Angle to north in radians
+        &#34;&#34;&#34;
+
+        if deltaLon == 0 and deltaLat == 0:
+            return 0
+
+        # Calculate vector from anchorPixelPos to new pixelPos
+        vector = np.array([deltaLon, deltaLat])
+        # Divide by length to get unit vector (vector of length 1)
+        unitVector = vector / np.linalg.norm(vector)
+        north = np.array([0, 1])
+        # cos(theta) = vector1 * vector2. where theta is the angle between vectors
+        dotProduct = np.dot(unitVector, north)
+        # calculate angle to north
+        angle = np.arccos(dotProduct)
+
+        if deltaLon &lt; 0:
+            angle = 2 * math.pi - angle
+
+        return angle</code></pre>
+</details>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="Positioner.HomographyConverter.HomographyConverter" href="HomographyConverter.html#Positioner.HomographyConverter.HomographyConverter">HomographyConverter</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="Positioner.IConvertor.IConvertor.configuration"><code class="name">var <span class="ident">configuration</span> : <a title="Calibrator.Configurations.ICalibrationConfiguration.ICalibrationConfiguration" href="../Calibrator/Configurations/ICalibrationConfiguration.html#Calibrator.Configurations.ICalibrationConfiguration.ICalibrationConfiguration">ICalibrationConfiguration</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="Positioner.IConvertor.IConvertor.staticError"><code class="name">var <span class="ident">staticError</span> : <a title="Positioner.Accuracy.StaticAccuracyDataset.StaticAccuracyError" href="Accuracy/StaticAccuracyDataset.html#Positioner.Accuracy.StaticAccuracyDataset.StaticAccuracyError">StaticAccuracyError</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Static methods</h3>
+<dl>
+<dt id="Positioner.IConvertor.IConvertor.GetAngleToNorthFromVector"><code class="name flex">
+<span>def <span class="ident">GetAngleToNorthFromVector</span></span>(<span>deltaLon, deltaLat)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>This function converts a vector to an angle compared to north in radians</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>deltaLon</code></strong> :&ensp;<code>int</code></dt>
+<dd>difference in longitude</dd>
+<dt><strong><code>deltaLat</code></strong> :&ensp;<code>int</code></dt>
+<dd>difference in latitude</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Angle to north in radians</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def GetAngleToNorthFromVector(deltaLon, deltaLat):
+    &#34;&#34;&#34;
+    This function converts a vector to an angle compared to north in radians
+
+    Parameters
+    ----------
+    deltaLon: int
+        difference in longitude
+    deltaLat: int
+        difference in latitude
+
+    Returns
+    -------
+    Angle to north in radians
+    &#34;&#34;&#34;
+
+    if deltaLon == 0 and deltaLat == 0:
+        return 0
+
+    # Calculate vector from anchorPixelPos to new pixelPos
+    vector = np.array([deltaLon, deltaLat])
+    # Divide by length to get unit vector (vector of length 1)
+    unitVector = vector / np.linalg.norm(vector)
+    north = np.array([0, 1])
+    # cos(theta) = vector1 * vector2. where theta is the angle between vectors
+    dotProduct = np.dot(unitVector, north)
+    # calculate angle to north
+    angle = np.arccos(dotProduct)
+
+    if deltaLon &lt; 0:
+        angle = 2 * math.pi - angle
+
+    return angle</code></pre>
+</details>
+</dd>
+<dt id="Positioner.IConvertor.IConvertor.MetersBetweenGeoPositions"><code class="name flex">
+<span>def <span class="ident">MetersBetweenGeoPositions</span></span>(<span>position1: (<class 'float'>, <class 'float'>), position2: (<class 'float'>, <class 'float'>))</span>
+</code></dt>
+<dd>
+<div class="desc"><p>"
+This is a very simple function that returns the distance between to coordinates in meters</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>position1</code></strong> :&ensp;<code>(float, float)</code></dt>
+<dd>The position of the first point in (latitude, longitude) format</dd>
+<dt><strong><code>position2</code></strong> :&ensp;<code>(float, float)</code></dt>
+<dd>The second position, to wich the distance is calulated from the first point</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>distance</code></strong> :&ensp;<code>float</code></dt>
+<dd>The distance between the points in meters</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def MetersBetweenGeoPositions(position1: (float, float), position2: (float, float)):
+    &#34;&#34;&#34;&#34;
+    This is a very simple function that returns the distance between to coordinates in meters
+
+    Parameters
+    ----------
+    position1: (float, float)
+            The position of the first point in (latitude, longitude) format
+
+    position2: (float, float)
+            The second position, to wich the distance is calulated from the first point
+
+    Returns
+    -------
+    distance: float
+            The distance between the points in meters
+    &#34;&#34;&#34;
+    if len(position1) != len(position2):
+        raise RuntimeError(&#34;Points don&#39;t have the same amount of dimensions&#34;)
+    elif len(position1) != 2:
+        raise RuntimeError(&#34;Coordinates do not contain the expected two dimensions, it has &#34; + str(len(position1)))
+    elif (position1[0] &lt; -90) or (position1[0] &gt; 90) or (position2[0] &lt; -90) or (position2[0] &gt; 90):
+        lat1 = str(position1[0])
+        lat2 = str(position2[0])
+        raise RuntimeError(&#34;latitude must be in [-90, 90] range, instead they are 1: &#34; + lat1 + &#34; and 2: &#34; + lat2)
+    return geopy.distance.distance(position1, position2).meters</code></pre>
+</details>
+</dd>
+<dt id="Positioner.IConvertor.IConvertor.MoveGeoByBearing"><code class="name flex">
+<span>def <span class="ident">MoveGeoByBearing</span></span>(<span>startLatDegrees, startLonDegrees, angleToNorth, metersToMove, earthRadius=6378.1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>This function lets you calculate the new position given how many meters you move from a certain position.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>startLatDegrees</code></strong> :&ensp;<code>double</code></dt>
+<dd>a known latitude</dd>
+<dt><strong><code>startLonDegrees</code></strong> :&ensp;<code>double</code></dt>
+<dd>a known longitude</dd>
+<dt><strong><code>angleToNorth</code></strong> :&ensp;<code>double</code></dt>
+<dd>angle to go in (since pixels either 0 or 90 degrees)</dd>
+<dt><strong><code>metersToMove</code></strong> :&ensp;<code>double</code></dt>
+<dd>use the scale to get convert the scale to degrees per pixel</dd>
+<dt><strong><code>earthRadius</code></strong> :&ensp;<code>double</code></dt>
+<dd>the radius of the earth</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>the new gps position, given the input</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def MoveGeoByBearing(startLatDegrees, startLonDegrees, angleToNorth, metersToMove, earthRadius=6378.1):
+    &#34;&#34;&#34;
+    This function lets you calculate the new position given how many meters you move from a certain position.
+
+    Parameters
+    ----------
+    startLatDegrees : double
+        a known latitude
+    startLonDegrees : double
+        a known longitude
+    angleToNorth : double
+        angle to go in (since pixels either 0 or 90 degrees)
+    metersToMove : double
+        use the scale to get convert the scale to degrees per pixel
+    earthRadius : double
+        the radius of the earth
+
+    Returns
+    -------
+    the new gps position, given the input
+
+    &#34;&#34;&#34;
+    startLat = math.radians(startLatDegrees)
+    startLon = math.radians(startLonDegrees)
+    distance = metersToMove / 1000
+    bearing = math.radians(angleToNorth)
+    lengthRatio = distance / earthRadius
+    newLat = math.asin(
+        math.sin(startLat) * math.cos(lengthRatio) + math.cos(startLat) * math.sin(lengthRatio) * math.cos(bearing))
+    newLon = startLon + math.atan2(math.sin(bearing) * math.sin(lengthRatio) * math.cos(startLat),
+                                   math.cos(lengthRatio) - math.sin(startLat) * math.sin(newLat))
+    return [math.degrees(newLat), math.degrees(newLon)]</code></pre>
+</details>
+</dd>
+<dt id="Positioner.IConvertor.IConvertor.PrepareShiftedPositionList"><code class="name flex">
+<span>def <span class="ident">PrepareShiftedPositionList</span></span>(<span>object: <a title="FrameAnalyzer.IDetector.DetectionObject" href="../FrameAnalyzer/IDetector.html#FrameAnalyzer.IDetector.DetectionObject">DetectionObject</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Given a single DetectedObject it returns the list of all single pixel shifted (in cardinal directions) positions
+In other words, it takes the position of the detected object, and makes a list of x+1, X-1 etc. versions of that
+object and converts them using the 2DTo3D function. It discards the original point in this process,
+it is a helper function for ConversionSinglePixelError</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>object</code></strong> :&ensp;<code>DetectedObject</code></dt>
+<dd>The single detected object which is to be duplicated and shifted</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>[DetectedObject]
+Four copies of the input, each shifted one pixel in a different direction.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def PrepareShiftedPositionList(object: DetectedObject):
+    &#34;&#34;&#34;
+    Given a single DetectedObject it returns the list of all single pixel shifted (in cardinal directions) positions
+    In other words, it takes the position of the detected object, and makes a list of x+1, X-1 etc. versions of that
+    object and converts them using the 2DTo3D function. It discards the original point in this process,
+    it is a helper function for ConversionSinglePixelError
+
+    Parameters
+    ----------
+    object : DetectedObject
+            The single detected object which is to be duplicated and shifted
+
+    Returns
+    -------
+    [DetectedObject]
+            Four copies of the input, each shifted one pixel in a different direction.
+    &#34;&#34;&#34;
+    singlePixelShiftList = []
+    objectID = object.id
+    objectType = object.type
+    objectXPosition = object.x
+    objectYPosition = object.y
+    singlePixelShiftList.append(DetectedObject(objectXPosition + 5, objectYPosition, objectID, objectType))
+    singlePixelShiftList.append(DetectedObject(objectXPosition - 5, objectYPosition, objectID, objectType))
+    singlePixelShiftList.append(DetectedObject(objectXPosition, objectYPosition + 5, objectID, objectType))
+    singlePixelShiftList.append(DetectedObject(objectXPosition, objectYPosition - 5, objectID, objectType))
+    return singlePixelShiftList</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="Positioner.IConvertor.IConvertor.ConversionSinglePixelError"><code class="name flex">
+<span>def <span class="ident">ConversionSinglePixelError</span></span>(<span>self, detectedObjects: [<class '<a title="FrameAnalyzer.IDetector.DetectionObject" href="../FrameAnalyzer/IDetector.html#FrameAnalyzer.IDetector.DetectionObject">DetectionObject</a>'>], frameIndex: int)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>This function does the same as Convert2DTo3D but also checks how much the position would change for each point,
+if it was shifted by a single pixel
+(it picks the largest error per point of all four cardinal directions and passes that)</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>detectedObjects</code></strong> :&ensp;<code>[DetectedObject]</code></dt>
+<dd>A list items, each holding the information of a single point to be transformed from 2D to 3D</dd>
+<dt><strong><code>frameIndex</code></strong> :&ensp;<code>int</code></dt>
+<dd>the index of the frame in the video on which this list of objects, and these positions, were detected</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>[DetectedObjectPosition]
+A list containing for each entry the result of that entry in Convert2DTo3D and its metadata (e.g. error)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ConversionSinglePixelError(self, detectedObjects: [DetectedObject], frameIndex: int):
+    &#34;&#34;&#34;
+    This function does the same as Convert2DTo3D but also checks how much the position would change for each point,
+    if it was shifted by a single pixel
+    (it picks the largest error per point of all four cardinal directions and passes that)
+
+    Parameters
+    ----------
+    detectedObjects : [DetectedObject]
+            A list items, each holding the information of a single point to be transformed from 2D to 3D
+
+    frameIndex : int
+            the index of the frame in the video on which this list of objects, and these positions, were detected
+
+    Returns
+    -------
+    [DetectedObjectPosition]
+            A list containing for each entry the result of that entry in Convert2DTo3D and its metadata (e.g. error)
+    &#34;&#34;&#34;
+    detectedObjectPositionsWithError = []
+
+    if detectedObjects == []:
+        return []
+
+    mainResults = self.Convert2DTo3D(detectedObjects, frameIndex, True)
+
+    for i in range(len(mainResults)):
+        mainResult = mainResults[i]
+        mainPosition = (mainResult.latitude, mainResult.longitude)
+        shiftedObjects = self.PrepareShiftedPositionList(detectedObjects[i])
+        shiftedObjectResults = self.Convert2DTo3D(shiftedObjects, frameIndex)
+        errorDistance = []
+        for obj in shiftedObjectResults:
+            errorDistance.append(self.MetersBetweenGeoPositions((obj.latitude, obj.longitude), mainPosition))
+
+        objectLat = mainResult.latitude
+        objectLon = mainResult.longitude
+        objectAlt = mainResult.altitude
+        objectID = mainResult.id
+        objectType = mainResult.type
+        objectEr = 0
+        if self.staticError is not None:
+            objectEr = max(errorDistance) + self.staticError.GetMaxError()
+        objectRdX = mainResult.rijksdriehoekX
+        objectRdY = mainResult.rijksdriehoekY
+        final = DetectedObjectPosition(objectLat, objectLon, objectAlt, objectID,
+                                       objectType, objectEr, objectRdX, objectRdY)
+        detectedObjectPositionsWithError.append(final)
+
+    return detectedObjectPositionsWithError</code></pre>
+</details>
+</dd>
+<dt id="Positioner.IConvertor.IConvertor.Convert2DTo3D"><code class="name flex">
+<span>def <span class="ident">Convert2DTo3D</span></span>(<span>self, detectedObjects: [<class '<a title="FrameAnalyzer.IDetector.DetectionObject" href="../FrameAnalyzer/IDetector.html#FrameAnalyzer.IDetector.DetectionObject">DetectionObject</a>'>], frameIndex: int, showConversions=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>This function converts a screenspace (2D) position to a worldspace (3D) position.
+It uses the worldRepresentation to convert the given DetectedObject[] data to detectedObjectPosition[] data.
+This function is meant to be abstract and to recieve specific implementation depending on the conversion method</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>detectedObjects</code></strong> :&ensp;<code>[DetectedObject]</code></dt>
+<dd>The DetectedObject[] data to be converted.</dd>
+<dt><strong><code>frameIndex</code></strong> :&ensp;<code>int</code></dt>
+<dd>The index belonging to the DetectedObject[] data.</dd>
+<dt><strong><code>showConversions</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Whether conversions are shown on the map</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>DetectedObjectPosition[]</code></dt>
+<dd>An array of named tuples containing X, Y and Z coordinates, ID
+and the type of detected and to 3D converted objects.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def Convert2DTo3D(self, detectedObjects: [DetectedObject], frameIndex: int, showConversions=False):
+    &#34;&#34;&#34;
+    This function converts a screenspace (2D) position to a worldspace (3D) position.
+    It uses the worldRepresentation to convert the given DetectedObject[] data to detectedObjectPosition[] data.
+    This function is meant to be abstract and to recieve specific implementation depending on the conversion method
+
+
+    Parameters
+    ----------
+    detectedObjects : [DetectedObject]
+        The DetectedObject[] data to be converted.
+    frameIndex : int
+        The index belonging to the DetectedObject[] data.
+    showConversions : bool
+        Whether conversions are shown on the map
+
+    Returns
+    -------
+    DetectedObjectPosition[]
+        An array of named tuples containing X, Y and Z coordinates, ID
+        and the type of detected and to 3D converted objects.
+    &#34;&#34;&#34;
+    detectedObjectPositions = []
+
+    for detectedObject in detectedObjects:
+        x = (detectedObject.x - 540) / 40
+        y = (250 - detectedObject.y) / 30
+        objectID = detectedObject.id
+        objectType = detectedObject.type
+        detectedObjectPositions.append(DetectedObjectPosition(y, x, 0, objectID, objectType))
+
+    return detectedObjectPositions</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<img src="/images/logo_full.png" alt="">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="Positioner" href="index.html">Positioner</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="Positioner.IConvertor.IConvertor" href="#Positioner.IConvertor.IConvertor">IConvertor</a></code></h4>
+<ul class="">
+<li><code><a title="Positioner.IConvertor.IConvertor.ConversionSinglePixelError" href="#Positioner.IConvertor.IConvertor.ConversionSinglePixelError">ConversionSinglePixelError</a></code></li>
+<li><code><a title="Positioner.IConvertor.IConvertor.Convert2DTo3D" href="#Positioner.IConvertor.IConvertor.Convert2DTo3D">Convert2DTo3D</a></code></li>
+<li><code><a title="Positioner.IConvertor.IConvertor.GetAngleToNorthFromVector" href="#Positioner.IConvertor.IConvertor.GetAngleToNorthFromVector">GetAngleToNorthFromVector</a></code></li>
+<li><code><a title="Positioner.IConvertor.IConvertor.MetersBetweenGeoPositions" href="#Positioner.IConvertor.IConvertor.MetersBetweenGeoPositions">MetersBetweenGeoPositions</a></code></li>
+<li><code><a title="Positioner.IConvertor.IConvertor.MoveGeoByBearing" href="#Positioner.IConvertor.IConvertor.MoveGeoByBearing">MoveGeoByBearing</a></code></li>
+<li><code><a title="Positioner.IConvertor.IConvertor.PrepareShiftedPositionList" href="#Positioner.IConvertor.IConvertor.PrepareShiftedPositionList">PrepareShiftedPositionList</a></code></li>
+<li><code><a title="Positioner.IConvertor.IConvertor.configuration" href="#Positioner.IConvertor.IConvertor.configuration">configuration</a></code></li>
+<li><code><a title="Positioner.IConvertor.IConvertor.staticError" href="#Positioner.IConvertor.IConvertor.staticError">staticError</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p><center>
+This program has been developed by students from the bachelor Computer Science at Utrecht University within the Software Project course.
+&#169 Copyright Utrecht University (Department of Information and Computing Sciences)
+</center></p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

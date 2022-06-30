@@ -1,0 +1,1 @@
+<img src="/images/logo_full.png" alt="">

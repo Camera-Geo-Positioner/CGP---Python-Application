@@ -1,0 +1,1 @@
+All icons are sourced from https://remixicon.com/ and are are free for both personal and commercial use.

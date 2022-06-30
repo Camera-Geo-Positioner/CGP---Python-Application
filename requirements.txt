@@ -1,0 +1,25 @@
+setuptools~=49.2.0
+scipy
+numpy
+pygame
+pygame_gui
+opencv-contrib-python
+pep8
+pytest
+pytest-cov
+pytest-ordering
+websockets>=10.2
+aioconsole>=0.4.1
+pdoc3
+mapbox
+geopy
+tk
+rijksdriehoek
+matplotlib
+scikit-image
+filterpy
+#Install cuda version of torch
+--extra-index-url https://download.pytorch.org/whl/cu113
+torch
+torchvision
+torchaudio

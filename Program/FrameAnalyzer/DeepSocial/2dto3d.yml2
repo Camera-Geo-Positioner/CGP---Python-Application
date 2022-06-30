@@ -1,0 +1,16 @@
+name: 2dto3d
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+dependencies:
+  - opencv
+  - pip
+  - numpy
+  - python=3.7
+  - ipython
+  - js2py
+  - matplotlib
+  - scikit-image
+  - filterpy
+prefix: /home/watchfuleye/anaconda3/envs/2dto3d

@@ -1,0 +1,1711 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>Calibrator.Input.Primitives.IPrimitive API documentation</title>
+<meta name="description" content="Interface for primitive inputs for the calibration." />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;700&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/favicon/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="pdoc-header">
+<nav class="pdoc-nav">
+<ul>
+<li>
+<a href="../index.html" class="menu">Home</a>
+</li>
+<li>
+<a href="../Main.html" class="menu">Main</a>
+</li>
+<li>
+<a href="../API/index.html" class="menu">API</a>
+</li>
+<li>
+<a href="../Calibrator/index.html" class="menu">Calibrator</a>
+</li>
+<li>
+<a href="../CameraReader/index.html" class="menu">Camera Reader</a>
+</li>
+<li>
+<a href="../FrameAnalyzer/index.html" class="menu">Frame Analyzer</a>
+</li>
+<li>
+<a href="../IO/index.html" class="menu">IO</a>
+</li>
+<li>
+<a href="../Positioner/index.html" class="menu">Positioner</a>
+</li>
+<li>
+<a href="../Windowing/index.html" class="menu">Windowing</a>
+</li>
+<li>
+<a href="../ArgsGUI/index.html" class="menu">ArgsGUI</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>Calibrator.Input.Primitives.IPrimitive</code></h1>
+</header>
+<section id="section-intro">
+<p>Interface for primitive inputs for the calibration.</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># This program has been developed by students from the bachelor Computer Science at Utrecht University within the
+# Software Project course.
+# © Copyright Utrecht University (Department of Information and Computing Sciences)
+
+&#34;&#34;&#34;
+Interface for primitive inputs for the calibration.
+&#34;&#34;&#34;
+
+from abc import ABC, abstractmethod
+from Windowing.Rendering import Rendering
+
+
+class IPrimitive(ABC):
+    # Movement variables
+    prevMousePositionX = 0
+    prevMousePositionY = 0
+    moveAsWhole = False
+    movePoint = False
+    movePointIndex = None
+    prevMovePointIndex = None
+
+    # This class is an abstract class that defines the interface for all primitives.
+    def __init__(self, relativeX, relativeY, points):
+        &#34;&#34;&#34; Initializes a primitive.
+
+        Parameters
+        ----------
+        relativeX : int
+            The relative center x position of the primitive.
+        relativeY : int
+            The relative center y position of the primitive.
+        points : list
+            The points of the primitive.
+        &#34;&#34;&#34;
+
+        self.x = relativeX
+        self.y = relativeY
+        self.points = points
+
+        # Check if the points are IPrimitivePoints
+        for point in self.points:
+            if not isinstance(point, IPrimitivePoint):
+                raise TypeError(&#34;The points must be of type IPrimitivePoint.&#34;)
+
+    # Moves the shape as a whole
+    def MoveTo(self, relativeX, relativeY):
+        &#34;&#34;&#34; Moves the shape as a whole.
+
+        Parameters
+        ----------
+        relativeX : int
+            The relative center x position of the primitive.
+        relativeY : int
+            The relative center y position of the primitive.
+        &#34;&#34;&#34;
+
+        # For all points in the primitive, check if the offset
+        # would put them out-of-bounds
+        dx = relativeX - self.prevMousePositionX
+        dy = relativeY - self.prevMousePositionY
+        for point in self.GetRelativePoints():
+            nx = point[0] + dx
+            ny = point[1] + dy
+
+            if nx &lt; 0 or nx &gt; 1:
+                dx = 0
+            if ny &lt; 0 or ny &gt; 1:
+                dy = 0
+
+        # Move as whole
+        self.x += dx
+        self.y += dy
+
+    # Converts relative primitive points to absolute screen points
+    def GetAbsolutePoints(self, absoluteWidth, absoluteHeight) -&gt; [(int, int)]:
+        &#34;&#34;&#34; Converts relative primitive points to absolute screen points.
+
+        Parameters
+        ----------
+        absoluteWidth : int
+            The absolute width of the respective image.
+        absoluteHeight : int
+            The absolute height of the respective image.
+
+        Returns
+        -------
+        [(int, int)]
+            The absolute screen points of the primitive.
+        &#34;&#34;&#34;
+
+        return list(
+            map(
+                lambda point: self.GetAbsolutePoint(point, absoluteWidth, absoluteHeight),
+                range(len(self.points))
+            )
+        )
+
+    # Converts specific relative primitive point to absolute screen point
+    def GetAbsolutePoint(self, index, absoluteWidth, absoluteHeight) -&gt; (int, int):
+        &#34;&#34;&#34; Converts specific relative primitive point with index to absolute screen point.
+
+         Parameters
+         ----------
+         index : int
+             The index of the point to be converted.
+         absoluteWidth : int
+             The absolute width of the respective image.
+         absoluteHeight : int
+             The absolute height of the respective image.
+
+         Returns
+         -------
+         (int, int)
+             The absolute screen point of the primitive.
+         &#34;&#34;&#34;
+
+        width = (self.x + self.points[index].relativeX) * absoluteWidth
+        height = (self.y + self.points[index].relativeY) * absoluteHeight
+        return int(width), int(height)
+
+    # Converts relative primitive points to relative screen points
+    def GetRelativePoints(self) -&gt; [(float, float)]:
+        &#34;&#34;&#34; Lists relative primitive points.
+
+        Returns
+        -------
+        [(float, float)]
+            The relative screen points of the primitive.
+        &#34;&#34;&#34;
+
+        return list(
+            map(
+                self.GetRelativePoint,
+                range(len(self.points))
+            )
+        )
+
+    # Converts specific relative primitive point to relative screen point
+    def GetRelativePoint(self, index) -&gt; (float, float):
+        &#34;&#34;&#34; Get a specific relative primitive point.
+
+        Parameters
+        ----------
+        index : int
+            The index of the point.
+
+        Returns
+        -------
+        (float, float)
+            The relative screen point of the primitive at the specified index.
+        &#34;&#34;&#34;
+
+        return self.x + self.points[index].relativeX, self.y + self.points[index].relativeY
+
+    # Checks if the relative mouse position is over any primitive point
+    def IsMouseOverPoint(self, relativeMouseX, relativeMouseY) -&gt; (bool, int):
+        &#34;&#34;&#34; Checks if the relative mouse position is over any primitive point.
+
+        Parameters
+        ----------
+        relativeMouseX : float
+            The relative x screen position of the mouse.
+        relativeMouseY : float
+            The relative y screen position of the mouse.
+
+        Returns
+        -------
+        (bool, int)
+            A tuple containing the following:
+                - True if the mouse is over a point, False otherwise.
+                - The index of the point if the mouse is over a point, None otherwise.
+        &#34;&#34;&#34;
+
+        # Get all valid points
+        valid = [False] * len(self.points)
+        for i in range(len(self.points)):
+            if self.points[i].IsMouseOver(self.x, self.y, relativeMouseX, relativeMouseY):
+                valid[i] = True
+
+        # Be biased for the previous move point index
+        if self.prevMovePointIndex is not None and valid[self.prevMovePointIndex]:
+            return True, self.prevMovePointIndex
+
+        # Otherwise, take the first valid point
+        for i in range(len(valid)):
+            if valid[i]:
+                return True, i
+        return False, None
+
+    def HandleMouseMovement(self, relativeMouseX, relativeMouseY) -&gt; bool:
+        &#34;&#34;&#34; Handles mouse movement.
+
+        Parameters
+        ----------
+        relativeMouseX : float
+            The relative x screen position of the mouse.
+        relativeMouseY : float
+            The relative y screen position of the mouse.
+
+        Returns
+        -------
+        bool
+            True if the primitive was moved, False otherwise.
+        &#34;&#34;&#34;
+
+        movedPrimitive = False
+
+        # Handle movement from previous frame
+        if self.moveAsWhole:
+            self.MoveTo(relativeMouseX, relativeMouseY)
+            movedPrimitive = True
+        elif self.movePoint:
+            self.points[self.movePointIndex].MoveTo(relativeMouseX - self.x, relativeMouseY - self.y)
+            self.prevMovePointIndex = self.movePointIndex
+            movedPrimitive = True
+
+        # Reset movement
+        self.ResetMouseMovement()
+
+        # Check if the mouse is over any of the primitive points
+        mouseOverPoint, pointIndex = self.IsMouseOverPoint(relativeMouseX, relativeMouseY)
+        if mouseOverPoint:
+            # If the mouse is over a primitive point, move that point
+            self.movePoint = True
+            self.movePointIndex = pointIndex
+
+        # Check if the mouse is over the primitive as a whole
+        elif self.IsMouseOver(relativeMouseX, relativeMouseY):
+            # If the mouse is not over a primitive point, move the whole primitive
+            self.moveAsWhole = True
+            movedPrimitive = True
+
+        # Set previous mouse position
+        self.prevMousePositionX = relativeMouseX
+        self.prevMousePositionY = relativeMouseY
+
+        return movedPrimitive
+
+    def ResetMouseMovement(self):
+        &#34;&#34;&#34; Resets mouse movement. &#34;&#34;&#34;
+
+        self.moveAsWhole = False
+        self.movePoint = False
+        self.movePointIndex = None
+
+    @abstractmethod
+    # Check if the relative mouse position is over the primitive as a whole
+    def IsMouseOver(self, relativeMouseX, relativeMouseY) -&gt; bool:
+        &#34;&#34;&#34; Checks if the relative mouse position is over the primitive as a whole.
+
+        Parameters
+        ----------
+        relativeMouseX : float
+            The relative x screen position of the mouse.
+        relativeMouseY : float
+            The relative y screen position of the mouse.
+
+        Returns
+        -------
+        bool
+            True if the mouse is over the primitive as a whole, False otherwise.
+        &#34;&#34;&#34;
+
+        raise NotImplementedError(&#34;The method isMouseOver is not implemented.&#34;)
+        pass
+
+    @abstractmethod
+    # Render the primitive to a surface
+    def Render(self, surface, xOffset, yOffset, absoluteWidth, absoluteHeight, scaled=False):  # pragma: no cover
+        &#34;&#34;&#34; Renders the primitive to a surface.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to render the primitive to.
+        xOffset : int
+            The x offset to render the primitive at.
+        yOffset : int
+            The y offset to render the primitive at.
+        absoluteWidth : int
+            The absolute width of the respective image.
+        absoluteHeight : int
+            The absolute height of the respective image
+        scaled : bool
+            Determines if the points should be shown scaled. Default is False.
+        &#34;&#34;&#34;
+
+        for i in range(len(self.points)):
+            self.points[i].Render(
+                surface,
+                self.x, self.y,
+                xOffset, yOffset,
+                absoluteWidth, absoluteHeight,
+                i,
+                scaled
+            )
+
+
+class IPrimitivePoint:
+    collisionRadius = 3
+    borderRadius = 1
+    innerBorderColor = (255, 255, 255, 255)
+    outerBorderColor = (0, 0, 0, 64)
+
+    def __init__(self, relativeX, relativeY, color=(255, 255, 255, 255)):
+        &#34;&#34;&#34; Initializes the primitive point.
+
+        Parameters
+        ----------
+        relativeX : float
+            The relative x position of the point.
+        relativeY : float
+            The relative y position of the point.
+        &#34;&#34;&#34;
+
+        self.relativeX = relativeX
+        self.relativeY = relativeY
+        self.color = color
+
+    def MoveTo(self, relativeX, relativeY):
+        &#34;&#34;&#34; Moves the primitive point to the relative position.
+
+        Parameters
+        ----------
+        relativeX : float
+            The relative x position of the point.
+        relativeY : float
+            The relative y position of the point.
+        &#34;&#34;&#34;
+
+        self.relativeX = relativeX
+        self.relativeY = relativeY
+
+    def IsMouseOver(self, x, y, relativeMouseX, relativeMouseY) -&gt; bool:
+        &#34;&#34;&#34; Moves the primitive point to the relative position.
+
+        Parameters
+        ----------
+        x : int
+            The relative x position of the parent.
+        y : int
+            The relative y position of the parent.
+        relativeMouseX : float
+            The relative x position of the mouse.
+        relativeMouseY : float
+            The relative y position of the mouse.
+        &#34;&#34;&#34;
+
+        ax = x + self.relativeX
+        ay = y + self.relativeY
+        dx = abs(relativeMouseX - ax)
+        dy = abs(relativeMouseY - ay)
+        relativeRadius = self.collisionRadius / 128.0
+        return dx * dx + dy * dy &lt;= relativeRadius * relativeRadius
+
+    def Render(
+            self,
+            surface,
+            x, y,
+            xOffset, yOffset,
+            absoluteWidth, absoluteHeight,
+            identifier,
+            scaled=False
+    ):  # pragma: no cover
+        &#34;&#34;&#34; Renders the primitive point to a surface.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to render to.
+        x : float
+            The relative x position of the primitive (parent).
+        y : float
+            The relative y position of the primitive (parent).
+        xOffset : int
+            The x offset to render the primitive at.
+        yOffset : int
+            The y offset to render the primitive at.
+        absoluteWidth : int
+            The absolute width of the respective image.
+        absoluteHeight : int
+            The absolute height of the respective image
+        identifier : int
+            The identifier of the primitive point.
+        scaled : bool
+            Determines if the point should be shown scaled. Default is False.
+        &#34;&#34;&#34;
+        # Calculate scale
+        scale = 3.5 if scaled else 1
+
+        # Calculate point center
+        px = int((x + self.relativeX) * absoluteWidth) + xOffset
+        py = int((y + self.relativeY) * absoluteHeight) + yOffset
+
+        # Render outer border
+        Rendering.RenderPoint(
+            surface,
+            px, py,
+            self.outerBorderColor,
+            (self.collisionRadius * scale + self.borderRadius * 2)
+        )
+
+        # Render inner border
+        Rendering.RenderPoint(
+            surface,
+            px, py,
+            self.innerBorderColor,
+            (self.collisionRadius * scale + self.borderRadius)
+        )
+
+        # Render inner fill
+        Rendering.RenderPoint(
+            surface,
+            px, py,
+            self.color,
+            self.collisionRadius * scale
+        )
+
+        # If scaled: render the ID inside the point
+        if scaled:
+            Rendering.RenderText(
+                surface=surface,
+                text=str(identifier),
+                x=px, y=py,
+                shadowOffset=1,
+                textAlignment=Rendering.TextAlignment.MiddleCenter,
+                fontSize=Rendering.FontSize.Mini
+            )</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitive"><code class="flex name class">
+<span>class <span class="ident">IPrimitive</span></span>
+<span>(</span><span>relativeX, relativeY, points)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Helper class that provides a standard way to create an ABC using
+inheritance.</p>
+<p>Initializes a primitive.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>relativeX</code></strong> :&ensp;<code>int</code></dt>
+<dd>The relative center x position of the primitive.</dd>
+<dt><strong><code>relativeY</code></strong> :&ensp;<code>int</code></dt>
+<dd>The relative center y position of the primitive.</dd>
+<dt><strong><code>points</code></strong> :&ensp;<code>list</code></dt>
+<dd>The points of the primitive.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class IPrimitive(ABC):
+    # Movement variables
+    prevMousePositionX = 0
+    prevMousePositionY = 0
+    moveAsWhole = False
+    movePoint = False
+    movePointIndex = None
+    prevMovePointIndex = None
+
+    # This class is an abstract class that defines the interface for all primitives.
+    def __init__(self, relativeX, relativeY, points):
+        &#34;&#34;&#34; Initializes a primitive.
+
+        Parameters
+        ----------
+        relativeX : int
+            The relative center x position of the primitive.
+        relativeY : int
+            The relative center y position of the primitive.
+        points : list
+            The points of the primitive.
+        &#34;&#34;&#34;
+
+        self.x = relativeX
+        self.y = relativeY
+        self.points = points
+
+        # Check if the points are IPrimitivePoints
+        for point in self.points:
+            if not isinstance(point, IPrimitivePoint):
+                raise TypeError(&#34;The points must be of type IPrimitivePoint.&#34;)
+
+    # Moves the shape as a whole
+    def MoveTo(self, relativeX, relativeY):
+        &#34;&#34;&#34; Moves the shape as a whole.
+
+        Parameters
+        ----------
+        relativeX : int
+            The relative center x position of the primitive.
+        relativeY : int
+            The relative center y position of the primitive.
+        &#34;&#34;&#34;
+
+        # For all points in the primitive, check if the offset
+        # would put them out-of-bounds
+        dx = relativeX - self.prevMousePositionX
+        dy = relativeY - self.prevMousePositionY
+        for point in self.GetRelativePoints():
+            nx = point[0] + dx
+            ny = point[1] + dy
+
+            if nx &lt; 0 or nx &gt; 1:
+                dx = 0
+            if ny &lt; 0 or ny &gt; 1:
+                dy = 0
+
+        # Move as whole
+        self.x += dx
+        self.y += dy
+
+    # Converts relative primitive points to absolute screen points
+    def GetAbsolutePoints(self, absoluteWidth, absoluteHeight) -&gt; [(int, int)]:
+        &#34;&#34;&#34; Converts relative primitive points to absolute screen points.
+
+        Parameters
+        ----------
+        absoluteWidth : int
+            The absolute width of the respective image.
+        absoluteHeight : int
+            The absolute height of the respective image.
+
+        Returns
+        -------
+        [(int, int)]
+            The absolute screen points of the primitive.
+        &#34;&#34;&#34;
+
+        return list(
+            map(
+                lambda point: self.GetAbsolutePoint(point, absoluteWidth, absoluteHeight),
+                range(len(self.points))
+            )
+        )
+
+    # Converts specific relative primitive point to absolute screen point
+    def GetAbsolutePoint(self, index, absoluteWidth, absoluteHeight) -&gt; (int, int):
+        &#34;&#34;&#34; Converts specific relative primitive point with index to absolute screen point.
+
+         Parameters
+         ----------
+         index : int
+             The index of the point to be converted.
+         absoluteWidth : int
+             The absolute width of the respective image.
+         absoluteHeight : int
+             The absolute height of the respective image.
+
+         Returns
+         -------
+         (int, int)
+             The absolute screen point of the primitive.
+         &#34;&#34;&#34;
+
+        width = (self.x + self.points[index].relativeX) * absoluteWidth
+        height = (self.y + self.points[index].relativeY) * absoluteHeight
+        return int(width), int(height)
+
+    # Converts relative primitive points to relative screen points
+    def GetRelativePoints(self) -&gt; [(float, float)]:
+        &#34;&#34;&#34; Lists relative primitive points.
+
+        Returns
+        -------
+        [(float, float)]
+            The relative screen points of the primitive.
+        &#34;&#34;&#34;
+
+        return list(
+            map(
+                self.GetRelativePoint,
+                range(len(self.points))
+            )
+        )
+
+    # Converts specific relative primitive point to relative screen point
+    def GetRelativePoint(self, index) -&gt; (float, float):
+        &#34;&#34;&#34; Get a specific relative primitive point.
+
+        Parameters
+        ----------
+        index : int
+            The index of the point.
+
+        Returns
+        -------
+        (float, float)
+            The relative screen point of the primitive at the specified index.
+        &#34;&#34;&#34;
+
+        return self.x + self.points[index].relativeX, self.y + self.points[index].relativeY
+
+    # Checks if the relative mouse position is over any primitive point
+    def IsMouseOverPoint(self, relativeMouseX, relativeMouseY) -&gt; (bool, int):
+        &#34;&#34;&#34; Checks if the relative mouse position is over any primitive point.
+
+        Parameters
+        ----------
+        relativeMouseX : float
+            The relative x screen position of the mouse.
+        relativeMouseY : float
+            The relative y screen position of the mouse.
+
+        Returns
+        -------
+        (bool, int)
+            A tuple containing the following:
+                - True if the mouse is over a point, False otherwise.
+                - The index of the point if the mouse is over a point, None otherwise.
+        &#34;&#34;&#34;
+
+        # Get all valid points
+        valid = [False] * len(self.points)
+        for i in range(len(self.points)):
+            if self.points[i].IsMouseOver(self.x, self.y, relativeMouseX, relativeMouseY):
+                valid[i] = True
+
+        # Be biased for the previous move point index
+        if self.prevMovePointIndex is not None and valid[self.prevMovePointIndex]:
+            return True, self.prevMovePointIndex
+
+        # Otherwise, take the first valid point
+        for i in range(len(valid)):
+            if valid[i]:
+                return True, i
+        return False, None
+
+    def HandleMouseMovement(self, relativeMouseX, relativeMouseY) -&gt; bool:
+        &#34;&#34;&#34; Handles mouse movement.
+
+        Parameters
+        ----------
+        relativeMouseX : float
+            The relative x screen position of the mouse.
+        relativeMouseY : float
+            The relative y screen position of the mouse.
+
+        Returns
+        -------
+        bool
+            True if the primitive was moved, False otherwise.
+        &#34;&#34;&#34;
+
+        movedPrimitive = False
+
+        # Handle movement from previous frame
+        if self.moveAsWhole:
+            self.MoveTo(relativeMouseX, relativeMouseY)
+            movedPrimitive = True
+        elif self.movePoint:
+            self.points[self.movePointIndex].MoveTo(relativeMouseX - self.x, relativeMouseY - self.y)
+            self.prevMovePointIndex = self.movePointIndex
+            movedPrimitive = True
+
+        # Reset movement
+        self.ResetMouseMovement()
+
+        # Check if the mouse is over any of the primitive points
+        mouseOverPoint, pointIndex = self.IsMouseOverPoint(relativeMouseX, relativeMouseY)
+        if mouseOverPoint:
+            # If the mouse is over a primitive point, move that point
+            self.movePoint = True
+            self.movePointIndex = pointIndex
+
+        # Check if the mouse is over the primitive as a whole
+        elif self.IsMouseOver(relativeMouseX, relativeMouseY):
+            # If the mouse is not over a primitive point, move the whole primitive
+            self.moveAsWhole = True
+            movedPrimitive = True
+
+        # Set previous mouse position
+        self.prevMousePositionX = relativeMouseX
+        self.prevMousePositionY = relativeMouseY
+
+        return movedPrimitive
+
+    def ResetMouseMovement(self):
+        &#34;&#34;&#34; Resets mouse movement. &#34;&#34;&#34;
+
+        self.moveAsWhole = False
+        self.movePoint = False
+        self.movePointIndex = None
+
+    @abstractmethod
+    # Check if the relative mouse position is over the primitive as a whole
+    def IsMouseOver(self, relativeMouseX, relativeMouseY) -&gt; bool:
+        &#34;&#34;&#34; Checks if the relative mouse position is over the primitive as a whole.
+
+        Parameters
+        ----------
+        relativeMouseX : float
+            The relative x screen position of the mouse.
+        relativeMouseY : float
+            The relative y screen position of the mouse.
+
+        Returns
+        -------
+        bool
+            True if the mouse is over the primitive as a whole, False otherwise.
+        &#34;&#34;&#34;
+
+        raise NotImplementedError(&#34;The method isMouseOver is not implemented.&#34;)
+        pass
+
+    @abstractmethod
+    # Render the primitive to a surface
+    def Render(self, surface, xOffset, yOffset, absoluteWidth, absoluteHeight, scaled=False):  # pragma: no cover
+        &#34;&#34;&#34; Renders the primitive to a surface.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to render the primitive to.
+        xOffset : int
+            The x offset to render the primitive at.
+        yOffset : int
+            The y offset to render the primitive at.
+        absoluteWidth : int
+            The absolute width of the respective image.
+        absoluteHeight : int
+            The absolute height of the respective image
+        scaled : bool
+            Determines if the points should be shown scaled. Default is False.
+        &#34;&#34;&#34;
+
+        for i in range(len(self.points)):
+            self.points[i].Render(
+                surface,
+                self.x, self.y,
+                xOffset, yOffset,
+                absoluteWidth, absoluteHeight,
+                i,
+                scaled
+            )</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>abc.ABC</li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive" href="PlanePrimitive.html#Calibrator.Input.Primitives.PlanePrimitive.PlanePrimitive">PlanePrimitive</a></li>
+<li><a title="Calibrator.Input.Primitives.PointsPrimitive.PointsPrimitive" href="PointsPrimitive.html#Calibrator.Input.Primitives.PointsPrimitive.PointsPrimitive">PointsPrimitive</a></li>
+<li><a title="Calibrator.Input.Primitives.SquarePrimitive.SquarePrimitive" href="SquarePrimitive.html#Calibrator.Input.Primitives.SquarePrimitive.SquarePrimitive">SquarePrimitive</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitive.moveAsWhole"><code class="name">var <span class="ident">moveAsWhole</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitive.movePoint"><code class="name">var <span class="ident">movePoint</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitive.movePointIndex"><code class="name">var <span class="ident">movePointIndex</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitive.prevMousePositionX"><code class="name">var <span class="ident">prevMousePositionX</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitive.prevMousePositionY"><code class="name">var <span class="ident">prevMousePositionY</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitive.prevMovePointIndex"><code class="name">var <span class="ident">prevMovePointIndex</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitive.GetAbsolutePoint"><code class="name flex">
+<span>def <span class="ident">GetAbsolutePoint</span></span>(<span>self, index, absoluteWidth, absoluteHeight) -> (<class 'int'>, <class 'int'>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Converts specific relative primitive point with index to absolute screen point.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>index</code></strong> :&ensp;<code>int</code></dt>
+<dd>The index of the point to be converted.</dd>
+<dt><strong><code>absoluteWidth</code></strong> :&ensp;<code>int</code></dt>
+<dd>The absolute width of the respective image.</dd>
+<dt><strong><code>absoluteHeight</code></strong> :&ensp;<code>int</code></dt>
+<dd>The absolute height of the respective image.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>(int, int)
+The absolute screen point of the primitive.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def GetAbsolutePoint(self, index, absoluteWidth, absoluteHeight) -&gt; (int, int):
+    &#34;&#34;&#34; Converts specific relative primitive point with index to absolute screen point.
+
+     Parameters
+     ----------
+     index : int
+         The index of the point to be converted.
+     absoluteWidth : int
+         The absolute width of the respective image.
+     absoluteHeight : int
+         The absolute height of the respective image.
+
+     Returns
+     -------
+     (int, int)
+         The absolute screen point of the primitive.
+     &#34;&#34;&#34;
+
+    width = (self.x + self.points[index].relativeX) * absoluteWidth
+    height = (self.y + self.points[index].relativeY) * absoluteHeight
+    return int(width), int(height)</code></pre>
+</details>
+</dd>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitive.GetAbsolutePoints"><code class="name flex">
+<span>def <span class="ident">GetAbsolutePoints</span></span>(<span>self, absoluteWidth, absoluteHeight) -> [(<class 'int'>, <class 'int'>)]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Converts relative primitive points to absolute screen points.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>absoluteWidth</code></strong> :&ensp;<code>int</code></dt>
+<dd>The absolute width of the respective image.</dd>
+<dt><strong><code>absoluteHeight</code></strong> :&ensp;<code>int</code></dt>
+<dd>The absolute height of the respective image.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>[(int, int)]
+The absolute screen points of the primitive.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def GetAbsolutePoints(self, absoluteWidth, absoluteHeight) -&gt; [(int, int)]:
+    &#34;&#34;&#34; Converts relative primitive points to absolute screen points.
+
+    Parameters
+    ----------
+    absoluteWidth : int
+        The absolute width of the respective image.
+    absoluteHeight : int
+        The absolute height of the respective image.
+
+    Returns
+    -------
+    [(int, int)]
+        The absolute screen points of the primitive.
+    &#34;&#34;&#34;
+
+    return list(
+        map(
+            lambda point: self.GetAbsolutePoint(point, absoluteWidth, absoluteHeight),
+            range(len(self.points))
+        )
+    )</code></pre>
+</details>
+</dd>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitive.GetRelativePoint"><code class="name flex">
+<span>def <span class="ident">GetRelativePoint</span></span>(<span>self, index) -> (<class 'float'>, <class 'float'>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get a specific relative primitive point.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>index</code></strong> :&ensp;<code>int</code></dt>
+<dd>The index of the point.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>(float, float)
+The relative screen point of the primitive at the specified index.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def GetRelativePoint(self, index) -&gt; (float, float):
+    &#34;&#34;&#34; Get a specific relative primitive point.
+
+    Parameters
+    ----------
+    index : int
+        The index of the point.
+
+    Returns
+    -------
+    (float, float)
+        The relative screen point of the primitive at the specified index.
+    &#34;&#34;&#34;
+
+    return self.x + self.points[index].relativeX, self.y + self.points[index].relativeY</code></pre>
+</details>
+</dd>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitive.GetRelativePoints"><code class="name flex">
+<span>def <span class="ident">GetRelativePoints</span></span>(<span>self) -> [(<class 'float'>, <class 'float'>)]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Lists relative primitive points.</p>
+<h2 id="returns">Returns</h2>
+<p>[(float, float)]
+The relative screen points of the primitive.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def GetRelativePoints(self) -&gt; [(float, float)]:
+    &#34;&#34;&#34; Lists relative primitive points.
+
+    Returns
+    -------
+    [(float, float)]
+        The relative screen points of the primitive.
+    &#34;&#34;&#34;
+
+    return list(
+        map(
+            self.GetRelativePoint,
+            range(len(self.points))
+        )
+    )</code></pre>
+</details>
+</dd>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitive.HandleMouseMovement"><code class="name flex">
+<span>def <span class="ident">HandleMouseMovement</span></span>(<span>self, relativeMouseX, relativeMouseY) -> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Handles mouse movement.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>relativeMouseX</code></strong> :&ensp;<code>float</code></dt>
+<dd>The relative x screen position of the mouse.</dd>
+<dt><strong><code>relativeMouseY</code></strong> :&ensp;<code>float</code></dt>
+<dd>The relative y screen position of the mouse.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>bool</code></dt>
+<dd>True if the primitive was moved, False otherwise.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def HandleMouseMovement(self, relativeMouseX, relativeMouseY) -&gt; bool:
+    &#34;&#34;&#34; Handles mouse movement.
+
+    Parameters
+    ----------
+    relativeMouseX : float
+        The relative x screen position of the mouse.
+    relativeMouseY : float
+        The relative y screen position of the mouse.
+
+    Returns
+    -------
+    bool
+        True if the primitive was moved, False otherwise.
+    &#34;&#34;&#34;
+
+    movedPrimitive = False
+
+    # Handle movement from previous frame
+    if self.moveAsWhole:
+        self.MoveTo(relativeMouseX, relativeMouseY)
+        movedPrimitive = True
+    elif self.movePoint:
+        self.points[self.movePointIndex].MoveTo(relativeMouseX - self.x, relativeMouseY - self.y)
+        self.prevMovePointIndex = self.movePointIndex
+        movedPrimitive = True
+
+    # Reset movement
+    self.ResetMouseMovement()
+
+    # Check if the mouse is over any of the primitive points
+    mouseOverPoint, pointIndex = self.IsMouseOverPoint(relativeMouseX, relativeMouseY)
+    if mouseOverPoint:
+        # If the mouse is over a primitive point, move that point
+        self.movePoint = True
+        self.movePointIndex = pointIndex
+
+    # Check if the mouse is over the primitive as a whole
+    elif self.IsMouseOver(relativeMouseX, relativeMouseY):
+        # If the mouse is not over a primitive point, move the whole primitive
+        self.moveAsWhole = True
+        movedPrimitive = True
+
+    # Set previous mouse position
+    self.prevMousePositionX = relativeMouseX
+    self.prevMousePositionY = relativeMouseY
+
+    return movedPrimitive</code></pre>
+</details>
+</dd>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitive.IsMouseOver"><code class="name flex">
+<span>def <span class="ident">IsMouseOver</span></span>(<span>self, relativeMouseX, relativeMouseY) -> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if the relative mouse position is over the primitive as a whole.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>relativeMouseX</code></strong> :&ensp;<code>float</code></dt>
+<dd>The relative x screen position of the mouse.</dd>
+<dt><strong><code>relativeMouseY</code></strong> :&ensp;<code>float</code></dt>
+<dd>The relative y screen position of the mouse.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>bool</code></dt>
+<dd>True if the mouse is over the primitive as a whole, False otherwise.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+# Check if the relative mouse position is over the primitive as a whole
+def IsMouseOver(self, relativeMouseX, relativeMouseY) -&gt; bool:
+    &#34;&#34;&#34; Checks if the relative mouse position is over the primitive as a whole.
+
+    Parameters
+    ----------
+    relativeMouseX : float
+        The relative x screen position of the mouse.
+    relativeMouseY : float
+        The relative y screen position of the mouse.
+
+    Returns
+    -------
+    bool
+        True if the mouse is over the primitive as a whole, False otherwise.
+    &#34;&#34;&#34;
+
+    raise NotImplementedError(&#34;The method isMouseOver is not implemented.&#34;)
+    pass</code></pre>
+</details>
+</dd>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitive.IsMouseOverPoint"><code class="name flex">
+<span>def <span class="ident">IsMouseOverPoint</span></span>(<span>self, relativeMouseX, relativeMouseY) -> (<class 'bool'>, <class 'int'>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if the relative mouse position is over any primitive point.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>relativeMouseX</code></strong> :&ensp;<code>float</code></dt>
+<dd>The relative x screen position of the mouse.</dd>
+<dt><strong><code>relativeMouseY</code></strong> :&ensp;<code>float</code></dt>
+<dd>The relative y screen position of the mouse.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>(bool, int)
+A tuple containing the following:
+- True if the mouse is over a point, False otherwise.
+- The index of the point if the mouse is over a point, None otherwise.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def IsMouseOverPoint(self, relativeMouseX, relativeMouseY) -&gt; (bool, int):
+    &#34;&#34;&#34; Checks if the relative mouse position is over any primitive point.
+
+    Parameters
+    ----------
+    relativeMouseX : float
+        The relative x screen position of the mouse.
+    relativeMouseY : float
+        The relative y screen position of the mouse.
+
+    Returns
+    -------
+    (bool, int)
+        A tuple containing the following:
+            - True if the mouse is over a point, False otherwise.
+            - The index of the point if the mouse is over a point, None otherwise.
+    &#34;&#34;&#34;
+
+    # Get all valid points
+    valid = [False] * len(self.points)
+    for i in range(len(self.points)):
+        if self.points[i].IsMouseOver(self.x, self.y, relativeMouseX, relativeMouseY):
+            valid[i] = True
+
+    # Be biased for the previous move point index
+    if self.prevMovePointIndex is not None and valid[self.prevMovePointIndex]:
+        return True, self.prevMovePointIndex
+
+    # Otherwise, take the first valid point
+    for i in range(len(valid)):
+        if valid[i]:
+            return True, i
+    return False, None</code></pre>
+</details>
+</dd>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitive.MoveTo"><code class="name flex">
+<span>def <span class="ident">MoveTo</span></span>(<span>self, relativeX, relativeY)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Moves the shape as a whole.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>relativeX</code></strong> :&ensp;<code>int</code></dt>
+<dd>The relative center x position of the primitive.</dd>
+<dt><strong><code>relativeY</code></strong> :&ensp;<code>int</code></dt>
+<dd>The relative center y position of the primitive.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def MoveTo(self, relativeX, relativeY):
+    &#34;&#34;&#34; Moves the shape as a whole.
+
+    Parameters
+    ----------
+    relativeX : int
+        The relative center x position of the primitive.
+    relativeY : int
+        The relative center y position of the primitive.
+    &#34;&#34;&#34;
+
+    # For all points in the primitive, check if the offset
+    # would put them out-of-bounds
+    dx = relativeX - self.prevMousePositionX
+    dy = relativeY - self.prevMousePositionY
+    for point in self.GetRelativePoints():
+        nx = point[0] + dx
+        ny = point[1] + dy
+
+        if nx &lt; 0 or nx &gt; 1:
+            dx = 0
+        if ny &lt; 0 or ny &gt; 1:
+            dy = 0
+
+    # Move as whole
+    self.x += dx
+    self.y += dy</code></pre>
+</details>
+</dd>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitive.Render"><code class="name flex">
+<span>def <span class="ident">Render</span></span>(<span>self, surface, xOffset, yOffset, absoluteWidth, absoluteHeight, scaled=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Renders the primitive to a surface.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>surface</code></strong> :&ensp;<code>pygame.Surface</code></dt>
+<dd>The surface to render the primitive to.</dd>
+<dt><strong><code>xOffset</code></strong> :&ensp;<code>int</code></dt>
+<dd>The x offset to render the primitive at.</dd>
+<dt><strong><code>yOffset</code></strong> :&ensp;<code>int</code></dt>
+<dd>The y offset to render the primitive at.</dd>
+<dt><strong><code>absoluteWidth</code></strong> :&ensp;<code>int</code></dt>
+<dd>The absolute width of the respective image.</dd>
+<dt><strong><code>absoluteHeight</code></strong> :&ensp;<code>int</code></dt>
+<dd>The absolute height of the respective image</dd>
+<dt><strong><code>scaled</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Determines if the points should be shown scaled. Default is False.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+# Render the primitive to a surface
+def Render(self, surface, xOffset, yOffset, absoluteWidth, absoluteHeight, scaled=False):  # pragma: no cover
+    &#34;&#34;&#34; Renders the primitive to a surface.
+
+    Parameters
+    ----------
+    surface : pygame.Surface
+        The surface to render the primitive to.
+    xOffset : int
+        The x offset to render the primitive at.
+    yOffset : int
+        The y offset to render the primitive at.
+    absoluteWidth : int
+        The absolute width of the respective image.
+    absoluteHeight : int
+        The absolute height of the respective image
+    scaled : bool
+        Determines if the points should be shown scaled. Default is False.
+    &#34;&#34;&#34;
+
+    for i in range(len(self.points)):
+        self.points[i].Render(
+            surface,
+            self.x, self.y,
+            xOffset, yOffset,
+            absoluteWidth, absoluteHeight,
+            i,
+            scaled
+        )</code></pre>
+</details>
+</dd>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitive.ResetMouseMovement"><code class="name flex">
+<span>def <span class="ident">ResetMouseMovement</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Resets mouse movement.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ResetMouseMovement(self):
+    &#34;&#34;&#34; Resets mouse movement. &#34;&#34;&#34;
+
+    self.moveAsWhole = False
+    self.movePoint = False
+    self.movePointIndex = None</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint"><code class="flex name class">
+<span>class <span class="ident">IPrimitivePoint</span></span>
+<span>(</span><span>relativeX, relativeY, color=(255, 255, 255, 255))</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Initializes the primitive point.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>relativeX</code></strong> :&ensp;<code>float</code></dt>
+<dd>The relative x position of the point.</dd>
+<dt><strong><code>relativeY</code></strong> :&ensp;<code>float</code></dt>
+<dd>The relative y position of the point.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class IPrimitivePoint:
+    collisionRadius = 3
+    borderRadius = 1
+    innerBorderColor = (255, 255, 255, 255)
+    outerBorderColor = (0, 0, 0, 64)
+
+    def __init__(self, relativeX, relativeY, color=(255, 255, 255, 255)):
+        &#34;&#34;&#34; Initializes the primitive point.
+
+        Parameters
+        ----------
+        relativeX : float
+            The relative x position of the point.
+        relativeY : float
+            The relative y position of the point.
+        &#34;&#34;&#34;
+
+        self.relativeX = relativeX
+        self.relativeY = relativeY
+        self.color = color
+
+    def MoveTo(self, relativeX, relativeY):
+        &#34;&#34;&#34; Moves the primitive point to the relative position.
+
+        Parameters
+        ----------
+        relativeX : float
+            The relative x position of the point.
+        relativeY : float
+            The relative y position of the point.
+        &#34;&#34;&#34;
+
+        self.relativeX = relativeX
+        self.relativeY = relativeY
+
+    def IsMouseOver(self, x, y, relativeMouseX, relativeMouseY) -&gt; bool:
+        &#34;&#34;&#34; Moves the primitive point to the relative position.
+
+        Parameters
+        ----------
+        x : int
+            The relative x position of the parent.
+        y : int
+            The relative y position of the parent.
+        relativeMouseX : float
+            The relative x position of the mouse.
+        relativeMouseY : float
+            The relative y position of the mouse.
+        &#34;&#34;&#34;
+
+        ax = x + self.relativeX
+        ay = y + self.relativeY
+        dx = abs(relativeMouseX - ax)
+        dy = abs(relativeMouseY - ay)
+        relativeRadius = self.collisionRadius / 128.0
+        return dx * dx + dy * dy &lt;= relativeRadius * relativeRadius
+
+    def Render(
+            self,
+            surface,
+            x, y,
+            xOffset, yOffset,
+            absoluteWidth, absoluteHeight,
+            identifier,
+            scaled=False
+    ):  # pragma: no cover
+        &#34;&#34;&#34; Renders the primitive point to a surface.
+
+        Parameters
+        ----------
+        surface : pygame.Surface
+            The surface to render to.
+        x : float
+            The relative x position of the primitive (parent).
+        y : float
+            The relative y position of the primitive (parent).
+        xOffset : int
+            The x offset to render the primitive at.
+        yOffset : int
+            The y offset to render the primitive at.
+        absoluteWidth : int
+            The absolute width of the respective image.
+        absoluteHeight : int
+            The absolute height of the respective image
+        identifier : int
+            The identifier of the primitive point.
+        scaled : bool
+            Determines if the point should be shown scaled. Default is False.
+        &#34;&#34;&#34;
+        # Calculate scale
+        scale = 3.5 if scaled else 1
+
+        # Calculate point center
+        px = int((x + self.relativeX) * absoluteWidth) + xOffset
+        py = int((y + self.relativeY) * absoluteHeight) + yOffset
+
+        # Render outer border
+        Rendering.RenderPoint(
+            surface,
+            px, py,
+            self.outerBorderColor,
+            (self.collisionRadius * scale + self.borderRadius * 2)
+        )
+
+        # Render inner border
+        Rendering.RenderPoint(
+            surface,
+            px, py,
+            self.innerBorderColor,
+            (self.collisionRadius * scale + self.borderRadius)
+        )
+
+        # Render inner fill
+        Rendering.RenderPoint(
+            surface,
+            px, py,
+            self.color,
+            self.collisionRadius * scale
+        )
+
+        # If scaled: render the ID inside the point
+        if scaled:
+            Rendering.RenderText(
+                surface=surface,
+                text=str(identifier),
+                x=px, y=py,
+                shadowOffset=1,
+                textAlignment=Rendering.TextAlignment.MiddleCenter,
+                fontSize=Rendering.FontSize.Mini
+            )</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint.borderRadius"><code class="name">var <span class="ident">borderRadius</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint.collisionRadius"><code class="name">var <span class="ident">collisionRadius</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint.innerBorderColor"><code class="name">var <span class="ident">innerBorderColor</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint.outerBorderColor"><code class="name">var <span class="ident">outerBorderColor</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint.IsMouseOver"><code class="name flex">
+<span>def <span class="ident">IsMouseOver</span></span>(<span>self, x, y, relativeMouseX, relativeMouseY) -> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Moves the primitive point to the relative position.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>x</code></strong> :&ensp;<code>int</code></dt>
+<dd>The relative x position of the parent.</dd>
+<dt><strong><code>y</code></strong> :&ensp;<code>int</code></dt>
+<dd>The relative y position of the parent.</dd>
+<dt><strong><code>relativeMouseX</code></strong> :&ensp;<code>float</code></dt>
+<dd>The relative x position of the mouse.</dd>
+<dt><strong><code>relativeMouseY</code></strong> :&ensp;<code>float</code></dt>
+<dd>The relative y position of the mouse.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def IsMouseOver(self, x, y, relativeMouseX, relativeMouseY) -&gt; bool:
+    &#34;&#34;&#34; Moves the primitive point to the relative position.
+
+    Parameters
+    ----------
+    x : int
+        The relative x position of the parent.
+    y : int
+        The relative y position of the parent.
+    relativeMouseX : float
+        The relative x position of the mouse.
+    relativeMouseY : float
+        The relative y position of the mouse.
+    &#34;&#34;&#34;
+
+    ax = x + self.relativeX
+    ay = y + self.relativeY
+    dx = abs(relativeMouseX - ax)
+    dy = abs(relativeMouseY - ay)
+    relativeRadius = self.collisionRadius / 128.0
+    return dx * dx + dy * dy &lt;= relativeRadius * relativeRadius</code></pre>
+</details>
+</dd>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint.MoveTo"><code class="name flex">
+<span>def <span class="ident">MoveTo</span></span>(<span>self, relativeX, relativeY)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Moves the primitive point to the relative position.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>relativeX</code></strong> :&ensp;<code>float</code></dt>
+<dd>The relative x position of the point.</dd>
+<dt><strong><code>relativeY</code></strong> :&ensp;<code>float</code></dt>
+<dd>The relative y position of the point.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def MoveTo(self, relativeX, relativeY):
+    &#34;&#34;&#34; Moves the primitive point to the relative position.
+
+    Parameters
+    ----------
+    relativeX : float
+        The relative x position of the point.
+    relativeY : float
+        The relative y position of the point.
+    &#34;&#34;&#34;
+
+    self.relativeX = relativeX
+    self.relativeY = relativeY</code></pre>
+</details>
+</dd>
+<dt id="Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint.Render"><code class="name flex">
+<span>def <span class="ident">Render</span></span>(<span>self, surface, x, y, xOffset, yOffset, absoluteWidth, absoluteHeight, identifier, scaled=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Renders the primitive point to a surface.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>surface</code></strong> :&ensp;<code>pygame.Surface</code></dt>
+<dd>The surface to render to.</dd>
+<dt><strong><code>x</code></strong> :&ensp;<code>float</code></dt>
+<dd>The relative x position of the primitive (parent).</dd>
+<dt><strong><code>y</code></strong> :&ensp;<code>float</code></dt>
+<dd>The relative y position of the primitive (parent).</dd>
+<dt><strong><code>xOffset</code></strong> :&ensp;<code>int</code></dt>
+<dd>The x offset to render the primitive at.</dd>
+<dt><strong><code>yOffset</code></strong> :&ensp;<code>int</code></dt>
+<dd>The y offset to render the primitive at.</dd>
+<dt><strong><code>absoluteWidth</code></strong> :&ensp;<code>int</code></dt>
+<dd>The absolute width of the respective image.</dd>
+<dt><strong><code>absoluteHeight</code></strong> :&ensp;<code>int</code></dt>
+<dd>The absolute height of the respective image</dd>
+<dt><strong><code>identifier</code></strong> :&ensp;<code>int</code></dt>
+<dd>The identifier of the primitive point.</dd>
+<dt><strong><code>scaled</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Determines if the point should be shown scaled. Default is False.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def Render(
+        self,
+        surface,
+        x, y,
+        xOffset, yOffset,
+        absoluteWidth, absoluteHeight,
+        identifier,
+        scaled=False
+):  # pragma: no cover
+    &#34;&#34;&#34; Renders the primitive point to a surface.
+
+    Parameters
+    ----------
+    surface : pygame.Surface
+        The surface to render to.
+    x : float
+        The relative x position of the primitive (parent).
+    y : float
+        The relative y position of the primitive (parent).
+    xOffset : int
+        The x offset to render the primitive at.
+    yOffset : int
+        The y offset to render the primitive at.
+    absoluteWidth : int
+        The absolute width of the respective image.
+    absoluteHeight : int
+        The absolute height of the respective image
+    identifier : int
+        The identifier of the primitive point.
+    scaled : bool
+        Determines if the point should be shown scaled. Default is False.
+    &#34;&#34;&#34;
+    # Calculate scale
+    scale = 3.5 if scaled else 1
+
+    # Calculate point center
+    px = int((x + self.relativeX) * absoluteWidth) + xOffset
+    py = int((y + self.relativeY) * absoluteHeight) + yOffset
+
+    # Render outer border
+    Rendering.RenderPoint(
+        surface,
+        px, py,
+        self.outerBorderColor,
+        (self.collisionRadius * scale + self.borderRadius * 2)
+    )
+
+    # Render inner border
+    Rendering.RenderPoint(
+        surface,
+        px, py,
+        self.innerBorderColor,
+        (self.collisionRadius * scale + self.borderRadius)
+    )
+
+    # Render inner fill
+    Rendering.RenderPoint(
+        surface,
+        px, py,
+        self.color,
+        self.collisionRadius * scale
+    )
+
+    # If scaled: render the ID inside the point
+    if scaled:
+        Rendering.RenderText(
+            surface=surface,
+            text=str(identifier),
+            x=px, y=py,
+            shadowOffset=1,
+            textAlignment=Rendering.TextAlignment.MiddleCenter,
+            fontSize=Rendering.FontSize.Mini
+        )</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<img src="/images/logo_full.png" alt="">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="Calibrator.Input.Primitives" href="index.html">Calibrator.Input.Primitives</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitive">IPrimitive</a></code></h4>
+<ul class="two-column">
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.GetAbsolutePoint" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitive.GetAbsolutePoint">GetAbsolutePoint</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.GetAbsolutePoints" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitive.GetAbsolutePoints">GetAbsolutePoints</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.GetRelativePoint" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitive.GetRelativePoint">GetRelativePoint</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.GetRelativePoints" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitive.GetRelativePoints">GetRelativePoints</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.HandleMouseMovement" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitive.HandleMouseMovement">HandleMouseMovement</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.IsMouseOver" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitive.IsMouseOver">IsMouseOver</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.IsMouseOverPoint" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitive.IsMouseOverPoint">IsMouseOverPoint</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.MoveTo" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitive.MoveTo">MoveTo</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.Render" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitive.Render">Render</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.ResetMouseMovement" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitive.ResetMouseMovement">ResetMouseMovement</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.moveAsWhole" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitive.moveAsWhole">moveAsWhole</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.movePoint" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitive.movePoint">movePoint</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.movePointIndex" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitive.movePointIndex">movePointIndex</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.prevMousePositionX" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitive.prevMousePositionX">prevMousePositionX</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.prevMousePositionY" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitive.prevMousePositionY">prevMousePositionY</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitive.prevMovePointIndex" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitive.prevMovePointIndex">prevMovePointIndex</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint">IPrimitivePoint</a></code></h4>
+<ul class="two-column">
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint.IsMouseOver" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint.IsMouseOver">IsMouseOver</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint.MoveTo" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint.MoveTo">MoveTo</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint.Render" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint.Render">Render</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint.borderRadius" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint.borderRadius">borderRadius</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint.collisionRadius" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint.collisionRadius">collisionRadius</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint.innerBorderColor" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint.innerBorderColor">innerBorderColor</a></code></li>
+<li><code><a title="Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint.outerBorderColor" href="#Calibrator.Input.Primitives.IPrimitive.IPrimitivePoint.outerBorderColor">outerBorderColor</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p><center>
+This program has been developed by students from the bachelor Computer Science at Utrecht University within the Software Project course.
+&#169 Copyright Utrecht University (Department of Information and Computing Sciences)
+</center></p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

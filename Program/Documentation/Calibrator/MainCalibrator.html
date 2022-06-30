@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>Calibrator.MainCalibrator API documentation</title>
+<meta name="description" content="Controller object for the calibration, handles the choosing of different calibration methods." />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;700&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/favicon/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="pdoc-header">
+<nav class="pdoc-nav">
+<ul>
+<li>
+<a href="../index.html" class="menu">Home</a>
+</li>
+<li>
+<a href="../Main/Main.html" class="menu">Main</a>
+</li>
+<li>
+<a href="../API/index.html" class="menu">API</a>
+</li>
+<li>
+<a href="../Calibrator/index.html" class="menu">Calibrator</a>
+</li>
+<li>
+<a href="../CameraReader/index.html" class="menu">Camera Reader</a>
+</li>
+<li>
+<a href="../FrameAnalyzer/index.html" class="menu">Frame Analyzer</a>
+</li>
+<li>
+<a href="../IO/index.html" class="menu">IO</a>
+</li>
+<li>
+<a href="../Positioner/index.html" class="menu">Positioner</a>
+</li>
+<li>
+<a href="../Windowing/index.html" class="menu">Windowing</a>
+</li>
+<li>
+<a href="../ArgsGUI/index.html" class="menu">ArgsGUI</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>Calibrator.MainCalibrator</code></h1>
+</header>
+<section id="section-intro">
+<p>Controller object for the calibration, handles the choosing of different calibration methods.</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># This program has been developed by students from the bachelor Computer Science at Utrecht University within the
+# Software Project course.
+# © Copyright Utrecht University (Department of Information and Computing Sciences)
+
+&#34;&#34;&#34;
+Controller object for the calibration, handles the choosing of different calibration methods.
+&#34;&#34;&#34;
+import argparse
+from enum import Enum
+from typing import Dict, Any
+
+import cv2
+
+from Calibrator.Configurations.ICalibrationConfiguration import ICalibrationConfiguration
+
+# Calibration methods - Imports
+from Calibrator.Methods.HomographyCalibrationMethod import HomographyCalibrationMethod
+
+# Calibration configuration - Imports
+from Calibrator.Configurations.HomographyCalibrationConfiguration import HomographyCalibrationConfiguration
+
+
+# Calibration methods - Enum
+class CalibrationMethods(Enum):
+    Homography = HomographyCalibrationMethod
+
+
+# Calibration configurations - Enum
+class CalibrationConfigurations(Enum):
+    Homography = HomographyCalibrationConfiguration
+
+
+# Calibrator class which contains the calibration methods and the configuration handling
+class MainCalibrator:
+    calibrated = False
+
+    @staticmethod
+    def Calibrate(cameraId, srcImage, masterWindow, arguments) -&gt; ICalibrationConfiguration or None:
+        &#34;&#34;&#34;Enter UI menu where the user can specify the calibration method and perform the calibration
+
+            Parameters
+            ----------
+            cameraId: string
+                The camera id of the camera to calibrate.
+            srcImage: numpy.ndarray
+                The source image to perform the calibration on.
+            masterWindow: MasterWindow
+                The master window object
+            arguments : Dict[str, Any]
+                The arguments of the program.
+
+            Returns
+            -------
+            ICalibrationConfiguration or None
+                The configuration of the calibration method or None if the calibration failed.
+        &#34;&#34;&#34;
+        # Retrieve the program arguments that are relevant for calibration.
+        # The calibration method is either &#39;Homography&#39; or &#39;None&#39;
+        calibrationMethod = arguments[&#39;calibrator&#39;]
+        forceRecalibrate = arguments[&#39;forceRecalibrate&#39;]
+
+        if calibrationMethod == &#39;None&#39;:
+            MainCalibrator.calibrated = True
+            return None
+
+        if not forceRecalibrate:
+            # Try to find a configured calibration method
+            # print(&#39;[Calibrator] Searching for calibration configurations of camera #&#39; + str(cameraId))
+            configuration = MainCalibrator.GetConfiguredCalibrationMethod(cameraId, calibrationMethod, arguments)
+
+            # If a configuration exists, use it.
+            if configuration is not None:
+                MainCalibrator.calibrated = True
+                return configuration
+
+        # Perform calibration with the chosen method.
+        newConfiguration = MainCalibrator.PerformCalibrationMethod(calibrationMethod, cameraId, srcImage, masterWindow)
+        if newConfiguration is not None:
+            # If the calibration was successful, we return the configuration
+            MainCalibrator.calibrated = True
+            return newConfiguration
+
+        # Calibration failed.
+        return None
+
+    @staticmethod
+    def PerformCalibrationMethod(method, cameraId, srcImage, masterWindow) -&gt; ICalibrationConfiguration or None:
+        &#34;&#34;&#34; Perform the calibration method
+
+            Parameters
+            ----------
+            method: string
+                The name of the calibration method to perform
+            cameraId: string
+                The camera id of the camera to calibrate
+            srcImage: numpy.ndarray
+                The source image to perform the calibration on
+            masterWindow: MasterWindow
+                The master window object
+
+            Returns
+            -------
+            ICalibrationConfiguration or None
+
+            The configuration of the calibration method or None if the calibration failed
+        &#34;&#34;&#34;
+
+        # Create the calibration method and perform the calibration
+        calibrator = CalibrationMethods[method].value()
+        configuration = calibrator.MakeWorldRepresentation(srcImage, masterWindow)
+        if configuration is None:
+            # print(&#39;[Calibrator] Calibration with method &#39; + str(method) + &#39; failed!&#39;)
+            return None
+
+        # Save the configuration
+        configuration.Save(cameraId)
+
+        # Return the configuration
+        # print(&#39;[Calibrator] Calibration with method &#39; + str(method) + &#39; succeeded!&#39;)
+        return configuration
+
+    @staticmethod
+    def GetConfiguredCalibrationMethod(cameraId, calibrationMethod, arguments) -&gt; ICalibrationConfiguration or None:
+        &#34;&#34;&#34; Get a configured calibration method
+
+            Parameters
+            ----------
+            cameraId: string
+                The camera id of the camera to get the calibration method for
+            calibrationMethod: string
+                The name of the calibration method to get
+
+            Returns
+            -------
+            ICalibrationConfiguration or None
+                The configuration of the calibration method or None if the calibration method is not configured
+        &#34;&#34;&#34;
+
+        # Check if the calibration method configuration exists
+        exists = ICalibrationConfiguration.Exists(CalibrationConfigurations[calibrationMethod].value, cameraId)
+
+        # If the configuration does not exist, return nothing
+        if not exists:
+            return None
+
+        # Return the configuration
+        configuration = CalibrationConfigurations[calibrationMethod].value()
+
+        try:
+            configuration.Load(cameraId, arguments)
+        except:
+            return None
+        return configuration
+
+    @staticmethod
+    def AddCalibratorArguments(parser: argparse.ArgumentParser):
+        &#34;&#34;&#34; Add the arguments for the calibrator to the parser
+
+            Parameters
+            ----------
+            parser: argparse.ArgumentParser
+                The parser to add the arguments to
+        &#34;&#34;&#34;
+        if parser is None:
+            raise TypeError(&#34;Parser is none.&#34;)
+
+        # Add the calibrator arguments
+        parser.add_argument(&#39;-c&#39;, &#39;--calibrator&#39;, default=&#39;Homography&#39;, help=&#39;Calibration method (None or Homography)&#39;)
+        parser.add_argument(&#39;-f&#39;, &#39;--forceRecalibrate&#39;, action=&#34;store_true&#34;, default=False,
+                            help=&#39;Use an existing calibration (if exists)&#39;)
+
+    @staticmethod
+    def ValidateCalibratorArguments(arguments: Dict[str, Any]):
+        &#34;&#34;&#34; Validate the calibrator arguments.
+
+            Parameters
+            ----------
+            arguments: Dict[str, Any]
+                The arguments to validate.
+        &#34;&#34;&#34;
+        # Check if the calibrator is valid
+        if arguments[&#39;calibrator&#39;] not in [&#39;None&#39;, &#39;Homography&#39;]:
+            raise ValueError(&#39;Calibrator must be None or Homography&#39;)
+        if type(arguments[&#39;forceRecalibrate&#39;]) is not bool:
+            raise ValueError(&#39;forceRecalibrate must be a boolean&#39;)
+
+        # print(arguments[&#39;forceRecalibrate&#39;])</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="Calibrator.MainCalibrator.CalibrationConfigurations"><code class="flex name class">
+<span>class <span class="ident">CalibrationConfigurations</span></span>
+<span>(</span><span>value, names=None, *, module=None, qualname=None, type=None, start=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class CalibrationConfigurations(Enum):
+    Homography = HomographyCalibrationConfiguration</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="Calibrator.MainCalibrator.CalibrationConfigurations.Homography"><code class="name">var <span class="ident">Homography</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="Calibrator.MainCalibrator.CalibrationMethods"><code class="flex name class">
+<span>class <span class="ident">CalibrationMethods</span></span>
+<span>(</span><span>value, names=None, *, module=None, qualname=None, type=None, start=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class CalibrationMethods(Enum):
+    Homography = HomographyCalibrationMethod</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="Calibrator.MainCalibrator.CalibrationMethods.Homography"><code class="name">var <span class="ident">Homography</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="Calibrator.MainCalibrator.MainCalibrator"><code class="flex name class">
+<span>class <span class="ident">MainCalibrator</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class MainCalibrator:
+    calibrated = False
+
+    @staticmethod
+    def Calibrate(cameraId, srcImage, masterWindow, arguments) -&gt; ICalibrationConfiguration or None:
+        &#34;&#34;&#34;Enter UI menu where the user can specify the calibration method and perform the calibration
+
+            Parameters
+            ----------
+            cameraId: string
+                The camera id of the camera to calibrate.
+            srcImage: numpy.ndarray
+                The source image to perform the calibration on.
+            masterWindow: MasterWindow
+                The master window object
+            arguments : Dict[str, Any]
+                The arguments of the program.
+
+            Returns
+            -------
+            ICalibrationConfiguration or None
+                The configuration of the calibration method or None if the calibration failed.
+        &#34;&#34;&#34;
+        # Retrieve the program arguments that are relevant for calibration.
+        # The calibration method is either &#39;Homography&#39; or &#39;None&#39;
+        calibrationMethod = arguments[&#39;calibrator&#39;]
+        forceRecalibrate = arguments[&#39;forceRecalibrate&#39;]
+
+        if calibrationMethod == &#39;None&#39;:
+            MainCalibrator.calibrated = True
+            return None
+
+        if not forceRecalibrate:
+            # Try to find a configured calibration method
+            # print(&#39;[Calibrator] Searching for calibration configurations of camera #&#39; + str(cameraId))
+            configuration = MainCalibrator.GetConfiguredCalibrationMethod(cameraId, calibrationMethod, arguments)
+
+            # If a configuration exists, use it.
+            if configuration is not None:
+                MainCalibrator.calibrated = True
+                return configuration
+
+        # Perform calibration with the chosen method.
+        newConfiguration = MainCalibrator.PerformCalibrationMethod(calibrationMethod, cameraId, srcImage, masterWindow)
+        if newConfiguration is not None:
+            # If the calibration was successful, we return the configuration
+            MainCalibrator.calibrated = True
+            return newConfiguration
+
+        # Calibration failed.
+        return None
+
+    @staticmethod
+    def PerformCalibrationMethod(method, cameraId, srcImage, masterWindow) -&gt; ICalibrationConfiguration or None:
+        &#34;&#34;&#34; Perform the calibration method
+
+            Parameters
+            ----------
+            method: string
+                The name of the calibration method to perform
+            cameraId: string
+                The camera id of the camera to calibrate
+            srcImage: numpy.ndarray
+                The source image to perform the calibration on
+            masterWindow: MasterWindow
+                The master window object
+
+            Returns
+            -------
+            ICalibrationConfiguration or None
+
+            The configuration of the calibration method or None if the calibration failed
+        &#34;&#34;&#34;
+
+        # Create the calibration method and perform the calibration
+        calibrator = CalibrationMethods[method].value()
+        configuration = calibrator.MakeWorldRepresentation(srcImage, masterWindow)
+        if configuration is None:
+            # print(&#39;[Calibrator] Calibration with method &#39; + str(method) + &#39; failed!&#39;)
+            return None
+
+        # Save the configuration
+        configuration.Save(cameraId)
+
+        # Return the configuration
+        # print(&#39;[Calibrator] Calibration with method &#39; + str(method) + &#39; succeeded!&#39;)
+        return configuration
+
+    @staticmethod
+    def GetConfiguredCalibrationMethod(cameraId, calibrationMethod, arguments) -&gt; ICalibrationConfiguration or None:
+        &#34;&#34;&#34; Get a configured calibration method
+
+            Parameters
+            ----------
+            cameraId: string
+                The camera id of the camera to get the calibration method for
+            calibrationMethod: string
+                The name of the calibration method to get
+
+            Returns
+            -------
+            ICalibrationConfiguration or None
+                The configuration of the calibration method or None if the calibration method is not configured
+        &#34;&#34;&#34;
+
+        # Check if the calibration method configuration exists
+        exists = ICalibrationConfiguration.Exists(CalibrationConfigurations[calibrationMethod].value, cameraId)
+
+        # If the configuration does not exist, return nothing
+        if not exists:
+            return None
+
+        # Return the configuration
+        configuration = CalibrationConfigurations[calibrationMethod].value()
+
+        try:
+            configuration.Load(cameraId, arguments)
+        except:
+            return None
+        return configuration
+
+    @staticmethod
+    def AddCalibratorArguments(parser: argparse.ArgumentParser):
+        &#34;&#34;&#34; Add the arguments for the calibrator to the parser
+
+            Parameters
+            ----------
+            parser: argparse.ArgumentParser
+                The parser to add the arguments to
+        &#34;&#34;&#34;
+        if parser is None:
+            raise TypeError(&#34;Parser is none.&#34;)
+
+        # Add the calibrator arguments
+        parser.add_argument(&#39;-c&#39;, &#39;--calibrator&#39;, default=&#39;Homography&#39;, help=&#39;Calibration method (None or Homography)&#39;)
+        parser.add_argument(&#39;-f&#39;, &#39;--forceRecalibrate&#39;, action=&#34;store_true&#34;, default=False,
+                            help=&#39;Use an existing calibration (if exists)&#39;)
+
+    @staticmethod
+    def ValidateCalibratorArguments(arguments: Dict[str, Any]):
+        &#34;&#34;&#34; Validate the calibrator arguments.
+
+            Parameters
+            ----------
+            arguments: Dict[str, Any]
+                The arguments to validate.
+        &#34;&#34;&#34;
+        # Check if the calibrator is valid
+        if arguments[&#39;calibrator&#39;] not in [&#39;None&#39;, &#39;Homography&#39;]:
+            raise ValueError(&#39;Calibrator must be None or Homography&#39;)
+        if type(arguments[&#39;forceRecalibrate&#39;]) is not bool:
+            raise ValueError(&#39;forceRecalibrate must be a boolean&#39;)</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="Calibrator.MainCalibrator.MainCalibrator.calibrated"><code class="name">var <span class="ident">calibrated</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Static methods</h3>
+<dl>
+<dt id="Calibrator.MainCalibrator.MainCalibrator.AddCalibratorArguments"><code class="name flex">
+<span>def <span class="ident">AddCalibratorArguments</span></span>(<span>parser: argparse.ArgumentParser)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add the arguments for the calibrator to the parser</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>parser</code></strong> :&ensp;<code>argparse.ArgumentParser</code></dt>
+<dd>The parser to add the arguments to</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def AddCalibratorArguments(parser: argparse.ArgumentParser):
+    &#34;&#34;&#34; Add the arguments for the calibrator to the parser
+
+        Parameters
+        ----------
+        parser: argparse.ArgumentParser
+            The parser to add the arguments to
+    &#34;&#34;&#34;
+    if parser is None:
+        raise TypeError(&#34;Parser is none.&#34;)
+
+    # Add the calibrator arguments
+    parser.add_argument(&#39;-c&#39;, &#39;--calibrator&#39;, default=&#39;Homography&#39;, help=&#39;Calibration method (None or Homography)&#39;)
+    parser.add_argument(&#39;-f&#39;, &#39;--forceRecalibrate&#39;, action=&#34;store_true&#34;, default=False,
+                        help=&#39;Use an existing calibration (if exists)&#39;)</code></pre>
+</details>
+</dd>
+<dt id="Calibrator.MainCalibrator.MainCalibrator.Calibrate"><code class="name flex">
+<span>def <span class="ident">Calibrate</span></span>(<span>cameraId, srcImage, masterWindow, arguments) -> <a title="Calibrator.Configurations.ICalibrationConfiguration.ICalibrationConfiguration" href="Configurations/ICalibrationConfiguration.html#Calibrator.Configurations.ICalibrationConfiguration.ICalibrationConfiguration">ICalibrationConfiguration</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Enter UI menu where the user can specify the calibration method and perform the calibration</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>cameraId</code></strong> :&ensp;<code>string</code></dt>
+<dd>The camera id of the camera to calibrate.</dd>
+<dt><strong><code>srcImage</code></strong> :&ensp;<code>numpy.ndarray</code></dt>
+<dd>The source image to perform the calibration on.</dd>
+<dt><strong><code>masterWindow</code></strong> :&ensp;<code>MasterWindow</code></dt>
+<dd>The master window object</dd>
+<dt><strong><code>arguments</code></strong> :&ensp;<code>Dict[str, Any]</code></dt>
+<dd>The arguments of the program.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>ICalibrationConfiguration</code> or <code>None</code></dt>
+<dd>The configuration of the calibration method or None if the calibration failed.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def Calibrate(cameraId, srcImage, masterWindow, arguments) -&gt; ICalibrationConfiguration or None:
+    &#34;&#34;&#34;Enter UI menu where the user can specify the calibration method and perform the calibration
+
+        Parameters
+        ----------
+        cameraId: string
+            The camera id of the camera to calibrate.
+        srcImage: numpy.ndarray
+            The source image to perform the calibration on.
+        masterWindow: MasterWindow
+            The master window object
+        arguments : Dict[str, Any]
+            The arguments of the program.
+
+        Returns
+        -------
+        ICalibrationConfiguration or None
+            The configuration of the calibration method or None if the calibration failed.
+    &#34;&#34;&#34;
+    # Retrieve the program arguments that are relevant for calibration.
+    # The calibration method is either &#39;Homography&#39; or &#39;None&#39;
+    calibrationMethod = arguments[&#39;calibrator&#39;]
+    forceRecalibrate = arguments[&#39;forceRecalibrate&#39;]
+
+    if calibrationMethod == &#39;None&#39;:
+        MainCalibrator.calibrated = True
+        return None
+
+    if not forceRecalibrate:
+        # Try to find a configured calibration method
+        # print(&#39;[Calibrator] Searching for calibration configurations of camera #&#39; + str(cameraId))
+        configuration = MainCalibrator.GetConfiguredCalibrationMethod(cameraId, calibrationMethod, arguments)
+
+        # If a configuration exists, use it.
+        if configuration is not None:
+            MainCalibrator.calibrated = True
+            return configuration
+
+    # Perform calibration with the chosen method.
+    newConfiguration = MainCalibrator.PerformCalibrationMethod(calibrationMethod, cameraId, srcImage, masterWindow)
+    if newConfiguration is not None:
+        # If the calibration was successful, we return the configuration
+        MainCalibrator.calibrated = True
+        return newConfiguration
+
+    # Calibration failed.
+    return None</code></pre>
+</details>
+</dd>
+<dt id="Calibrator.MainCalibrator.MainCalibrator.GetConfiguredCalibrationMethod"><code class="name flex">
+<span>def <span class="ident">GetConfiguredCalibrationMethod</span></span>(<span>cameraId, calibrationMethod, arguments) -> <a title="Calibrator.Configurations.ICalibrationConfiguration.ICalibrationConfiguration" href="Configurations/ICalibrationConfiguration.html#Calibrator.Configurations.ICalibrationConfiguration.ICalibrationConfiguration">ICalibrationConfiguration</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get a configured calibration method</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>cameraId</code></strong> :&ensp;<code>string</code></dt>
+<dd>The camera id of the camera to get the calibration method for</dd>
+<dt><strong><code>calibrationMethod</code></strong> :&ensp;<code>string</code></dt>
+<dd>The name of the calibration method to get</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>ICalibrationConfiguration</code> or <code>None</code></dt>
+<dd>The configuration of the calibration method or None if the calibration method is not configured</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def GetConfiguredCalibrationMethod(cameraId, calibrationMethod, arguments) -&gt; ICalibrationConfiguration or None:
+    &#34;&#34;&#34; Get a configured calibration method
+
+        Parameters
+        ----------
+        cameraId: string
+            The camera id of the camera to get the calibration method for
+        calibrationMethod: string
+            The name of the calibration method to get
+
+        Returns
+        -------
+        ICalibrationConfiguration or None
+            The configuration of the calibration method or None if the calibration method is not configured
+    &#34;&#34;&#34;
+
+    # Check if the calibration method configuration exists
+    exists = ICalibrationConfiguration.Exists(CalibrationConfigurations[calibrationMethod].value, cameraId)
+
+    # If the configuration does not exist, return nothing
+    if not exists:
+        return None
+
+    # Return the configuration
+    configuration = CalibrationConfigurations[calibrationMethod].value()
+
+    try:
+        configuration.Load(cameraId, arguments)
+    except:
+        return None
+    return configuration</code></pre>
+</details>
+</dd>
+<dt id="Calibrator.MainCalibrator.MainCalibrator.PerformCalibrationMethod"><code class="name flex">
+<span>def <span class="ident">PerformCalibrationMethod</span></span>(<span>method, cameraId, srcImage, masterWindow) -> <a title="Calibrator.Configurations.ICalibrationConfiguration.ICalibrationConfiguration" href="Configurations/ICalibrationConfiguration.html#Calibrator.Configurations.ICalibrationConfiguration.ICalibrationConfiguration">ICalibrationConfiguration</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Perform the calibration method</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>method</code></strong> :&ensp;<code>string</code></dt>
+<dd>The name of the calibration method to perform</dd>
+<dt><strong><code>cameraId</code></strong> :&ensp;<code>string</code></dt>
+<dd>The camera id of the camera to calibrate</dd>
+<dt><strong><code>srcImage</code></strong> :&ensp;<code>numpy.ndarray</code></dt>
+<dd>The source image to perform the calibration on</dd>
+<dt><strong><code>masterWindow</code></strong> :&ensp;<code>MasterWindow</code></dt>
+<dd>The master window object</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>ICalibrationConfiguration</code> or <code>None</code></dt>
+<dd>&nbsp;</dd>
+<dt><code>The configuration</code> of <code>the calibration method</code> or <code>None if the calibration failed</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def PerformCalibrationMethod(method, cameraId, srcImage, masterWindow) -&gt; ICalibrationConfiguration or None:
+    &#34;&#34;&#34; Perform the calibration method
+
+        Parameters
+        ----------
+        method: string
+            The name of the calibration method to perform
+        cameraId: string
+            The camera id of the camera to calibrate
+        srcImage: numpy.ndarray
+            The source image to perform the calibration on
+        masterWindow: MasterWindow
+            The master window object
+
+        Returns
+        -------
+        ICalibrationConfiguration or None
+
+        The configuration of the calibration method or None if the calibration failed
+    &#34;&#34;&#34;
+
+    # Create the calibration method and perform the calibration
+    calibrator = CalibrationMethods[method].value()
+    configuration = calibrator.MakeWorldRepresentation(srcImage, masterWindow)
+    if configuration is None:
+        # print(&#39;[Calibrator] Calibration with method &#39; + str(method) + &#39; failed!&#39;)
+        return None
+
+    # Save the configuration
+    configuration.Save(cameraId)
+
+    # Return the configuration
+    # print(&#39;[Calibrator] Calibration with method &#39; + str(method) + &#39; succeeded!&#39;)
+    return configuration</code></pre>
+</details>
+</dd>
+<dt id="Calibrator.MainCalibrator.MainCalibrator.ValidateCalibratorArguments"><code class="name flex">
+<span>def <span class="ident">ValidateCalibratorArguments</span></span>(<span>arguments: Dict[str, Any])</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Validate the calibrator arguments.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>arguments</code></strong> :&ensp;<code>Dict[str, Any]</code></dt>
+<dd>The arguments to validate.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def ValidateCalibratorArguments(arguments: Dict[str, Any]):
+    &#34;&#34;&#34; Validate the calibrator arguments.
+
+        Parameters
+        ----------
+        arguments: Dict[str, Any]
+            The arguments to validate.
+    &#34;&#34;&#34;
+    # Check if the calibrator is valid
+    if arguments[&#39;calibrator&#39;] not in [&#39;None&#39;, &#39;Homography&#39;]:
+        raise ValueError(&#39;Calibrator must be None or Homography&#39;)
+    if type(arguments[&#39;forceRecalibrate&#39;]) is not bool:
+        raise ValueError(&#39;forceRecalibrate must be a boolean&#39;)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<img src="/images/logo_full.png" alt="">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="Calibrator" href="index.html">Calibrator</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="Calibrator.MainCalibrator.CalibrationConfigurations" href="#Calibrator.MainCalibrator.CalibrationConfigurations">CalibrationConfigurations</a></code></h4>
+<ul class="">
+<li><code><a title="Calibrator.MainCalibrator.CalibrationConfigurations.Homography" href="#Calibrator.MainCalibrator.CalibrationConfigurations.Homography">Homography</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="Calibrator.MainCalibrator.CalibrationMethods" href="#Calibrator.MainCalibrator.CalibrationMethods">CalibrationMethods</a></code></h4>
+<ul class="">
+<li><code><a title="Calibrator.MainCalibrator.CalibrationMethods.Homography" href="#Calibrator.MainCalibrator.CalibrationMethods.Homography">Homography</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="Calibrator.MainCalibrator.MainCalibrator" href="#Calibrator.MainCalibrator.MainCalibrator">MainCalibrator</a></code></h4>
+<ul class="">
+<li><code><a title="Calibrator.MainCalibrator.MainCalibrator.AddCalibratorArguments" href="#Calibrator.MainCalibrator.MainCalibrator.AddCalibratorArguments">AddCalibratorArguments</a></code></li>
+<li><code><a title="Calibrator.MainCalibrator.MainCalibrator.Calibrate" href="#Calibrator.MainCalibrator.MainCalibrator.Calibrate">Calibrate</a></code></li>
+<li><code><a title="Calibrator.MainCalibrator.MainCalibrator.GetConfiguredCalibrationMethod" href="#Calibrator.MainCalibrator.MainCalibrator.GetConfiguredCalibrationMethod">GetConfiguredCalibrationMethod</a></code></li>
+<li><code><a title="Calibrator.MainCalibrator.MainCalibrator.PerformCalibrationMethod" href="#Calibrator.MainCalibrator.MainCalibrator.PerformCalibrationMethod">PerformCalibrationMethod</a></code></li>
+<li><code><a title="Calibrator.MainCalibrator.MainCalibrator.ValidateCalibratorArguments" href="#Calibrator.MainCalibrator.MainCalibrator.ValidateCalibratorArguments">ValidateCalibratorArguments</a></code></li>
+<li><code><a title="Calibrator.MainCalibrator.MainCalibrator.calibrated" href="#Calibrator.MainCalibrator.MainCalibrator.calibrated">calibrated</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p><center>
+This program has been developed by students from the bachelor Computer Science at Utrecht University within the Software Project course.
+&#169 Copyright Utrecht University (Department of Information and Computing Sciences)
+</center></p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

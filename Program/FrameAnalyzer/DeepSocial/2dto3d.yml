@@ -1,0 +1,23 @@
+name: 2dto3d
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7
+#  - opencv
+  - numpy
+
+# Extra DeepSOCIAL requirements:
+  - ipython
+  - js2py
+  - matplotlib
+  - scikit-image
+  - filterpy
+
+  - pip
+  - pip:
+    - --extra-index-url https://download.pytorch.org/whl/cu113
+    - torch==1.11.0+cu113
+    - torchaudio==0.11.0+cu113
+    - torchvision==0.12.0+cu113
+prefix: /home/watchfuleye/anaconda3/envs/2dto3d

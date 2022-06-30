@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>API.APIServer API documentation</title>
+<meta name="description" content="API Server, creates a connection to a http socket and sends and receives messages from this socket." />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;700&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/favicon/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="pdoc-header">
+<nav class="pdoc-nav">
+<ul>
+<li>
+<a href="../index.html" class="menu">Home</a>
+</li>
+<li>
+<a href="../Main/Main.html" class="menu">Main</a>
+</li>
+<li>
+<a href="../API/index.html" class="menu">API</a>
+</li>
+<li>
+<a href="../Calibrator/index.html" class="menu">Calibrator</a>
+</li>
+<li>
+<a href="../CameraReader/index.html" class="menu">Camera Reader</a>
+</li>
+<li>
+<a href="../FrameAnalyzer/index.html" class="menu">Frame Analyzer</a>
+</li>
+<li>
+<a href="../IO/index.html" class="menu">IO</a>
+</li>
+<li>
+<a href="../Positioner/index.html" class="menu">Positioner</a>
+</li>
+<li>
+<a href="../Windowing/index.html" class="menu">Windowing</a>
+</li>
+<li>
+<a href="../ArgsGUI/index.html" class="menu">ArgsGUI</a>
+</li>
+</ul>
+</nav>
+</header>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>API.APIServer</code></h1>
+</header>
+<section id="section-intro">
+<p>API Server, creates a connection to a http socket and sends and receives messages from this socket.</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># This program has been developed by students from the bachelor Computer Science at Utrecht University within the
+# Software Project course.
+# © Copyright Utrecht University (Department of Information and Computing Sciences)
+
+&#34;&#34;&#34;
+API Server, creates a connection to a http socket and sends and receives messages from this socket.
+&#34;&#34;&#34;
+
+import asyncio
+import json
+import pathlib
+import ssl
+from typing import Optional
+
+import websockets
+from websockets.exceptions import ConnectionClosedOK, ConnectionClosedError
+
+
+class APIServer:
+    &#34;&#34;&#34;A WebSocket server that can broadcast data to all connected clients&#34;&#34;&#34;
+    clients: set = set()
+    sslContext: ssl.SSLContext = None
+
+    def __init__(self, loop, serverCertificateFolder: Optional[pathlib.Path]):
+        &#34;&#34;&#34;
+        Initializes the server, but doesn&#39;t start it yet (See `Start` for that)
+
+        Parameters
+        ----------
+        loop : Any
+            a loop to create futures
+        serverCertificateFolder : Optional[pathlib.Path]
+            Optional path to the folder containing a file named &#39;server.pem&#39;
+            The &#39;server.pem&#39; is the certificate this server should use for TLS connections.
+            When `None`, the server uses the raw WebSocket protocol without encryption
+        &#34;&#34;&#34;
+        if serverCertificateFolder:     # pragma: no cover
+            self.sslContext = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+            self.sslContext.load_cert_chain(serverCertificateFolder.with_name(&#39;server.pem&#39;))
+            self.sslContext.verify_mode = ssl.CERT_REQUIRED
+            self.sslContext.load_verify_locations(cafile=serverCertificateFolder.with_name(&#39;ca.crt&#39;))
+        self.connectFuture = loop.create_future()
+        self.doneFuture = loop.create_future()
+
+    async def Start(self, port=8080, interface=&#34;&#34;):
+        &#34;&#34;&#34;
+        Starts the server and waits till the server is correctly started.
+
+        Parameters
+        ----------
+        port : int
+            The port the server should connect to
+        interface : str
+            The interface of the server
+        &#34;&#34;&#34;
+        async with websockets.serve(self._ClientHandler, interface, port, ssl=self.sslContext):
+            print(&#34;Server started, connected to port: &#34; + str(port))
+            self.connectFuture.set_result(True)
+            await self.doneFuture
+
+    def UntilConnected(self):
+        &#34;&#34;&#34;
+        Check if the server is connected to the assigned port.
+
+        Returns
+        -------
+        asyncio.Future
+        &#34;&#34;&#34;
+        return self.connectFuture
+
+    def Stop(self):
+        &#34;&#34;&#34;Stop the API server.&#34;&#34;&#34;
+        self.doneFuture.set_result(None)
+
+    async def _ClientHandler(self, websocket: websockets.WebSocketServerProtocol):  # pragma: no cover
+        &#34;&#34;&#34;
+        The client handler, handles the massages from individual clients.
+
+        Parameters
+        ----------
+        websocket: The websocket the client is connected to
+        &#34;&#34;&#34;
+        identifier = websocket.remote_address
+        if self.sslContext is not None:
+            # Get the client certificate
+            certificate = websocket.transport.get_extra_info(&#34;ssl_object&#34;).getpeercert()
+            # certificate[&#39;subject&#39;] is a tuple, convert to a dictionary
+            subject = dict(x[0] for x in certificate[&#39;subject&#39;])
+            identifier = f&#39;{subject[&#34;commonName&#34;]}@{identifier}&#39;
+
+        print(f&#39;Connection by {identifier}&#39;)
+
+        try:
+            self.clients.add(websocket)
+            isOpen = True
+            while isOpen:
+                message = await websocket.recv()
+                isOpen = await self._OnClientCommand(websocket, json.loads(message))
+            print(f&#39;Connection from {identifier} closed by exit command&#39;)
+        except ConnectionClosedOK:
+            print(f&#39;Connection from {identifier} closed&#39;)
+        except ConnectionClosedError as e:
+            print(f&#39;Connection from {identifier} closed incorrectly: {e}&#39;)
+        finally:
+            self.clients.remove(websocket)  # Removes the client from the set if it was already added
+
+    async def _OnClientCommand(self, websocket: websockets.WebSocketServerProtocol, command):  # pragma: no cover
+        &#34;&#34;&#34;
+        Function to handle client messages, used by the _ClientHandler.
+
+        Parameters
+        ----------
+        websocket : websockets.WebSocketServerProtocol
+            The websocket the client is connected to
+        command : str|dict
+            The command that was sent by the client
+        &#34;&#34;&#34;
+        if command is not dict or &#39;type&#39; not in command:
+            return True
+
+        if command[&#39;type&#39;] == &#39;exit&#39;:
+            return False
+        return True
+
+    def BroadcastData(self, data):
+        &#34;&#34;&#34;
+        Broadcast data to all the currently connected clients.
+
+        Parameters
+        ----------
+        data : Any
+            The data to be broadcast to the clients
+        &#34;&#34;&#34;
+        websockets.broadcast(self.clients, data)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="API.APIServer.APIServer"><code class="flex name class">
+<span>class <span class="ident">APIServer</span></span>
+<span>(</span><span>loop, serverCertificateFolder: Optional[pathlib.Path])</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A WebSocket server that can broadcast data to all connected clients</p>
+<p>Initializes the server, but doesn't start it yet (See <code>Start</code> for that)</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>loop</code></strong> :&ensp;<code>Any</code></dt>
+<dd>a loop to create futures</dd>
+<dt><strong><code>serverCertificateFolder</code></strong> :&ensp;<code>Optional[pathlib.Path]</code></dt>
+<dd>Optional path to the folder containing a file named 'server.pem'
+The 'server.pem' is the certificate this server should use for TLS connections.
+When <code>None</code>, the server uses the raw WebSocket protocol without encryption</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class APIServer:
+    &#34;&#34;&#34;A WebSocket server that can broadcast data to all connected clients&#34;&#34;&#34;
+    clients: set = set()
+    sslContext: ssl.SSLContext = None
+
+    def __init__(self, loop, serverCertificateFolder: Optional[pathlib.Path]):
+        &#34;&#34;&#34;
+        Initializes the server, but doesn&#39;t start it yet (See `Start` for that)
+
+        Parameters
+        ----------
+        loop : Any
+            a loop to create futures
+        serverCertificateFolder : Optional[pathlib.Path]
+            Optional path to the folder containing a file named &#39;server.pem&#39;
+            The &#39;server.pem&#39; is the certificate this server should use for TLS connections.
+            When `None`, the server uses the raw WebSocket protocol without encryption
+        &#34;&#34;&#34;
+        if serverCertificateFolder:     # pragma: no cover
+            self.sslContext = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+            self.sslContext.load_cert_chain(serverCertificateFolder.with_name(&#39;server.pem&#39;))
+            self.sslContext.verify_mode = ssl.CERT_REQUIRED
+            self.sslContext.load_verify_locations(cafile=serverCertificateFolder.with_name(&#39;ca.crt&#39;))
+        self.connectFuture = loop.create_future()
+        self.doneFuture = loop.create_future()
+
+    async def Start(self, port=8080, interface=&#34;&#34;):
+        &#34;&#34;&#34;
+        Starts the server and waits till the server is correctly started.
+
+        Parameters
+        ----------
+        port : int
+            The port the server should connect to
+        interface : str
+            The interface of the server
+        &#34;&#34;&#34;
+        async with websockets.serve(self._ClientHandler, interface, port, ssl=self.sslContext):
+            print(&#34;Server started, connected to port: &#34; + str(port))
+            self.connectFuture.set_result(True)
+            await self.doneFuture
+
+    def UntilConnected(self):
+        &#34;&#34;&#34;
+        Check if the server is connected to the assigned port.
+
+        Returns
+        -------
+        asyncio.Future
+        &#34;&#34;&#34;
+        return self.connectFuture
+
+    def Stop(self):
+        &#34;&#34;&#34;Stop the API server.&#34;&#34;&#34;
+        self.doneFuture.set_result(None)
+
+    async def _ClientHandler(self, websocket: websockets.WebSocketServerProtocol):  # pragma: no cover
+        &#34;&#34;&#34;
+        The client handler, handles the massages from individual clients.
+
+        Parameters
+        ----------
+        websocket: The websocket the client is connected to
+        &#34;&#34;&#34;
+        identifier = websocket.remote_address
+        if self.sslContext is not None:
+            # Get the client certificate
+            certificate = websocket.transport.get_extra_info(&#34;ssl_object&#34;).getpeercert()
+            # certificate[&#39;subject&#39;] is a tuple, convert to a dictionary
+            subject = dict(x[0] for x in certificate[&#39;subject&#39;])
+            identifier = f&#39;{subject[&#34;commonName&#34;]}@{identifier}&#39;
+
+        print(f&#39;Connection by {identifier}&#39;)
+
+        try:
+            self.clients.add(websocket)
+            isOpen = True
+            while isOpen:
+                message = await websocket.recv()
+                isOpen = await self._OnClientCommand(websocket, json.loads(message))
+            print(f&#39;Connection from {identifier} closed by exit command&#39;)
+        except ConnectionClosedOK:
+            print(f&#39;Connection from {identifier} closed&#39;)
+        except ConnectionClosedError as e:
+            print(f&#39;Connection from {identifier} closed incorrectly: {e}&#39;)
+        finally:
+            self.clients.remove(websocket)  # Removes the client from the set if it was already added
+
+    async def _OnClientCommand(self, websocket: websockets.WebSocketServerProtocol, command):  # pragma: no cover
+        &#34;&#34;&#34;
+        Function to handle client messages, used by the _ClientHandler.
+
+        Parameters
+        ----------
+        websocket : websockets.WebSocketServerProtocol
+            The websocket the client is connected to
+        command : str|dict
+            The command that was sent by the client
+        &#34;&#34;&#34;
+        if command is not dict or &#39;type&#39; not in command:
+            return True
+
+        if command[&#39;type&#39;] == &#39;exit&#39;:
+            return False
+        return True
+
+    def BroadcastData(self, data):
+        &#34;&#34;&#34;
+        Broadcast data to all the currently connected clients.
+
+        Parameters
+        ----------
+        data : Any
+            The data to be broadcast to the clients
+        &#34;&#34;&#34;
+        websockets.broadcast(self.clients, data)</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="API.APIServer.APIServer.clients"><code class="name">var <span class="ident">clients</span> : set</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="API.APIServer.APIServer.sslContext"><code class="name">var <span class="ident">sslContext</span> : ssl.SSLContext</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="API.APIServer.APIServer.BroadcastData"><code class="name flex">
+<span>def <span class="ident">BroadcastData</span></span>(<span>self, data)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Broadcast data to all the currently connected clients.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>data</code></strong> :&ensp;<code>Any</code></dt>
+<dd>The data to be broadcast to the clients</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def BroadcastData(self, data):
+    &#34;&#34;&#34;
+    Broadcast data to all the currently connected clients.
+
+    Parameters
+    ----------
+    data : Any
+        The data to be broadcast to the clients
+    &#34;&#34;&#34;
+    websockets.broadcast(self.clients, data)</code></pre>
+</details>
+</dd>
+<dt id="API.APIServer.APIServer.Start"><code class="name flex">
+<span>async def <span class="ident">Start</span></span>(<span>self, port=8080, interface='')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Starts the server and waits till the server is correctly started.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>port</code></strong> :&ensp;<code>int</code></dt>
+<dd>The port the server should connect to</dd>
+<dt><strong><code>interface</code></strong> :&ensp;<code>str</code></dt>
+<dd>The interface of the server</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def Start(self, port=8080, interface=&#34;&#34;):
+    &#34;&#34;&#34;
+    Starts the server and waits till the server is correctly started.
+
+    Parameters
+    ----------
+    port : int
+        The port the server should connect to
+    interface : str
+        The interface of the server
+    &#34;&#34;&#34;
+    async with websockets.serve(self._ClientHandler, interface, port, ssl=self.sslContext):
+        print(&#34;Server started, connected to port: &#34; + str(port))
+        self.connectFuture.set_result(True)
+        await self.doneFuture</code></pre>
+</details>
+</dd>
+<dt id="API.APIServer.APIServer.Stop"><code class="name flex">
+<span>def <span class="ident">Stop</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Stop the API server.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def Stop(self):
+    &#34;&#34;&#34;Stop the API server.&#34;&#34;&#34;
+    self.doneFuture.set_result(None)</code></pre>
+</details>
+</dd>
+<dt id="API.APIServer.APIServer.UntilConnected"><code class="name flex">
+<span>def <span class="ident">UntilConnected</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Check if the server is connected to the assigned port.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>asyncio.Future</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def UntilConnected(self):
+    &#34;&#34;&#34;
+    Check if the server is connected to the assigned port.
+
+    Returns
+    -------
+    asyncio.Future
+    &#34;&#34;&#34;
+    return self.connectFuture</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<img src="/images/logo_full.png" alt="">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="API" href="index.html">API</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="API.APIServer.APIServer" href="#API.APIServer.APIServer">APIServer</a></code></h4>
+<ul class="two-column">
+<li><code><a title="API.APIServer.APIServer.BroadcastData" href="#API.APIServer.APIServer.BroadcastData">BroadcastData</a></code></li>
+<li><code><a title="API.APIServer.APIServer.Start" href="#API.APIServer.APIServer.Start">Start</a></code></li>
+<li><code><a title="API.APIServer.APIServer.Stop" href="#API.APIServer.APIServer.Stop">Stop</a></code></li>
+<li><code><a title="API.APIServer.APIServer.UntilConnected" href="#API.APIServer.APIServer.UntilConnected">UntilConnected</a></code></li>
+<li><code><a title="API.APIServer.APIServer.clients" href="#API.APIServer.APIServer.clients">clients</a></code></li>
+<li><code><a title="API.APIServer.APIServer.sslContext" href="#API.APIServer.APIServer.sslContext">sslContext</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p><center>
+This program has been developed by students from the bachelor Computer Science at Utrecht University within the Software Project course.
+&#169 Copyright Utrecht University (Department of Information and Computing Sciences)
+</center></p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+:root {
+    --main-red: rgb(255 0 0 / 1);
+    --main-red-light: rgb(255 0 0 / 0.5);
+    --main-red-lighter: rgb(255 0 0 / 0.2);
+    --main-red-superlight: rgb(255 0 0 / 0.1);
+    --main-gray: rgb(128 128 128 / 1);
+    --main-gray-light: rgb(128 128 128 / 0.8);
+    --main-gray-lighter: rgb(128 128 128 / 0.5);
+    --main-gray-superlight: rgb(128 128 128 / 0.3);
+    --box-shadow: rgb(0 0 0 / 0.2);
+}
+
+body.we-body {
+    font-family: 'Source Code Pro', monospace;
+}
+
+body.we-body > * {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav.we-nav, nav.pdoc-nav {
+    max-width: 1140px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 50px 0 var(--box-shadow);
+}
+nav.we-nav {
+    background-color: var(--main-red-lighter);
+}
+nav.pdoc-nav {
+    background-color: var(--main-gray-superlight);
+}
+
+nav.we-nav ul, nav.pdoc-nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+nav.we-nav a, nav.pdoc-nav a {
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--main-red-light);
+}
+nav.pdoc-nav a {
+    color: var(--main-gray-light);
+}
+nav.we-nav a:hover {
+    color: var(--main-red);
+}
+nav.pdoc-nav a:hover {
+    color: black;
+}
+.main.we-main {
+    margin: 0 auto;
+}
+
+.section.we-section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 50px 0 var(--box-shadow);
+}
+
+#gitlab {
+    padding: 14px 10px 4px 10px;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 139, 1);
+    transition: background-color 0.2s;
+}
+#gitlab:hover {
+    background-color: rgba(0, 0, 139, 0.5);
+}
+#gitlab .txt {
+    fill: white;
+}
